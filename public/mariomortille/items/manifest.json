@@ -1,0 +1,382 @@
+{
+  "version": 1,
+  "frames": [
+    {
+      "key": "coin-01",
+      "url": "/mariomortille/items/coin-01.png",
+      "size": [
+        32,
+        32
+      ],
+      "displaySize": [
+        16,
+        16
+      ],
+      "anchor": [
+        16,
+        16
+      ],
+      "bbox": [
+        5,
+        4,
+        27,
+        27
+      ]
+    },
+    {
+      "key": "coin-02",
+      "url": "/mariomortille/items/coin-02.png",
+      "size": [
+        32,
+        32
+      ],
+      "displaySize": [
+        16,
+        16
+      ],
+      "anchor": [
+        16,
+        16
+      ],
+      "bbox": [
+        7,
+        4,
+        24,
+        27
+      ]
+    },
+    {
+      "key": "coin-03",
+      "url": "/mariomortille/items/coin-03.png",
+      "size": [
+        32,
+        32
+      ],
+      "displaySize": [
+        16,
+        16
+      ],
+      "anchor": [
+        16,
+        16
+      ],
+      "bbox": [
+        12,
+        4,
+        20,
+        28
+      ]
+    },
+    {
+      "key": "coin-04",
+      "url": "/mariomortille/items/coin-04.png",
+      "size": [
+        32,
+        32
+      ],
+      "displaySize": [
+        16,
+        16
+      ],
+      "anchor": [
+        16,
+        16
+      ],
+      "bbox": [
+        6,
+        4,
+        25,
+        27
+      ]
+    },
+    {
+      "key": "coin-05",
+      "url": "/mariomortille/items/coin-05.png",
+      "size": [
+        32,
+        32
+      ],
+      "displaySize": [
+        16,
+        16
+      ],
+      "anchor": [
+        16,
+        16
+      ],
+      "bbox": [
+        5,
+        4,
+        27,
+        27
+      ]
+    },
+    {
+      "key": "coin-06",
+      "url": "/mariomortille/items/coin-06.png",
+      "size": [
+        32,
+        32
+      ],
+      "displaySize": [
+        16,
+        16
+      ],
+      "anchor": [
+        16,
+        16
+      ],
+      "bbox": [
+        7,
+        4,
+        24,
+        28
+      ]
+    },
+    {
+      "key": "coin-07",
+      "url": "/mariomortille/items/coin-07.png",
+      "size": [
+        32,
+        32
+      ],
+      "displaySize": [
+        16,
+        16
+      ],
+      "anchor": [
+        16,
+        16
+      ],
+      "bbox": [
+        12,
+        4,
+        20,
+        27
+      ]
+    },
+    {
+      "key": "coin-08",
+      "url": "/mariomortille/items/coin-08.png",
+      "size": [
+        32,
+        32
+      ],
+      "displaySize": [
+        16,
+        16
+      ],
+      "anchor": [
+        16,
+        16
+      ],
+      "bbox": [
+        6,
+        4,
+        25,
+        28
+      ]
+    },
+    {
+      "key": "secret-01",
+      "url": "/mariomortille/items/secret-01.png",
+      "size": [
+        32,
+        32
+      ],
+      "displaySize": [
+        16,
+        16
+      ],
+      "anchor": [
+        16,
+        16
+      ],
+      "bbox": [
+        4,
+        4,
+        27,
+        28
+      ]
+    },
+    {
+      "key": "secret-02",
+      "url": "/mariomortille/items/secret-02.png",
+      "size": [
+        32,
+        32
+      ],
+      "displaySize": [
+        16,
+        16
+      ],
+      "anchor": [
+        16,
+        16
+      ],
+      "bbox": [
+        4,
+        4,
+        27,
+        28
+      ]
+    },
+    {
+      "key": "secret-03",
+      "url": "/mariomortille/items/secret-03.png",
+      "size": [
+        32,
+        32
+      ],
+      "displaySize": [
+        16,
+        16
+      ],
+      "anchor": [
+        16,
+        16
+      ],
+      "bbox": [
+        4,
+        4,
+        27,
+        28
+      ]
+    },
+    {
+      "key": "secret-04",
+      "url": "/mariomortille/items/secret-04.png",
+      "size": [
+        32,
+        32
+      ],
+      "displaySize": [
+        16,
+        16
+      ],
+      "anchor": [
+        16,
+        16
+      ],
+      "bbox": [
+        4,
+        4,
+        27,
+        28
+      ]
+    },
+    {
+      "key": "pickup-turbo",
+      "url": "/mariomortille/items/pickup-turbo.png",
+      "size": [
+        32,
+        32
+      ],
+      "displaySize": [
+        16,
+        16
+      ],
+      "anchor": [
+        16,
+        16
+      ],
+      "bbox": [
+        3,
+        4,
+        28,
+        28
+      ]
+    },
+    {
+      "key": "pickup-ember",
+      "url": "/mariomortille/items/pickup-ember.png",
+      "size": [
+        32,
+        32
+      ],
+      "displaySize": [
+        16,
+        16
+      ],
+      "anchor": [
+        16,
+        16
+      ],
+      "bbox": [
+        5,
+        4,
+        27,
+        28
+      ]
+    },
+    {
+      "key": "pickup-cloud",
+      "url": "/mariomortille/items/pickup-cloud.png",
+      "size": [
+        32,
+        32
+      ],
+      "displaySize": [
+        16,
+        16
+      ],
+      "anchor": [
+        16,
+        16
+      ],
+      "bbox": [
+        4,
+        4,
+        28,
+        27
+      ]
+    },
+    {
+      "key": "pickup-cobalt",
+      "url": "/mariomortille/items/pickup-cobalt.png",
+      "size": [
+        32,
+        32
+      ],
+      "displaySize": [
+        16,
+        16
+      ],
+      "anchor": [
+        16,
+        16
+      ],
+      "bbox": [
+        3,
+        4,
+        29,
+        28
+      ]
+    }
+  ],
+  "animations": {
+    "coin": {
+      "frames": [
+        "coin-01",
+        "coin-02",
+        "coin-03",
+        "coin-04",
+        "coin-05",
+        "coin-06",
+        "coin-07",
+        "coin-08"
+      ],
+      "fps": 10
+    },
+    "secret": {
+      "frames": [
+        "secret-01",
+        "secret-02",
+        "secret-03",
+        "secret-04"
+      ],
+      "fps": 6.25
+    }
+  },
+  "method": "Built-in imagegen full contact sheet, fixed-slot extraction, hard alpha160, group-shared scale, nearest neighbor. No drawn checkerboard."
+}

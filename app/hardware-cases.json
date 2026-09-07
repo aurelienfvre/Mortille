@@ -1,0 +1,362 @@
+{
+  "gamecube": {
+    "asset": "/models/hardware/gamecube-case.glb?v=3",
+    "size": [
+      1.55,
+      2.18,
+      0.15
+    ],
+    "cover": {
+      "node": "Case_Cover",
+      "pivot": [
+        -0.775,
+        0,
+        0.043
+      ],
+      "openAngle": -2.6
+    },
+    "front": {
+      "node": "Case_Front",
+      "position": [
+        0.775,
+        0,
+        0.035
+      ],
+      "size": [
+        1.49,
+        2.115
+      ],
+      "clearance": 0.003
+    },
+    "back": {
+      "node": "Case_Back",
+      "position": [
+        0,
+        0,
+        -0.078
+      ],
+      "size": [
+        1.49,
+        2.115
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ]
+    },
+    "spine": {
+      "node": "Case_Spine",
+      "position": [
+        -0.778,
+        0,
+        0
+      ],
+      "size": [
+        0.124,
+        2.115
+      ],
+      "normal": [
+        -1,
+        0,
+        0
+      ]
+    },
+    "disc": {
+      "position": [
+        0,
+        0,
+        0.025
+      ],
+      "diameter": 1.1
+    }
+  },
+  "ps2": {
+    "asset": "/models/hardware/ps2-case.glb?v=3",
+    "size": [
+      1.55,
+      2.18,
+      0.15
+    ],
+    "cover": {
+      "node": "Case_Cover",
+      "pivot": [
+        -0.775,
+        0,
+        0.043
+      ],
+      "openAngle": -2.6
+    },
+    "front": {
+      "node": "Case_Front",
+      "position": [
+        0.775,
+        0,
+        0.035
+      ],
+      "size": [
+        1.49,
+        2.115
+      ],
+      "clearance": 0.003
+    },
+    "back": {
+      "node": "Case_Back",
+      "position": [
+        0,
+        0,
+        -0.078
+      ],
+      "size": [
+        1.49,
+        2.115
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ]
+    },
+    "spine": {
+      "node": "Case_Spine",
+      "position": [
+        -0.778,
+        0,
+        0
+      ],
+      "size": [
+        0.124,
+        2.115
+      ],
+      "normal": [
+        -1,
+        0,
+        0
+      ]
+    },
+    "disc": {
+      "position": [
+        0,
+        0,
+        0.025
+      ],
+      "diameter": 1.22
+    }
+  },
+  "ps3": {
+    "asset": "/models/hardware/ps3-case.glb?v=3",
+    "size": [
+      1.55,
+      1.84,
+      0.15
+    ],
+    "cover": {
+      "node": "Case_Cover",
+      "pivot": [
+        -0.775,
+        0,
+        0.043
+      ],
+      "openAngle": -2.6
+    },
+    "front": {
+      "node": "Case_Front",
+      "position": [
+        0.775,
+        0,
+        0.035
+      ],
+      "size": [
+        1.49,
+        1.7750000000000001
+      ],
+      "clearance": 0.003
+    },
+    "back": {
+      "node": "Case_Back",
+      "position": [
+        0,
+        0,
+        -0.078
+      ],
+      "size": [
+        1.49,
+        1.7750000000000001
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ]
+    },
+    "spine": {
+      "node": "Case_Spine",
+      "position": [
+        -0.778,
+        0,
+        0
+      ],
+      "size": [
+        0.124,
+        1.7750000000000001
+      ],
+      "normal": [
+        -1,
+        0,
+        0
+      ]
+    },
+    "disc": {
+      "position": [
+        0,
+        0,
+        0.025
+      ],
+      "diameter": 1.22
+    }
+  },
+  "xbox": {
+    "asset": "/models/hardware/xbox-case.glb?v=3",
+    "size": [
+      1.55,
+      2.18,
+      0.15
+    ],
+    "cover": {
+      "node": "Case_Cover",
+      "pivot": [
+        -0.775,
+        0,
+        0.043
+      ],
+      "openAngle": -2.6
+    },
+    "front": {
+      "node": "Case_Front",
+      "position": [
+        0.775,
+        0,
+        0.035
+      ],
+      "size": [
+        1.49,
+        2.115
+      ],
+      "clearance": 0.003
+    },
+    "back": {
+      "node": "Case_Back",
+      "position": [
+        0,
+        0,
+        -0.078
+      ],
+      "size": [
+        1.49,
+        2.115
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ]
+    },
+    "spine": {
+      "node": "Case_Spine",
+      "position": [
+        -0.778,
+        0,
+        0
+      ],
+      "size": [
+        0.124,
+        2.115
+      ],
+      "normal": [
+        -1,
+        0,
+        0
+      ]
+    },
+    "disc": {
+      "position": [
+        0,
+        0,
+        0.025
+      ],
+      "diameter": 1.22
+    }
+  },
+  "xbox360": {
+    "asset": "/models/hardware/xbox360-case.glb?v=3",
+    "size": [
+      1.55,
+      2.1,
+      0.15
+    ],
+    "cover": {
+      "node": "Case_Cover",
+      "pivot": [
+        -0.775,
+        0,
+        0.043
+      ],
+      "openAngle": -2.6
+    },
+    "front": {
+      "node": "Case_Front",
+      "position": [
+        0.775,
+        0,
+        0.035
+      ],
+      "size": [
+        1.49,
+        2.035
+      ],
+      "clearance": 0.003
+    },
+    "back": {
+      "node": "Case_Back",
+      "position": [
+        0,
+        0,
+        -0.078
+      ],
+      "size": [
+        1.49,
+        2.035
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ]
+    },
+    "spine": {
+      "node": "Case_Spine",
+      "position": [
+        -0.778,
+        0,
+        0
+      ],
+      "size": [
+        0.124,
+        2.035
+      ],
+      "normal": [
+        -1,
+        0,
+        0
+      ]
+    },
+    "disc": {
+      "position": [
+        0,
+        0,
+        0.025
+      ],
+      "diameter": 1.22
+    }
+  }
+}

@@ -1,0 +1,3 @@
+Original ambient composition for Mortizle, created for this project.
+24-second stereo loop, 80 BPM. Soft keys, pads and bass; no external samples.
+Generated with work/lobby-polish/make-music.py.

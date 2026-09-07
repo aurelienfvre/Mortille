@@ -1,0 +1,378 @@
+[
+  {
+    "id": "n64",
+    "phases": [
+      {
+        "stage": "approach",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": [],
+        "examples": []
+      },
+      {
+        "stage": "contact",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": [],
+        "examples": []
+      },
+      {
+        "stage": "insert25",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": [],
+        "examples": []
+      },
+      {
+        "stage": "insert50",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": [],
+        "examples": []
+      },
+      {
+        "stage": "insert75",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": [],
+        "examples": []
+      },
+      {
+        "stage": "seated",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": [],
+        "examples": []
+      }
+    ]
+  },
+  {
+    "id": "gamecube",
+    "phases": [
+      {
+        "stage": "approach",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": [],
+        "examples": []
+      },
+      {
+        "stage": "contact",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": [],
+        "examples": []
+      },
+      {
+        "stage": "insert25",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": [],
+        "examples": []
+      },
+      {
+        "stage": "insert50",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": [],
+        "examples": []
+      },
+      {
+        "stage": "insert75",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": [],
+        "examples": []
+      },
+      {
+        "stage": "seated",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": [],
+        "examples": []
+      }
+    ]
+  },
+  {
+    "id": "gameboy",
+    "phases": [
+      {
+        "stage": "approach",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": [],
+        "examples": []
+      },
+      {
+        "stage": "contact",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": [],
+        "examples": []
+      },
+      {
+        "stage": "insert25",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": [],
+        "examples": []
+      },
+      {
+        "stage": "insert50",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": [],
+        "examples": []
+      },
+      {
+        "stage": "insert75",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": [],
+        "examples": []
+      },
+      {
+        "stage": "seated",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": [],
+        "examples": []
+      }
+    ]
+  },
+  {
+    "id": "ps2",
+    "phases": [
+      {
+        "stage": "approach",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": [],
+        "examples": []
+      },
+      {
+        "stage": "contact",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": [],
+        "examples": []
+      },
+      {
+        "stage": "insert25",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": [],
+        "examples": []
+      },
+      {
+        "stage": "insert50",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": [],
+        "examples": []
+      },
+      {
+        "stage": "insert75",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": [],
+        "examples": []
+      },
+      {
+        "stage": "seated",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": [],
+        "examples": []
+      }
+    ]
+  },
+  {
+    "id": "ps3",
+    "phases": [
+      {
+        "stage": "approach",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": [],
+        "examples": []
+      },
+      {
+        "stage": "contact",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": [],
+        "examples": []
+      },
+      {
+        "stage": "insert25",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": [],
+        "examples": []
+      },
+      {
+        "stage": "insert50",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": [],
+        "examples": []
+      },
+      {
+        "stage": "insert75",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": [],
+        "examples": []
+      },
+      {
+        "stage": "seated",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": [],
+        "examples": []
+      }
+    ]
+  },
+  {
+    "id": "xbox",
+    "phases": [
+      {
+        "stage": "approach",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": [],
+        "examples": []
+      },
+      {
+        "stage": "contact",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": [],
+        "examples": []
+      },
+      {
+        "stage": "insert25",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": [],
+        "examples": []
+      },
+      {
+        "stage": "insert50",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": [],
+        "examples": []
+      },
+      {
+        "stage": "insert75",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": [],
+        "examples": []
+      },
+      {
+        "stage": "seated",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": [],
+        "examples": []
+      }
+    ]
+  },
+  {
+    "id": "xbox360",
+    "phases": [
+      {
+        "stage": "approach",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": [],
+        "examples": []
+      },
+      {
+        "stage": "contact",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": [],
+        "examples": []
+      },
+      {
+        "stage": "insert25",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": [],
+        "examples": []
+      },
+      {
+        "stage": "insert50",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": [],
+        "examples": []
+      },
+      {
+        "stage": "insert75",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": [],
+        "examples": []
+      },
+      {
+        "stage": "seated",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": [],
+        "examples": []
+      }
+    ]
+  },
+  {
+    "id": "nes",
+    "phases": [
+      {
+        "stage": "approach",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": [],
+        "examples": []
+      },
+      {
+        "stage": "contact",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": [],
+        "examples": []
+      },
+      {
+        "stage": "insert25",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": [],
+        "examples": []
+      },
+      {
+        "stage": "insert50",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": [],
+        "examples": []
+      },
+      {
+        "stage": "insert75",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": [],
+        "examples": []
+      },
+      {
+        "stage": "seated",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": [],
+        "examples": []
+      }
+    ]
+  }
+]

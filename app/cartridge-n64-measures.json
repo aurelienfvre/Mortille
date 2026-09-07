@@ -1,0 +1,60 @@
+{
+  "asset": "/models/cartridge-n64.glb?v=1",
+  "bounds": {
+    "min": [
+      -0.67,
+      0,
+      -0.152
+    ],
+    "max": [
+      0.67,
+      1.06,
+      0.15
+    ]
+  },
+  "pivot": [
+    0,
+    0.53,
+    0
+  ],
+  "restYaw": -0.14,
+  "label": {
+    "position": [
+      0,
+      0.535,
+      0.152
+    ],
+    "size": [
+      1.035,
+      0.55
+    ]
+  },
+  "title": {
+    "position": [
+      0,
+      0.862,
+      0.153
+    ],
+    "size": [
+      1.035,
+      0.115
+    ]
+  },
+  "serial": {
+    "position": [
+      0,
+      0.232,
+      0.153
+    ],
+    "size": [
+      1.01,
+      0.031
+    ]
+  },
+  "connector": {
+    "width": 0.89,
+    "height": 0.112,
+    "depth": 0.086
+  },
+  "bodyInsertionWidth": 1.28
+}

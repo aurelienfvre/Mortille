@@ -1,0 +1,73 @@
+{
+  "asset": "/models/cartridge-nes.glb?v=1",
+  "bounds": {
+    "min": [
+      -0.49,
+      0,
+      -0.094
+    ],
+    "max": [
+      0.49,
+      1.2,
+      0.09
+    ]
+  },
+  "pivot": [
+    0,
+    0.6,
+    0
+  ],
+  "restYaw": -0.14,
+  "label": {
+    "position": [
+      0.055,
+      0.725,
+      0.092
+    ],
+    "size": [
+      0.78,
+      0.5
+    ]
+  },
+  "title": {
+    "position": [
+      0.055,
+      1.052,
+      0.093
+    ],
+    "size": [
+      0.78,
+      0.115
+    ]
+  },
+  "serial": {
+    "position": [
+      0.055,
+      0.426,
+      0.093
+    ],
+    "size": [
+      0.77,
+      0.031
+    ]
+  },
+  "connector": {
+    "width": 0.76,
+    "height": 0.078,
+    "depth": 0.062
+  },
+  "bodyInsertionWidth": 0.98,
+  "consoleAsset": "/models/console-nes-fit.glb?v=2",
+  "slot": {
+    "position": [
+      0,
+      0.47,
+      -0.13
+    ],
+    "opening": [
+      1.02,
+      0.23
+    ],
+    "bottom": 0.02
+  }
+}

@@ -1,0 +1,215 @@
+[
+  {
+    "id": "n64",
+    "phases": [
+      {
+        "stage": "approach",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": []
+      },
+      {
+        "stage": "contact",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": []
+      },
+      {
+        "stage": "seated",
+        "penetrations": 196,
+        "deepest": 0.02693283650640174,
+        "nodes": [
+          "n64_Shell"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gamecube",
+    "phases": [
+      {
+        "stage": "approach",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": []
+      },
+      {
+        "stage": "contact",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": []
+      },
+      {
+        "stage": "seated",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": []
+      }
+    ]
+  },
+  {
+    "id": "gameboy",
+    "phases": [
+      {
+        "stage": "approach",
+        "penetrations": 182,
+        "deepest": 0.05386567301280345,
+        "nodes": [
+          "Power slider",
+          "gameboy_Shell"
+        ]
+      },
+      {
+        "stage": "contact",
+        "penetrations": 369,
+        "deepest": 0.14409064320277556,
+        "nodes": [
+          "gameboy_Shell",
+          "Power slider"
+        ]
+      },
+      {
+        "stage": "seated",
+        "penetrations": 290,
+        "deepest": 0.5729246799350792,
+        "nodes": [
+          "gameboy_Shell"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ps2",
+    "phases": [
+      {
+        "stage": "approach",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": []
+      },
+      {
+        "stage": "contact",
+        "penetrations": 33,
+        "deepest": 0.06706108856629484,
+        "nodes": [
+          "ps2_Shell"
+        ]
+      },
+      {
+        "stage": "seated",
+        "penetrations": 617,
+        "deepest": 0.678708138144034,
+        "nodes": [
+          "ps2_Shell"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ps3",
+    "phases": [
+      {
+        "stage": "approach",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": []
+      },
+      {
+        "stage": "contact",
+        "penetrations": 8,
+        "deepest": 0.05197306460387599,
+        "nodes": [
+          "ps3_Shell"
+        ]
+      },
+      {
+        "stage": "seated",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": []
+      }
+    ]
+  },
+  {
+    "id": "xbox",
+    "phases": [
+      {
+        "stage": "approach",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": []
+      },
+      {
+        "stage": "contact",
+        "penetrations": 61,
+        "deepest": 0.16008128109122566,
+        "nodes": [
+          "xbox_Shell",
+          "Tray_Geometry"
+        ]
+      },
+      {
+        "stage": "seated",
+        "penetrations": 372,
+        "deepest": 0.3417420566796362,
+        "nodes": [
+          "Tray_Geometry",
+          "xbox_Shell"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "xbox360",
+    "phases": [
+      {
+        "stage": "approach",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": []
+      },
+      {
+        "stage": "contact",
+        "penetrations": 20,
+        "deepest": 0.07622015402648046,
+        "nodes": [
+          "xbox360_Shell"
+        ]
+      },
+      {
+        "stage": "seated",
+        "penetrations": 568,
+        "deepest": 0.7460402294100382,
+        "nodes": [
+          "Tray_Geometry",
+          "xbox360_Shell"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "nes",
+    "phases": [
+      {
+        "stage": "approach",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": []
+      },
+      {
+        "stage": "contact",
+        "penetrations": 0,
+        "deepest": 0,
+        "nodes": []
+      },
+      {
+        "stage": "seated",
+        "penetrations": 269,
+        "deepest": 0.05354252135527191,
+        "nodes": [
+          "nes_Shell"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,76 @@
+{
+  "asset": "/models/hardware/storage-crate.glb",
+  "units": "metres",
+  "root": "Storage_Crate",
+  "bounds": {
+    "width": 4.014,
+    "depth": 1.542,
+    "bodyHeight": 1.126
+  },
+  "opening": {
+    "width": 3.924,
+    "depth": 1.424,
+    "bottomY": 0.073,
+    "rimY": 1.11
+  },
+  "defaultPose": "closed",
+  "upAxis": "Y",
+  "frontAxis": "+Z",
+  "flaps": {
+    "Flap_Front": {
+      "pivot": [
+        0,
+        1.11,
+        0.75
+      ],
+      "axis": "x",
+      "closed": 0,
+      "open": -1.9198621771937625
+    },
+    "Flap_Back": {
+      "pivot": [
+        0,
+        1.11,
+        -0.75
+      ],
+      "axis": "x",
+      "closed": 0,
+      "open": 1.9198621771937625
+    },
+    "Flap_Left": {
+      "pivot": [
+        -2,
+        1.077,
+        0
+      ],
+      "axis": "z",
+      "closed": 0,
+      "open": -1.9198621771937625
+    },
+    "Flap_Right": {
+      "pivot": [
+        2,
+        1.077,
+        0
+      ],
+      "axis": "z",
+      "closed": 0,
+      "open": 1.9198621771937625
+    }
+  },
+  "suggestedOrder": {
+    "open": [
+      "Flap_Front",
+      "Flap_Back",
+      "Flap_Left",
+      "Flap_Right"
+    ],
+    "close": [
+      "Flap_Left",
+      "Flap_Right",
+      "Flap_Front",
+      "Flap_Back"
+    ]
+  },
+  "notes": "Inner short flaps lie below front/back in closed pose. Animate rotation on named pivot empties; preserve bind quaternion. No fixed lid."
+}

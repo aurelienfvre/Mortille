@@ -1,0 +1,8 @@
+import fs from 'node:fs';import * as T from 'three';import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js';
+for(const hero of [true,false]){
+ const load=async n=>{const b=fs.readFileSync(`public/models/${n}.glb`);return new GLTFLoader().register(()=>({name:'CPU_QA_TEXTURES',loadTexture:()=>Promise.resolve(new T.Texture())})).parseAsync(b.buffer.slice(b.byteOffset,b.byteOffset+b.byteLength),'');};
+ const g=await load(hero?'hero-sculpt-v2':'yeti-sculpt-v2'),l=await load(hero?'hero-eyelids':'yeti-eyelids');g.scene.updateMatrixWorld(true);let mesh;g.scene.traverse(o=>{if(!mesh && o.isSkinnedMesh)mesh=o;});const head=g.scene.getObjectByName('head'),i=mesh.skeleton.bones.indexOf(head);
+ console.log(hero,'head',head.matrixWorld.elements,'bindinv',mesh.skeleton.boneInverses[i].elements,'meshworld',mesh.matrixWorld.elements,'lidbbox',new T.Box3().setFromObject(l.scene));
+ l.scene.applyMatrix4(mesh.skeleton.boneInverses[i]);head.add(l.scene);g.scene.updateMatrixWorld(true);console.log('attached',new T.Box3().setFromObject(l.scene));
+}
+const b=fs.readFileSync('public/models/hero-eyelids.glb'),g=await new GLTFLoader().parseAsync(b.buffer.slice(b.byteOffset,b.byteOffset+b.byteLength),'');g.scene.traverse(o=>{if(!o.isMesh)return;console.log(o.name,o.morphTargetDictionary,o.geometry.morphTargetsRelative);for(const v of [0,1]){const box=new T.Box3();for(let i=0;i<o.geometry.attributes.position.count;i++){const p=new T.Vector3().fromBufferAttribute(o.geometry.attributes.position,i);for(const a of o.geometry.morphAttributes.position)p.addScaledVector(new T.Vector3().fromBufferAttribute(a,i),v);box.expandByPoint(p);}console.log('actual',v,box);}});

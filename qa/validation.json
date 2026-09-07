@@ -1,0 +1,48 @@
+{
+  "collisionSamples": 1324,
+  "swipeThresholds": "pass",
+  "consoleClearance": "pass",
+  "insertionHold": "pass",
+  "models": [
+    {
+      "model": "hero-character",
+      "triangles": 70000,
+      "primitives": 12,
+      "MB": 2.1,
+      "clips": [
+        "Idle",
+        "Walk",
+        "Dance",
+        "HighFive"
+      ]
+    },
+    {
+      "model": "yeti-character",
+      "triangles": 42000,
+      "primitives": 7,
+      "MB": 1.25,
+      "clips": [
+        "Idle",
+        "Walk",
+        "Dance",
+        "HighFive"
+      ]
+    },
+    {
+      "model": "console-tv-sequence",
+      "triangles": 49196,
+      "primitives": 28,
+      "MB": 1.61,
+      "clips": [
+        "Startup"
+      ]
+    },
+    {
+      "model": "metal-button",
+      "triangles": 2304,
+      "primitives": 3,
+      "MB": 0.05,
+      "clips": []
+    }
+  ]
+}

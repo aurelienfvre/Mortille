@@ -1,0 +1,180 @@
+{
+  "format": "PNG RGBA",
+  "alpha": "binary 0/255, threshold 128 on generated alpha",
+  "sampling": "nearest",
+  "sharedScale": 0.1,
+  "palette": 32,
+  "baseTile": 16,
+  "assets": [
+    {
+      "id": "tree",
+      "file": "tree.png",
+      "width": 64,
+      "height": 80,
+      "anchor": [
+        32.0,
+        80
+      ],
+      "origin": [
+        0.5,
+        1
+      ],
+      "sourceCrop": [
+        60,
+        0,
+        635,
+        610
+      ],
+      "scale": 0.1,
+      "visibleBounds": [
+        5,
+        22,
+        58,
+        80
+      ],
+      "collidable": false
+    },
+    {
+      "id": "bush",
+      "file": "bush.png",
+      "width": 48,
+      "height": 32,
+      "anchor": [
+        24.0,
+        32
+      ],
+      "origin": [
+        0.5,
+        1
+      ],
+      "sourceCrop": [
+        630,
+        320,
+        1030,
+        610
+      ],
+      "scale": 0.1,
+      "visibleBounds": [
+        6,
+        9,
+        41,
+        32
+      ],
+      "collidable": false
+    },
+    {
+      "id": "flowers",
+      "file": "flowers.png",
+      "width": 32,
+      "height": 32,
+      "anchor": [
+        16.0,
+        32
+      ],
+      "origin": [
+        0.5,
+        1
+      ],
+      "sourceCrop": [
+        1090,
+        300,
+        1430,
+        565
+      ],
+      "scale": 0.1,
+      "visibleBounds": [
+        1,
+        10,
+        30,
+        32
+      ],
+      "collidable": false
+    },
+    {
+      "id": "fence",
+      "file": "fence.png",
+      "width": 48,
+      "height": 32,
+      "anchor": [
+        24.0,
+        32
+      ],
+      "origin": [
+        0.5,
+        1
+      ],
+      "sourceCrop": [
+        170,
+        670,
+        600,
+        990
+      ],
+      "scale": 0.1,
+      "visibleBounds": [
+        5,
+        4,
+        42,
+        32
+      ],
+      "collidable": false
+    },
+    {
+      "id": "sign",
+      "file": "sign.png",
+      "width": 32,
+      "height": 48,
+      "anchor": [
+        16.0,
+        48
+      ],
+      "origin": [
+        0.5,
+        1
+      ],
+      "sourceCrop": [
+        690,
+        630,
+        1000,
+        1020
+      ],
+      "scale": 0.1,
+      "visibleBounds": [
+        2,
+        15,
+        29,
+        48
+      ],
+      "collidable": false
+    },
+    {
+      "id": "lamp",
+      "file": "lamp.png",
+      "width": 32,
+      "height": 48,
+      "anchor": [
+        16.0,
+        48
+      ],
+      "origin": [
+        0.5,
+        1
+      ],
+      "sourceCrop": [
+        1150,
+        565,
+        1340,
+        1024
+      ],
+      "scale": 0.1,
+      "visibleBounds": [
+        9,
+        4,
+        23,
+        48
+      ],
+      "collidable": false
+    }
+  ],
+  "integration": "Decorative only. Place origin bottom centre at ground height. No collision geometry.",
+  "visualReview": "Static contact sheet reviewed; in-engine composition pending."
+}

@@ -1,0 +1,510 @@
+{
+  "n64": {
+    "name": "Nintendo 64",
+    "asset": "/models/hardware/n64.glb?v=4",
+    "size": [
+      2.4,
+      0.66,
+      1.65
+    ],
+    "media": {
+      "asset": "/models/hardware/n64-media.glb?v=2",
+      "type": "cartridge",
+      "size": [
+        1.32,
+        0.88,
+        0.16
+      ],
+      "label": {
+        "position": [
+          0,
+          0.04,
+          0.0835
+        ],
+        "size": [
+          0.92,
+          0.58
+        ]
+      }
+    },
+    "insertion": {
+      "mode": "cart",
+      "approach": [
+        0,
+        1.14,
+        -0.22
+      ],
+      "contact": [
+        0,
+        1.04,
+        -0.22
+      ],
+      "seated": [
+        0,
+        0.77,
+        -0.22
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    "moving": {
+      "power": {
+        "node": "PowerButton",
+        "axis": "y",
+        "travel": -0.025
+      }
+    },
+    "display": "crt"
+  },
+  "gamecube": {
+    "name": "GameCube",
+    "asset": "/models/hardware/gamecube.glb?v=4",
+    "size": [
+      2.0,
+      1.04,
+      1.9
+    ],
+    "media": {
+      "asset": "/models/hardware/gamecube-media.glb?v=2",
+      "type": "disc",
+      "size": [
+        1.1,
+        1.1,
+        0.014
+      ],
+      "label": {
+        "position": [
+          0,
+          0,
+          0.01
+        ],
+        "size": [
+          1.03,
+          1.03
+        ]
+      }
+    },
+    "insertion": {
+      "mode": "top",
+      "approach": [
+        0,
+        1.43,
+        0
+      ],
+      "contact": [
+        0,
+        1.035,
+        0
+      ],
+      "seated": [
+        0,
+        0.995,
+        0
+      ],
+      "rotation": [
+        -1.5707963267948966,
+        0,
+        0
+      ]
+    },
+    "moving": {
+      "power": {
+        "node": "PowerButton",
+        "axis": "y",
+        "travel": -0.025
+      },
+      "lid": {
+        "node": "Lid",
+        "openAngle": -1.6
+      }
+    },
+    "display": "crt"
+  },
+  "gameboy": {
+    "name": "Game Boy",
+    "asset": "/models/hardware/gameboy.glb?v=4",
+    "size": [
+      1.06,
+      1.76,
+      0.3
+    ],
+    "media": {
+      "asset": "/models/hardware/gameboy-media.glb?v=2",
+      "type": "cartridge",
+      "size": [
+        0.69,
+        0.71,
+        0.105
+      ],
+      "label": {
+        "position": [
+          0,
+          0.02,
+          0.056
+        ],
+        "size": [
+          0.51,
+          0.45
+        ]
+      }
+    },
+    "insertion": {
+      "mode": "cart",
+      "approach": [
+        0,
+        2.12,
+        -0.05
+      ],
+      "contact": [
+        0,
+        2.075,
+        -0.05
+      ],
+      "seated": [
+        0,
+        1.36,
+        -0.05
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    "moving": {
+      "power": {
+        "node": "PowerButton",
+        "axis": "y",
+        "travel": -0.025
+      }
+    },
+    "display": "handheld",
+    "screen": {
+      "node": "Display_Surface",
+      "position": [
+        0,
+        1.195,
+        0.195
+      ],
+      "size": [
+        0.6,
+        0.54
+      ]
+    }
+  },
+  "ps2": {
+    "name": "PlayStation 2",
+    "asset": "/models/hardware/ps2.glb?v=4",
+    "size": [
+      2.4,
+      0.65,
+      1.65
+    ],
+    "media": {
+      "asset": "/models/hardware/ps2-media.glb?v=2",
+      "type": "disc",
+      "size": [
+        1.22,
+        1.22,
+        0.014
+      ],
+      "label": {
+        "position": [
+          0,
+          0,
+          0.01
+        ],
+        "size": [
+          1.15,
+          1.15
+        ]
+      }
+    },
+    "insertion": {
+      "mode": "tray",
+      "approach": [
+        -0.28,
+        1.03,
+        1.35
+      ],
+      "contact": [
+        -0.28,
+        0.393,
+        1.35
+      ],
+      "seated": [
+        -0.28,
+        0.38,
+        0.20000000000000018
+      ],
+      "rotation": [
+        -1.5707963267948966,
+        0,
+        0
+      ]
+    },
+    "moving": {
+      "power": {
+        "node": "PowerButton",
+        "axis": "y",
+        "travel": -0.025
+      },
+      "tray": {
+        "node": "Tray",
+        "openDistance": 1.15
+      }
+    },
+    "display": "crt"
+  },
+  "ps3": {
+    "name": "PlayStation 3",
+    "asset": "/models/hardware/ps3.glb?v=4",
+    "size": [
+      2.4,
+      0.73,
+      1.65
+    ],
+    "media": {
+      "asset": "/models/hardware/ps3-media.glb?v=2",
+      "type": "disc",
+      "size": [
+        1.22,
+        1.22,
+        0.014
+      ],
+      "label": {
+        "position": [
+          0,
+          0,
+          0.01
+        ],
+        "size": [
+          1.15,
+          1.15
+        ]
+      }
+    },
+    "insertion": {
+      "mode": "slot",
+      "approach": [
+        -0.28,
+        0.335,
+        1.5
+      ],
+      "contact": [
+        -0.28,
+        0.335,
+        1.37
+      ],
+      "seated": [
+        -0.28,
+        0.335,
+        0.1
+      ],
+      "rotation": [
+        -1.5707963267948966,
+        0,
+        0
+      ]
+    },
+    "moving": {
+      "power": {
+        "node": "PowerButton",
+        "axis": "y",
+        "travel": -0.025
+      }
+    },
+    "display": "modern"
+  },
+  "xbox": {
+    "name": "Xbox",
+    "asset": "/models/hardware/xbox.glb?v=4",
+    "size": [
+      2.4,
+      0.74,
+      1.74
+    ],
+    "media": {
+      "asset": "/models/hardware/xbox-media.glb?v=2",
+      "type": "disc",
+      "size": [
+        1.22,
+        1.22,
+        0.014
+      ],
+      "label": {
+        "position": [
+          0,
+          0,
+          0.01
+        ],
+        "size": [
+          1.15,
+          1.15
+        ]
+      }
+    },
+    "insertion": {
+      "mode": "tray",
+      "approach": [
+        -0.3,
+        1.03,
+        1.45
+      ],
+      "contact": [
+        -0.3,
+        0.463,
+        1.45
+      ],
+      "seated": [
+        -0.3,
+        0.45,
+        0.30000000000000004
+      ],
+      "rotation": [
+        -1.5707963267948966,
+        0,
+        0
+      ]
+    },
+    "moving": {
+      "power": {
+        "node": "PowerButton",
+        "axis": "y",
+        "travel": -0.025
+      },
+      "tray": {
+        "node": "Tray",
+        "openDistance": 1.15
+      }
+    },
+    "display": "crt"
+  },
+  "xbox360": {
+    "name": "Xbox 360",
+    "asset": "/models/hardware/xbox360.glb?v=5",
+    "size": [
+      2.4,
+      0.64,
+      1.65
+    ],
+    "media": {
+      "asset": "/models/hardware/xbox360-media.glb?v=5",
+      "type": "disc",
+      "size": [
+        1.22,
+        1.22,
+        0.014
+      ],
+      "label": {
+        "position": [
+          0,
+          0,
+          0.01
+        ],
+        "size": [
+          1.15,
+          1.15
+        ]
+      }
+    },
+    "insertion": {
+      "mode": "slot",
+      "approach": [
+        -0.3,
+        0.365,
+        1.52
+      ],
+      "contact": [
+        -0.3,
+        0.365,
+        1.38
+      ],
+      "seated": [
+        -0.3,
+        0.365,
+        0.2
+      ],
+      "rotation": [
+        -1.5707963267948966,
+        0,
+        0
+      ]
+    },
+    "moving": {
+      "power": {
+        "node": "PowerButton",
+        "axis": "y",
+        "travel": -0.025
+      }
+    },
+    "display": "modern"
+  },
+  "nes": {
+    "name": "Nintendo NES",
+    "asset": "/models/hardware/nes.glb?v=4",
+    "size": [
+      2.4,
+      0.73,
+      1.65
+    ],
+    "media": {
+      "asset": "/models/hardware/nes-media.glb?v=4",
+      "type": "cartridge",
+      "size": [
+        0.98,
+        1.2,
+        0.18
+      ],
+      "label": {
+        "position": [
+          -0.08,
+          -0.01,
+          0.098
+        ],
+        "size": [
+          0.64,
+          0.82
+        ]
+      }
+    },
+    "insertion": {
+      "mode": "front",
+      "approach": [
+        -0.25,
+        0.42,
+        1.62
+      ],
+      "contact": [
+        -0.25,
+        0.42,
+        1.2
+      ],
+      "seated": [
+        -0.25,
+        0.31,
+        0.12
+      ],
+      "rotation": [
+        -1.5707963267948966,
+        0,
+        0
+      ]
+    },
+    "moving": {
+      "lid": {
+        "node": "Lid",
+        "openAngle": -1.6
+      },
+      "power": {
+        "node": "PowerButton",
+        "axis": "z",
+        "travel": -0.025
+      }
+    },
+    "display": "crt"
+  }
+}

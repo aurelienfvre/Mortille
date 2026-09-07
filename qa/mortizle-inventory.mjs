@@ -1,0 +1,3 @@
+import fs from 'node:fs';
+const names=['aurelien-mortizle-v1','julien-mortizle-v1','gorille-mortizle-v1','mango-german-shepherd','steve-jack-russell','mortizle-cabinet'];
+const inventory=[];for(const name of names){const path=`public/models/${name}.glb`;if(!fs.existsSync(path))continue;const b=fs.readFileSync(path),j=JSON.parse(b.subarray(20,20+b.readUInt32LE(12)));let triangles=0,primitives=0;for(const m of j.meshes??[])for(const p of m.primitives){if((p.mode??4)===4)triangles+=(j.accessors[p.indices??p.attributes.POSITION].count)/3;primitives++;}inventory.push({name,bytes:b.length,triangles,primitives,animations:j.animations?.map(a=>a.name)||[]});}console.log(JSON.stringify(inventory,null,2));

@@ -1,0 +1,258 @@
+{
+  "totalSamples": 35014,
+  "poses": 41,
+  "threshold": 0.0007,
+  "results": [
+    {
+      "q": 0,
+      "hits": 0
+    },
+    {
+      "q": 0.025,
+      "hits": 0
+    },
+    {
+      "q": 0.05,
+      "hits": 0
+    },
+    {
+      "q": 0.075,
+      "hits": 0
+    },
+    {
+      "q": 0.1,
+      "hits": 0
+    },
+    {
+      "q": 0.125,
+      "hits": 0
+    },
+    {
+      "q": 0.15,
+      "hits": 0
+    },
+    {
+      "q": 0.175,
+      "hits": 0
+    },
+    {
+      "q": 0.2,
+      "hits": 0
+    },
+    {
+      "q": 0.225,
+      "hits": 0
+    },
+    {
+      "q": 0.25,
+      "hits": 0
+    },
+    {
+      "q": 0.275,
+      "hits": 0
+    },
+    {
+      "q": 0.3,
+      "hits": 0
+    },
+    {
+      "q": 0.325,
+      "hits": 0
+    },
+    {
+      "q": 0.35,
+      "hits": 0
+    },
+    {
+      "q": 0.375,
+      "hits": 0
+    },
+    {
+      "q": 0.4,
+      "hits": 0
+    },
+    {
+      "q": 0.425,
+      "hits": 0
+    },
+    {
+      "q": 0.45,
+      "hits": 0
+    },
+    {
+      "q": 0.475,
+      "hits": 0
+    },
+    {
+      "q": 0.5,
+      "hits": 0
+    },
+    {
+      "q": 0.525,
+      "hits": 0
+    },
+    {
+      "q": 0.55,
+      "hits": 0
+    },
+    {
+      "q": 0.575,
+      "hits": 0
+    },
+    {
+      "q": 0.6,
+      "hits": 0
+    },
+    {
+      "q": 0.625,
+      "hits": 0
+    },
+    {
+      "q": 0.65,
+      "hits": 0
+    },
+    {
+      "q": 0.675,
+      "hits": 0
+    },
+    {
+      "q": 0.7,
+      "hits": 0
+    },
+    {
+      "q": 0.725,
+      "hits": 0
+    },
+    {
+      "q": 0.75,
+      "hits": 0
+    },
+    {
+      "q": 0.775,
+      "hits": 0
+    },
+    {
+      "q": 0.8,
+      "hits": 0
+    },
+    {
+      "q": 0.825,
+      "hits": 0
+    },
+    {
+      "q": 0.85,
+      "hits": 0
+    },
+    {
+      "q": 0.875,
+      "hits": 0
+    },
+    {
+      "q": 0.9,
+      "hits": 0
+    },
+    {
+      "q": 0.925,
+      "hits": 0
+    },
+    {
+      "q": 0.95,
+      "hits": 0
+    },
+    {
+      "q": 0.975,
+      "hits": 0
+    },
+    {
+      "q": 1,
+      "hits": 0
+    }
+  ],
+  "validation": {
+    "file": "xbox360.glb",
+    "bytes": 807016,
+    "triangles": 14240,
+    "primitives": 12,
+    "errors": 0,
+    "warnings": 0,
+    "nodes": [
+      "Power switch",
+      "PowerButton",
+      "xbox360_Shell"
+    ],
+    "issues": [
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/0/primitives/0/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/1/primitives/0/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/1/primitives/1/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/1/primitives/2/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/1/primitives/3/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/1/primitives/4/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/1/primitives/5/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/1/primitives/6/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/1/primitives/7/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/1/primitives/8/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/1/primitives/9/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/1/primitives/10/attributes/TEXCOORD_0"
+      }
+    ]
+  }
+}

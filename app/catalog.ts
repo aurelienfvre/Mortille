@@ -1,0 +1,111 @@
+export const games = [
+  {
+    id: 'mario',
+    name: 'MARIOMORTILLE',
+    short: 'Aventure',
+    genre: 'Plateforme',
+    color: '#6ddce9',
+    tag: 'Sautez. Collectez. Rénovez.',
+    description:
+      'Traversez les toits, récupérez les cellules d’énergie et rejoignez la maison à rénover.',
+    keys: '← → ou Q D : bouger · Espace : sauter',
+    goal: 'Rejoindre la maison au bout du quartier.',
+  },
+  {
+    id: 'pac',
+    name: 'PACMORILLE',
+    short: 'Labyrinthe',
+    genre: 'Arcade',
+    color: '#a496f3',
+    tag: 'Ne laissez aucune énergie se perdre.',
+    description:
+      'Récupérez chaque étincelle dans le labyrinthe en évitant les gaspilleurs.',
+    keys: 'Flèches ou Z Q S D : se déplacer',
+    goal: 'Récupérer toutes les étincelles.',
+  },
+  {
+    id: 'invaders',
+    name: 'INVAGLORILLE',
+    short: 'Invasion',
+    genre: 'Tir',
+    color: '#b7a2ff',
+    tag: 'La dernière ligne de défense.',
+    description:
+      'Défendez le réseau électrique face aux vagues de gaspilleurs venus du ciel.',
+    keys: '← → ou Q D : bouger · Espace : tirer',
+    goal: 'Repousser les trois vagues.',
+  },
+  {
+    id: 'pong',
+    name: 'PONGORTEIL',
+    short: 'Duel',
+    genre: 'Sport',
+    color: '#84e2cd',
+    tag: 'Chaque échange compte.',
+    description:
+      'Défiez la machine dans un duel de raquettes. Le premier à sept remporte la partie.',
+    keys: '↑ ↓ ou Z S : bouger · Tactile : glisser',
+    goal: 'Marquer 7 points avant la machine.',
+  },
+  {
+    id: 'snake',
+    name: 'SNAKMORILLE',
+    short: 'Circuit',
+    genre: 'Réflexe',
+    color: '#b5dc79',
+    tag: 'Faites grandir le circuit.',
+    description:
+      'Reliez les cellules d’énergie sans croiser votre câble ni toucher les limites.',
+    keys: 'Flèches ou Z Q S D : tourner',
+    goal: 'Collecter 20 cellules.',
+  },
+  {
+    id: 'doctor',
+    name: 'DOCTOMORTILLE',
+    short: 'Réparation',
+    genre: 'Précision',
+    color: '#fcafa7',
+    tag: 'Juste au bon moment.',
+    description:
+      'Stabilisez les chaudières : arrêtez le curseur dans la zone verte pour chaque réparation.',
+    keys: 'Espace ou toucher : intervenir',
+    goal: 'Réussir 10 réparations avant 3 erreurs.',
+  },
+  {
+    id: 'strike',
+    name: 'STRIKEGLORILLE',
+    short: 'Mission',
+    genre: 'Action',
+    color: '#80badf',
+    tag: 'Rendez l’énergie au quartier.',
+    description:
+      'Avancez dans le quartier, esquivez les drones et neutralisez les gaspilleurs.',
+    keys: '← → : bouger · ↑ : sauter · Espace : tirer',
+    goal: 'Neutraliser les 12 drones.',
+  },
+  {
+    id: 'tetris',
+    name: 'TÉTRORTEIL',
+    short: 'Construction',
+    genre: 'Puzzle',
+    color: '#d99ddd',
+    tag: 'Une ligne. Une énergie nouvelle.',
+    description:
+      'Emboîtez les matériaux et complétez des lignes pour isoler le bâtiment.',
+    keys: '← → : déplacer · ↑ : tourner · ↓ : descendre · Espace : chute',
+    goal: 'Compléter 10 lignes.',
+  },
+  {
+    id: 'kart',
+    name: 'KARTORTEIL',
+    short: 'Grand tour',
+    genre: 'Course',
+    color: '#ffad6b',
+    tag: 'Branchez le turbo.',
+    description:
+      'Prenez le volant de votre kart électrique. Évitez les obstacles et ramassez les batteries.',
+    keys: '← → ou Q D : diriger · Maintenir Espace : turbo',
+    goal: 'Atteindre la ligne d’arrivée en gardant de l’énergie.',
+  },
+] as const;
+export type GameId = (typeof games)[number]['id'];
