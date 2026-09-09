@@ -1,0 +1,26 @@
+.intro{--story-actor-size:96px;--text-scale:2;--ink:#111629;--paper:#fff1bc;--gold:#ffbd38;position:absolute;inset:0;z-index:35;overflow:hidden;background:#124bbb;color:var(--paper);outline:none;isolation:isolate}
+.world{position:absolute;inset:0 0 14%;background:url('/mariomortille/story/retro/village.png') center bottom/100% 100% no-repeat;image-rendering:pixelated}
+.world::after{content:'';position:absolute;inset:0 0 64%;background:#0050e6;clip-path:polygon(0 0,100% 0,100% 83%,73% 83%,73% 100%,0 100%)}
+.header{position:absolute;top:16px;left:20px;right:20px;display:flex;gap:16px;align-items:center;color:var(--paper)}
+.header>div:first-child{padding:10px 12px;background:var(--ink);border:2px solid var(--paper);box-shadow:4px 4px 0 #060a14;color:var(--gold)}
+.header svg{display:block}.header button{margin-left:auto;border:2px solid var(--paper);background:var(--ink);color:var(--paper);padding:10px 12px;cursor:pointer;box-shadow:4px 4px 0 #060a14}.chapter{background:var(--ink);padding:6px}
+.cast{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.actor{position:absolute;bottom:calc(33% - var(--story-actor-size)*8/96);width:var(--story-actor-size);height:var(--story-actor-size);transform:translateX(-50%);pointer-events:none}
+.actor img{width:100%;height:100%;display:block;image-rendering:pixelated;object-fit:contain}
+.clouds{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.clouds img{position:absolute;width:clamp(100px,18vw,260px);height:auto;image-rendering:pixelated}
+.dialogue{--bubble-width:min(380px,calc(100% - 32px));--bubble-left:clamp(16px,calc(var(--speaker-x,50%) - var(--bubble-width)/2),calc(100% - var(--bubble-width) - 16px));position:absolute;left:var(--bubble-left);bottom:calc(33% + var(--story-actor-size)*88/96 + 18px);width:var(--bubble-width);box-sizing:border-box;display:grid;gap:12px;padding:14px 16px;background:var(--paper);color:var(--ink);border:4px solid var(--ink);box-shadow:4px 4px 0 #111629;z-index:2}
+.dialogue::before,.dialogue::after{content:'';position:absolute;left:var(--tail-x,50%);width:12px;height:12px;image-rendering:pixelated}
+.dialogue::before{bottom:-16px;background:var(--ink);box-shadow:4px 0 var(--ink)}
+.dialogue::after{bottom:-8px;background:var(--paper);width:8px;height:12px}
+.dialogue strong{color:#75421c;display:flex;align-items:center}.sentence{margin:0;min-height:32px}.words{display:flex;gap:10px 8px;flex-wrap:wrap;align-content:start}.words svg{display:block;flex:none}
+.dialogue button{justify-self:end;display:flex;gap:12px;align-items:center;border:0;background:none;color:#75421c;cursor:pointer;padding:4px 0}.dialogue button:disabled{opacity:.4;cursor:wait}
+.nextArrow{width:0;height:0;border-top:6px solid transparent;border-bottom:6px solid transparent;border-left:8px solid currentColor;animation:prompt 1s steps(2,end) infinite}
+.header button:focus-visible,.dialogue button:focus-visible{outline:3px solid var(--gold);outline-offset:4px}.header button:hover{color:#fff}.dialogue button:hover{color:#111629}
+.progress{position:absolute;bottom:24px;left:48px;display:flex;gap:6px}.progress i{width:8px;height:4px;background:#3c4b76}.progress .seen{background:var(--gold)}
+.srOnly{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+@keyframes prompt{50%{visibility:hidden}}
+@media(min-width:900px){.intro{--story-actor-size:192px}}
+@media(max-width:700px){.intro{--text-scale:1}.header{top:10px;left:12px;right:12px;gap:8px}.dialogue{--bubble-width:min(270px,calc(100% - 24px));padding:10px 12px;gap:8px}.words{gap:7px 5px}.sentence{min-height:20px}.progress{left:20px;bottom:18px}}
+@media(max-height:480px){.dialogue{--text-scale:1;--bubble-width:min(340px,calc(100% - 32px));gap:7px;padding:9px 12px}.header{top:8px}.header>div:first-child,.header button{padding:6px}}
+@media(prefers-reduced-motion:reduce){.nextArrow{animation:none}}

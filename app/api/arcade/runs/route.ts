@@ -1,3 +1,4 @@
+import { unlockQuery } from '../../../../db/ranking';
 import { database, body, requirePlayer, failure, ApiError } from '../../../../db/runtime';
 import { quartierLevels } from '../../../mariomortille/levels';
 import { calculateResult, REPLAY_VERSION } from '../../../mariomortille/scoring';
@@ -7,7 +8,7 @@ export async function POST(request: Request) {
     if (data.action === 'start') {
       if (data.gameId !== 'mario') throw new ApiError(400, 'Jeu inconnu.');
       const index = quartierLevels.findIndex(l => l.id === data.levelId); if (index < 0) throw new ApiError(400, 'Niveau inconnu.');
-      if (index > 0) { const unlocked = await db.prepare('SELECT id FROM arcade_runs WHERE player_id = ? AND game_id = ? AND level_id = ? AND finished_at IS NOT NULL AND replay_version = ? LIMIT 1').bind(guest.id, 'mario', quartierLevels[index - 1].id, REPLAY_VERSION).first(); if (!unlocked) throw new ApiError(403, 'Termine le niveau précédent.'); }
+      if (index > 0) { const unlocked = await db.prepare(unlockQuery).bind(guest.id, 'mario', quartierLevels[index - 1].id, REPLAY_VERSION).first(); if (!unlocked) throw new ApiError(403, 'Termine le niveau précédent.'); }
       const recent = await db.prepare('SELECT COUNT(*) AS count FROM arcade_runs WHERE player_id = ? AND started_at > ?').bind(guest.id, Date.now() - 60000).first<{ count: number }>();
       if ((recent?.count ?? 0) >= 12) throw new ApiError(429, 'Attends quelques secondes avant de relancer.');
       const id = crypto.randomUUID(); await db.prepare('INSERT INTO arcade_runs (id, player_id, game_id, level_id, started_at, replay_version) VALUES (?, ?, ?, ?, ?, ?)').bind(id, guest.id, 'mario', data.levelId, Date.now(), REPLAY_VERSION).run();

@@ -1,358 +1,11 @@
 {
-  "version": 1,
-  "frames": [
-    {
-      "key": "coin-01",
-      "url": "/mariomortille/items/coin-01.png",
-      "size": [
-        32,
-        32
-      ],
-      "displaySize": [
-        16,
-        16
-      ],
-      "anchor": [
-        16,
-        16
-      ],
-      "bbox": [
-        5,
-        4,
-        27,
-        27
-      ]
-    },
-    {
-      "key": "coin-02",
-      "url": "/mariomortille/items/coin-02.png",
-      "size": [
-        32,
-        32
-      ],
-      "displaySize": [
-        16,
-        16
-      ],
-      "anchor": [
-        16,
-        16
-      ],
-      "bbox": [
-        7,
-        4,
-        24,
-        27
-      ]
-    },
-    {
-      "key": "coin-03",
-      "url": "/mariomortille/items/coin-03.png",
-      "size": [
-        32,
-        32
-      ],
-      "displaySize": [
-        16,
-        16
-      ],
-      "anchor": [
-        16,
-        16
-      ],
-      "bbox": [
-        12,
-        4,
-        20,
-        28
-      ]
-    },
-    {
-      "key": "coin-04",
-      "url": "/mariomortille/items/coin-04.png",
-      "size": [
-        32,
-        32
-      ],
-      "displaySize": [
-        16,
-        16
-      ],
-      "anchor": [
-        16,
-        16
-      ],
-      "bbox": [
-        6,
-        4,
-        25,
-        27
-      ]
-    },
-    {
-      "key": "coin-05",
-      "url": "/mariomortille/items/coin-05.png",
-      "size": [
-        32,
-        32
-      ],
-      "displaySize": [
-        16,
-        16
-      ],
-      "anchor": [
-        16,
-        16
-      ],
-      "bbox": [
-        5,
-        4,
-        27,
-        27
-      ]
-    },
-    {
-      "key": "coin-06",
-      "url": "/mariomortille/items/coin-06.png",
-      "size": [
-        32,
-        32
-      ],
-      "displaySize": [
-        16,
-        16
-      ],
-      "anchor": [
-        16,
-        16
-      ],
-      "bbox": [
-        7,
-        4,
-        24,
-        28
-      ]
-    },
-    {
-      "key": "coin-07",
-      "url": "/mariomortille/items/coin-07.png",
-      "size": [
-        32,
-        32
-      ],
-      "displaySize": [
-        16,
-        16
-      ],
-      "anchor": [
-        16,
-        16
-      ],
-      "bbox": [
-        12,
-        4,
-        20,
-        27
-      ]
-    },
-    {
-      "key": "coin-08",
-      "url": "/mariomortille/items/coin-08.png",
-      "size": [
-        32,
-        32
-      ],
-      "displaySize": [
-        16,
-        16
-      ],
-      "anchor": [
-        16,
-        16
-      ],
-      "bbox": [
-        6,
-        4,
-        25,
-        28
-      ]
-    },
-    {
-      "key": "secret-01",
-      "url": "/mariomortille/items/secret-01.png",
-      "size": [
-        32,
-        32
-      ],
-      "displaySize": [
-        16,
-        16
-      ],
-      "anchor": [
-        16,
-        16
-      ],
-      "bbox": [
-        4,
-        4,
-        27,
-        28
-      ]
-    },
-    {
-      "key": "secret-02",
-      "url": "/mariomortille/items/secret-02.png",
-      "size": [
-        32,
-        32
-      ],
-      "displaySize": [
-        16,
-        16
-      ],
-      "anchor": [
-        16,
-        16
-      ],
-      "bbox": [
-        4,
-        4,
-        27,
-        28
-      ]
-    },
-    {
-      "key": "secret-03",
-      "url": "/mariomortille/items/secret-03.png",
-      "size": [
-        32,
-        32
-      ],
-      "displaySize": [
-        16,
-        16
-      ],
-      "anchor": [
-        16,
-        16
-      ],
-      "bbox": [
-        4,
-        4,
-        27,
-        28
-      ]
-    },
-    {
-      "key": "secret-04",
-      "url": "/mariomortille/items/secret-04.png",
-      "size": [
-        32,
-        32
-      ],
-      "displaySize": [
-        16,
-        16
-      ],
-      "anchor": [
-        16,
-        16
-      ],
-      "bbox": [
-        4,
-        4,
-        27,
-        28
-      ]
-    },
-    {
-      "key": "pickup-turbo",
-      "url": "/mariomortille/items/pickup-turbo.png",
-      "size": [
-        32,
-        32
-      ],
-      "displaySize": [
-        16,
-        16
-      ],
-      "anchor": [
-        16,
-        16
-      ],
-      "bbox": [
-        3,
-        4,
-        28,
-        28
-      ]
-    },
-    {
-      "key": "pickup-ember",
-      "url": "/mariomortille/items/pickup-ember.png",
-      "size": [
-        32,
-        32
-      ],
-      "displaySize": [
-        16,
-        16
-      ],
-      "anchor": [
-        16,
-        16
-      ],
-      "bbox": [
-        5,
-        4,
-        27,
-        28
-      ]
-    },
-    {
-      "key": "pickup-cloud",
-      "url": "/mariomortille/items/pickup-cloud.png",
-      "size": [
-        32,
-        32
-      ],
-      "displaySize": [
-        16,
-        16
-      ],
-      "anchor": [
-        16,
-        16
-      ],
-      "bbox": [
-        4,
-        4,
-        28,
-        27
-      ]
-    },
-    {
-      "key": "pickup-cobalt",
-      "url": "/mariomortille/items/pickup-cobalt.png",
-      "size": [
-        32,
-        32
-      ],
-      "displaySize": [
-        16,
-        16
-      ],
-      "anchor": [
-        16,
-        16
-      ],
-      "bbox": [
-        3,
-        4,
-        29,
-        28
-      ]
-    }
+  "size": [
+    32,
+    32
+  ],
+  "alpha": [
+    0,
+    255
   ],
   "animations": {
     "coin": {
@@ -364,19 +17,277 @@
         "coin-05",
         "coin-06",
         "coin-07",
-        "coin-08"
+        "coin-08",
+        "coin-09",
+        "coin-10",
+        "coin-11",
+        "coin-12",
+        "coin-13",
+        "coin-14",
+        "coin-15",
+        "coin-16"
       ],
-      "fps": 10
+      "fps": 15,
+      "loop": true
+    },
+    "pickup-ember": {
+      "frames": [
+        "pickup-ember-01",
+        "pickup-ember-02",
+        "pickup-ember-03",
+        "pickup-ember-04",
+        "pickup-ember-05",
+        "pickup-ember-06",
+        "pickup-ember-07",
+        "pickup-ember-08",
+        "pickup-ember-09",
+        "pickup-ember-10",
+        "pickup-ember-11",
+        "pickup-ember-12",
+        "pickup-ember-13",
+        "pickup-ember-14",
+        "pickup-ember-15",
+        "pickup-ember-16"
+      ],
+      "fps": 15,
+      "loop": true
+    },
+    "pickup-turbo": {
+      "frames": [
+        "pickup-turbo-01",
+        "pickup-turbo-02",
+        "pickup-turbo-03",
+        "pickup-turbo-04",
+        "pickup-turbo-05",
+        "pickup-turbo-06",
+        "pickup-turbo-07",
+        "pickup-turbo-08",
+        "pickup-turbo-09",
+        "pickup-turbo-10",
+        "pickup-turbo-11",
+        "pickup-turbo-12",
+        "pickup-turbo-13",
+        "pickup-turbo-14",
+        "pickup-turbo-15",
+        "pickup-turbo-16"
+      ],
+      "fps": 15,
+      "loop": true
+    },
+    "pickup-cloud": {
+      "frames": [
+        "pickup-cloud-01",
+        "pickup-cloud-02",
+        "pickup-cloud-03",
+        "pickup-cloud-04",
+        "pickup-cloud-05",
+        "pickup-cloud-06",
+        "pickup-cloud-07",
+        "pickup-cloud-08",
+        "pickup-cloud-09",
+        "pickup-cloud-10",
+        "pickup-cloud-11",
+        "pickup-cloud-12",
+        "pickup-cloud-13",
+        "pickup-cloud-14",
+        "pickup-cloud-15",
+        "pickup-cloud-16"
+      ],
+      "fps": 15,
+      "loop": true
+    },
+    "pickup-cobalt": {
+      "frames": [
+        "pickup-cobalt-01",
+        "pickup-cobalt-02",
+        "pickup-cobalt-03",
+        "pickup-cobalt-04",
+        "pickup-cobalt-05",
+        "pickup-cobalt-06",
+        "pickup-cobalt-07",
+        "pickup-cobalt-08",
+        "pickup-cobalt-09",
+        "pickup-cobalt-10",
+        "pickup-cobalt-11",
+        "pickup-cobalt-12",
+        "pickup-cobalt-13",
+        "pickup-cobalt-14",
+        "pickup-cobalt-15",
+        "pickup-cobalt-16"
+      ],
+      "fps": 15,
+      "loop": true
     },
     "secret": {
       "frames": [
         "secret-01",
         "secret-02",
         "secret-03",
-        "secret-04"
+        "secret-04",
+        "secret-05",
+        "secret-06",
+        "secret-07",
+        "secret-08",
+        "secret-09",
+        "secret-10",
+        "secret-11",
+        "secret-12",
+        "secret-13",
+        "secret-14",
+        "secret-15",
+        "secret-16"
       ],
-      "fps": 6.25
+      "fps": 15,
+      "loop": true
+    },
+    "fireball": {
+      "frames": [
+        "fireball-01",
+        "fireball-02",
+        "fireball-03",
+        "fireball-04",
+        "fireball-05",
+        "fireball-06",
+        "fireball-07",
+        "fireball-08"
+      ],
+      "fps": 10,
+      "loop": true
+    },
+    "impact": {
+      "frames": [
+        "impact-01",
+        "impact-02",
+        "impact-03",
+        "impact-04",
+        "impact-05",
+        "impact-06",
+        "impact-07",
+        "impact-08"
+      ],
+      "fps": 16,
+      "loop": false
+    },
+    "pickup-burst": {
+      "frames": [
+        "pickup-burst-01",
+        "pickup-burst-02",
+        "pickup-burst-03",
+        "pickup-burst-04",
+        "pickup-burst-05",
+        "pickup-burst-06",
+        "pickup-burst-07",
+        "pickup-burst-08"
+      ],
+      "fps": 16,
+      "loop": false
+    },
+    "smoke": {
+      "frames": [
+        "smoke-01",
+        "smoke-02",
+        "smoke-03",
+        "smoke-04",
+        "smoke-05",
+        "smoke-06"
+      ],
+      "fps": 15,
+      "loop": false
+    },
+    "transformation": {
+      "frames": [
+        "transformation-01",
+        "transformation-02",
+        "transformation-03",
+        "transformation-04",
+        "transformation-05",
+        "transformation-06",
+        "transformation-07",
+        "transformation-08"
+      ],
+      "fps": 12,
+      "loop": false
+    },
+    "dash-trail": {
+      "frames": [
+        "dash-trail-01",
+        "dash-trail-02",
+        "dash-trail-03",
+        "dash-trail-04",
+        "dash-trail-05",
+        "dash-trail-06",
+        "dash-trail-07",
+        "dash-trail-08"
+      ],
+      "fps": 12,
+      "loop": false
+    },
+    "flag-wave": {
+      "frames": [
+        "flag-wave-01",
+        "flag-wave-02",
+        "flag-wave-03",
+        "flag-wave-04",
+        "flag-wave-05",
+        "flag-wave-06",
+        "flag-wave-07",
+        "flag-wave-08"
+      ],
+      "fps": 10,
+      "loop": true,
+      "anchor": [
+        10,
+        71
+      ],
+      "frameSize": [
+        32,
+        72
+      ]
+    },
+    "flag-activate": {
+      "frames": [
+        "flag-activate-01",
+        "flag-activate-02",
+        "flag-activate-03",
+        "flag-activate-04",
+        "flag-activate-05",
+        "flag-activate-06",
+        "flag-activate-07",
+        "flag-activate-08"
+      ],
+      "fps": 10,
+      "loop": true,
+      "anchor": [
+        10,
+        71
+      ],
+      "frameSize": [
+        32,
+        72
+      ]
+    },
+    "finish-flag": {
+      "frames": [
+        "finish-flag-01",
+        "finish-flag-02",
+        "finish-flag-03",
+        "finish-flag-04",
+        "finish-flag-05",
+        "finish-flag-06",
+        "finish-flag-07",
+        "finish-flag-08"
+      ],
+      "fps": 10,
+      "loop": true,
+      "anchor": [
+        12,
+        94
+      ],
+      "frameSize": [
+        48,
+        96
+      ]
     }
   },
-  "method": "Built-in imagegen full contact sheet, fixed-slot extraction, hard alpha160, group-shared scale, nearest neighbor. No drawn checkerboard."
+  "source": "16-view item turntables; connected background removal; opaque alpha; shared clip scale"
 }

@@ -1,0 +1,282 @@
+[
+  {
+    "file": "aurelien-idle-01.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/aurel/idle-native/idle-01.png",
+    "scale": 0.36
+  },
+  {
+    "file": "aurelien-idle-02.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/aurel/idle-native/idle-02.png",
+    "scale": 0.36
+  },
+  {
+    "file": "aurelien-idle-03.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/aurel/idle-native/idle-03.png",
+    "scale": 0.36
+  },
+  {
+    "file": "aurelien-idle-04.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/aurel/idle-native/idle-04.png",
+    "scale": 0.36
+  },
+  {
+    "file": "aurelien-idle-05.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/aurel/idle-native/idle-05.png",
+    "scale": 0.36
+  },
+  {
+    "file": "aurelien-idle-06.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/aurel/idle-native/idle-06.png",
+    "scale": 0.36
+  },
+  {
+    "file": "aurelien-idle-07.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/aurel/idle-native/idle-07.png",
+    "scale": 0.36
+  },
+  {
+    "file": "aurelien-idle-08.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/aurel/idle-native/idle-08.png",
+    "scale": 0.36
+  },
+  {
+    "file": "julien-idle-01.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/juju/native/idle/frames/poses-01.png",
+    "scale": 0.38613861386138615
+  },
+  {
+    "file": "julien-idle-02.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/juju/native/idle/frames/poses-02.png",
+    "scale": 0.38613861386138615
+  },
+  {
+    "file": "julien-idle-03.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/juju/native/idle/frames/poses-03.png",
+    "scale": 0.38613861386138615
+  },
+  {
+    "file": "julien-idle-04.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/juju/native/idle/frames/poses-04.png",
+    "scale": 0.38613861386138615
+  },
+  {
+    "file": "julien-idle-05.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/juju/native/idle/frames/poses-05.png",
+    "scale": 0.38613861386138615
+  },
+  {
+    "file": "julien-idle-06.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/juju/native/idle/frames/poses-06.png",
+    "scale": 0.38613861386138615
+  },
+  {
+    "file": "julien-idle-07.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/juju/native/idle/frames/poses-07.png",
+    "scale": 0.38613861386138615
+  },
+  {
+    "file": "julien-idle-08.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/juju/native/idle/frames/poses-08.png",
+    "scale": 0.38613861386138615
+  },
+  {
+    "file": "ben-idle-01.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/ben/native/idle/frames/poses-01.png",
+    "scale": 0.38613861386138615
+  },
+  {
+    "file": "ben-idle-02.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/ben/native/idle/frames/poses-02.png",
+    "scale": 0.38613861386138615
+  },
+  {
+    "file": "ben-idle-03.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/ben/native/idle/frames/poses-03.png",
+    "scale": 0.38613861386138615
+  },
+  {
+    "file": "ben-idle-04.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/ben/native/idle/frames/poses-04.png",
+    "scale": 0.38613861386138615
+  },
+  {
+    "file": "ben-idle-05.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/ben/native/idle/frames/poses-05.png",
+    "scale": 0.38613861386138615
+  },
+  {
+    "file": "ben-idle-06.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/ben/native/idle/frames/poses-06.png",
+    "scale": 0.38613861386138615
+  },
+  {
+    "file": "ben-idle-07.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/ben/native/idle/frames/poses-07.png",
+    "scale": 0.38613861386138615
+  },
+  {
+    "file": "ben-idle-08.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/ben/native/idle/frames/poses-08.png",
+    "scale": 0.38613861386138615
+  },
+  {
+    "file": "raphael-idle-01.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/raph/native/idle-01.png",
+    "scale": 0.3706896551724138
+  },
+  {
+    "file": "raphael-idle-02.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/raph/native/idle-02.png",
+    "scale": 0.3706896551724138
+  },
+  {
+    "file": "raphael-idle-03.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/raph/native/idle-03.png",
+    "scale": 0.3706896551724138
+  },
+  {
+    "file": "raphael-idle-04.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/raph/native/idle-04.png",
+    "scale": 0.3706896551724138
+  },
+  {
+    "file": "raphael-idle-05.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/raph/native/idle-05.png",
+    "scale": 0.3706896551724138
+  },
+  {
+    "file": "raphael-idle-06.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/raph/native/idle-06.png",
+    "scale": 0.3706896551724138
+  },
+  {
+    "file": "raphael-idle-07.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/raph/native/idle-07.png",
+    "scale": 0.3706896551724138
+  },
+  {
+    "file": "raphael-idle-08.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/raph/native/idle-08.png",
+    "scale": 0.3706896551724138
+  },
+  {
+    "file": "mango-idle-01.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/mango/native/idle-01.png",
+    "scale": 0.33636363636363636
+  },
+  {
+    "file": "mango-idle-02.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/mango/native/idle-02.png",
+    "scale": 0.33636363636363636
+  },
+  {
+    "file": "mango-idle-03.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/mango/native/idle-03.png",
+    "scale": 0.33636363636363636
+  },
+  {
+    "file": "mango-idle-04.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/mango/native/idle-04.png",
+    "scale": 0.33636363636363636
+  },
+  {
+    "file": "mango-idle-05.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/mango/native/idle-05.png",
+    "scale": 0.33636363636363636
+  },
+  {
+    "file": "mango-idle-06.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/mango/native/idle-06.png",
+    "scale": 0.33636363636363636
+  },
+  {
+    "file": "mango-idle-07.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/mango/native/idle-07.png",
+    "scale": 0.33636363636363636
+  },
+  {
+    "file": "mango-idle-08.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/mango/native/idle-08.png",
+    "scale": 0.33636363636363636
+  },
+  {
+    "file": "aurelien-run-01.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/aurel/sprint-native/sprint-01.png",
+    "scale": 0.36
+  },
+  {
+    "file": "aurelien-run-02.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/aurel/sprint-native/sprint-02.png",
+    "scale": 0.36
+  },
+  {
+    "file": "aurelien-run-03.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/aurel/sprint-native/sprint-03.png",
+    "scale": 0.36
+  },
+  {
+    "file": "aurelien-run-04.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/aurel/sprint-native/sprint-04.png",
+    "scale": 0.36
+  },
+  {
+    "file": "aurelien-run-05.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/aurel/sprint-native/sprint-05.png",
+    "scale": 0.36
+  },
+  {
+    "file": "aurelien-run-06.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/aurel/sprint-native/sprint-06.png",
+    "scale": 0.36
+  },
+  {
+    "file": "aurelien-run-07.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/aurel/sprint-native/sprint-07.png",
+    "scale": 0.36
+  },
+  {
+    "file": "aurelien-run-08.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/aurel/sprint-native/sprint-08.png",
+    "scale": 0.36
+  },
+  {
+    "file": "ben-reaction-01.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/ben/prologue-reactions/frames/poses-01.png",
+    "scale": 0.38613861386138615
+  },
+  {
+    "file": "ben-reaction-02.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/ben/prologue-reactions/frames/poses-02.png",
+    "scale": 0.38613861386138615
+  },
+  {
+    "file": "ben-reaction-03.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/ben/prologue-reactions/frames/poses-03.png",
+    "scale": 0.38613861386138615
+  },
+  {
+    "file": "ben-reaction-04.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/ben/prologue-reactions/frames/poses-04.png",
+    "scale": 0.38613861386138615
+  },
+  {
+    "file": "ben-reaction-05.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/ben/prologue-reactions/frames/poses-05.png",
+    "scale": 0.38613861386138615
+  },
+  {
+    "file": "ben-reaction-06.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/ben/prologue-reactions/frames/poses-06.png",
+    "scale": 0.38613861386138615
+  },
+  {
+    "file": "ben-reaction-07.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/ben/prologue-reactions/frames/poses-07.png",
+    "scale": 0.38613861386138615
+  },
+  {
+    "file": "ben-reaction-08.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/ben/prologue-reactions/frames/poses-08.png",
+    "scale": 0.38613861386138615
+  }
+]

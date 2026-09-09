@@ -1,0 +1,18 @@
+.screen{position:absolute;inset:0;z-index:30;display:grid;place-items:center;background:#07529d url('/mariomortille/campaign/ocean-tile.png') repeat;background-size:512px 128px;image-rendering:pixelated;color:#fff4cc;font-family:monospace;outline:none;overflow:hidden;container-type:size}
+.world{position:relative;width:min(100cqw,150cqh);height:min(100cqh,66.6667cqw);aspect-ratio:3/2;overflow:hidden;isolation:isolate}
+.art{position:absolute;inset:0;width:100%;height:100%;image-rendering:pixelated;pointer-events:none}
+.top{position:absolute;left:0;right:0;top:0;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:1.5% 2.5%;background:linear-gradient(#071d36ed,#071d3655,transparent);z-index:4}
+.heading{width:40%;max-width:400px;margin:0;color:#fff3c8}.pixels{display:block;width:auto;height:clamp(18px,3cqh,32px);max-width:100%;image-rendering:pixelated}
+.back{border:2px solid #badfe7;background:#0c2849e8;color:#e6f5e7;font:700 clamp(10px,1.2vw,17px) monospace;padding:8px 12px;cursor:pointer;box-shadow:3px 3px 0 #071321}
+.back:focus-visible,.enter:focus-visible,.node:focus-visible{outline:3px solid #fff0a5;outline-offset:4px}
+.node{position:absolute;width:5.7%;height:6.7%;transform:translate(-50%,-57%);border:0;background:transparent;color:#4c2e15;font:900 clamp(11px,1.8vw,25px) monospace;cursor:pointer;z-index:3;text-shadow:1px 1px #fce1a1;display:grid;place-items:center;padding:0}
+.node::before{content:'';position:absolute;inset:8% 0 5%;border:2px solid transparent;border-radius:50%;pointer-events:none}
+.selected::before{border-color:#fff6bc;box-shadow:0 0 0 2px #8a6125,0 0 14px #ffe39499}.locked{color:#393934;text-shadow:1px 1px #c1ae82}.complete{color:#205e38}
+.hero{position:absolute;width:10%;height:auto;image-rendering:pixelated;transform-origin:center bottom;pointer-events:none;z-index:5;filter:drop-shadow(0 2px 0 #20392677)}
+.caption{position:absolute;left:2%;right:2%;bottom:1.2%;z-index:6;display:flex;align-items:center;justify-content:flex-end;gap:12px;background:transparent;padding:1.1% 1.8%;min-height:45px}
+.copy{min-width:0;display:grid;gap:4px}.name{margin:0;font-size:clamp(12px,1.6vw,22px);font-weight:900;letter-spacing:.02em}.hint{margin:0;font-size:clamp(10px,1.05vw,15px);color:#c4ddca}.enter{flex-shrink:0;border:2px solid #edc372;background:#b47124;color:#fff5d7;font:900 clamp(10px,1.15vw,16px) monospace;padding:8px 12px;cursor:pointer;box-shadow:3px 3px 0 #443115}.enter:disabled{background:#29454c;border-color:#5f7776;color:#9eafac;cursor:default}
+.sparkle{position:absolute;pointer-events:none;width:3px;height:2px;background:#d4f4ff;opacity:0;animation:waterGlint 3.6s steps(3,end) infinite;z-index:2}@keyframes waterGlint{0%,75%,100%{opacity:0}80%,90%{opacity:.8}}
+@media(prefers-reduced-motion:reduce){.sparkle{animation:none;opacity:.3}}
+@media(max-width:600px){.back{padding:5px 7px}.top{padding:1% 2%}.caption{padding:1%;gap:6px;min-height:34px}.hint{font-size:8px}.name{font-size:10px}.enter{padding:5px 6px;font-size:9px}.heading{width:45%}.hero{width:9%}.node{width:7%;height:8%}}
+
+.boss{position:absolute;width:6.2%;height:auto;image-rendering:pixelated;transform:translate(-50%,-90%);z-index:2;pointer-events:none}

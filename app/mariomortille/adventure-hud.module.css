@@ -1,0 +1,18 @@
+.overlay{--ink:#171c25;--cream:#fff0cf;--gold:#ffba4c;position:absolute;inset:12px 16px auto;z-index:4;color:var(--cream);pointer-events:none;filter:drop-shadow(2px 2px 0 #10121b)}
+.bar{display:flex;align-items:start;justify-content:flex-end;gap:8px 20px;max-width:100%;background:none;border:0;box-shadow:none;padding:0}.lives{margin-right:auto;flex-shrink:0}.lives .value{gap:4px}.lives .label{color:var(--cream)}
+.cell{display:flex;flex-direction:column;gap:8px;min-height:38px;white-space:nowrap}.label{color:var(--gold)}.text{display:inline-flex;flex-wrap:wrap;align-items:center;gap:5px 7px;line-height:0}.text svg{display:block;flex-shrink:0;max-width:100%;overflow:visible}.value{display:flex;gap:4px;align-items:center;min-height:18px}.face{display:block;width:40px;height:36px;image-rendering:pixelated;object-fit:contain}.empty{opacity:.25;filter:grayscale(1)}.item{width:24px;height:24px;image-rendering:pixelated;margin:-4px 0}.flag{width:12px;height:14px;border-left:2px solid var(--cream);background:linear-gradient(var(--gold) 0 55%,transparent 55%);margin-left:4px}
+.context{display:flex;align-items:flex-start;gap:10px;flex-wrap:wrap;margin:12px 0 0;width:fit-content;max-width:100%}.hint{max-width:410px;padding:8px 10px;background:#171c25db;border-left:4px solid var(--gold);display:flex;flex-direction:column;gap:8px}.hintTitle{color:var(--gold)}.hint>.text svg{height:14px;width:auto}.hint>.text{gap:4px}.dash{padding:7px 8px;background:#171c25c9;color:var(--cream)}.dash svg,.notice svg{height:7px;width:auto}.notice{pointer-events:auto;cursor:pointer;background:var(--ink);color:var(--gold);border:2px solid var(--gold);padding:7px 8px}.notice:focus-visible{outline:3px solid var(--cream);outline-offset:3px}
+@media(max-width:760px){.overlay{inset:8px 2% auto}.bar{gap:8px 12px;padding:0;flex-wrap:wrap;justify-content:flex-end}.lives{margin-right:auto}.face{width:40px;height:36px}.cell{gap:6px;min-height:28px}.cell .text svg{width:auto;height:7px}.value{min-height:18px}.context{margin-top:8px;gap:6px}.hint{max-width:320px}.hintTitle svg,.hint>.text svg{height:7px;width:auto}.dash{padding:6px}.item{width:16px;height:16px;margin:0}}
+@media(max-width:430px){.bar{gap:6px 10px}.cell{min-height:25px}.lives{flex-basis:100%;gap:4px}.lives .value{gap:2px}.face{width:30px;height:27px}.hint{max-width:260px}.context{justify-content:flex-start}.overlay{filter:drop-shadow(1px 1px 0 #10121b)}}
+/* Follow the fitted 640×360 playfield rather than the window's letterbox bars. */
+.overlay{top:max(8px,calc((100dvh - 56.25vw)/2 + 8px));left:max(12px,calc((100vw - 177.7778dvh)/2 + 12px));right:max(12px,calc((100vw - 177.7778dvh)/2 + 12px))}
+
+.overlay{top:calc(var(--playfield-top,0px) + 8px);left:calc(var(--playfield-left,0px) + 12px);right:calc(var(--playfield-left,0px) + 12px)}
+
+/* Quiet help lives over the ground, leaving the sky and characters unobstructed. */
+.overlay{height:calc(var(--playfield-height,100%) - 16px)}
+.context{position:absolute;left:0;right:0;bottom:10px;width:auto;max-width:none;margin:0;align-items:center;justify-content:space-between;color:#d4d6d8;gap:10px}
+.hint{padding:0;border:0;background:none;max-width:75%;display:block}
+.hint>.text svg{height:7px;width:auto}
+.dash{padding:0;background:none;color:#d4d6d8}
+@media(max-width:760px){.context{bottom:6px;gap:6px}.hint{max-width:100%}}

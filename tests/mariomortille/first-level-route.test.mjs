@@ -1,3 +1,4 @@
+import {minibossControls} from './miniboss-controls.mjs';
 import { strict as assert } from 'node:assert';
 import { firstLevel, firstLevelTiming, gardenSections, gardenObstacles, gardenSmashRoofs } from '../../app/mariomortille/first-level.ts';
 import { createState, tick, WIDTH, HEIGHT } from '../../app/mariomortille/simulation.ts';
@@ -19,7 +20,7 @@ for (let frame = 0; frame < 180 * 60 && !state.won; frame++) {
   const stepAhead = firstLevel.tiles.some(t => t.kind !== 'ground' && t.x >= p.x + WIDTH && t.x < p.x + WIDTH + 38 && t.y < p.y + HEIGHT && t.y + 16 > p.y);
   const terrainJump = height === undefined || height < p.y + HEIGHT - 3 || stepAhead;
   const enemyJump = state.enemies.some(e => !e.defeated && e.x > p.x && e.x - p.x < 64 && Math.abs(e.y + 20 - p.y - HEIGHT) < 20);
-  tick(state, firstLevel, { direction: 1, run: true, jump: true, jumpPressed: p.grounded && (terrainJump || enemyJump), powerPressed: !state.enemies.some(e => !e.defeated && e.x > p.x && e.x - p.x < 420) || state.enemies.some(e => !e.defeated && e.x > p.x && e.x - p.x < 90), downPressed: false });
+  tick(state, firstLevel, minibossControls(state, { direction: 1, run: true, jump: true, jumpPressed: p.grounded && (terrainJump || enemyJump), powerPressed: p.power === 'turbo' && (!state.enemies.some(e => !e.defeated && e.x > p.x && e.x - p.x < 420) || state.enemies.some(e => !e.defeated && e.x > p.x && e.x - p.x < 90)), downPressed: false }));
   hurts += state.events.includes('hurt') ? 1 : 0;
   jumps += state.events.includes('jump') ? 1 : 0;
   checkpointEvents += state.events.includes('checkpoint') ? 1 : 0;
@@ -40,8 +41,8 @@ for (let frame = 0; frame < 180 * 60 && !bonus.won; frame++) {
   const p = bonus.player;
   const ahead = Math.floor((p.x + WIDTH + 34) / 16), height = floor.get(ahead);
   const step = bonus.tiles.some(t => t.kind !== 'ground' && t.x >= p.x + WIDTH && t.x < p.x + WIDTH + 38 && t.y < p.y + HEIGHT && t.y + 16 > p.y);
-  const enemy = bonus.enemies.some(e => !e.defeated && e.x > p.x && e.x - p.x < 64 && Math.abs(e.y + 20 - p.y - HEIGHT) < 20);
-  const controls = { direction: 1, run: true, jump: true, jumpPressed: p.grounded && (height === undefined || height < p.y + HEIGHT - 3 || step || enemy), powerPressed: !bonus.enemies.some(e => !e.defeated && e.x > p.x && e.x - p.x < 420) || bonus.enemies.some(e => !e.defeated && e.x > p.x && e.x - p.x < 90), downPressed: false };
+  const enemy = bonus.enemies.some(e => !e.defeated && e.x > p.x && e.x - p.x < 80 && Math.abs(e.y + 20 - p.y - HEIGHT) < 20);
+  const controls = { direction: 1, run: true, jump: true, jumpPressed: p.grounded && (height === undefined || height < p.y + HEIGHT - 3 || step || enemy), powerPressed: p.power === 'turbo' && (!bonus.enemies.some(e => !e.defeated && e.x > p.x && e.x - p.x < 420) || bonus.enemies.some(e => !e.defeated && e.x > p.x && e.x - p.x < 90)), downPressed: false };
   const column = gardenSmashRoofs[roofIndex], x = column * 16, target = x + 24;
   if (column && p.x > x - 180 && p.x < x + 130) {
     controls.powerPressed = false;
@@ -54,11 +55,11 @@ for (let frame = 0; frame < 180 * 60 && !bonus.won; frame++) {
       controls.downPressed = !p.grounded && p.y + HEIGHT < 224 && p.pound === 0;
     }
   }
-  tick(bonus, firstLevel, controls);
+  tick(bonus, firstLevel, minibossControls(bonus, controls));
   bonusHurts += bonus.events.includes('hurt') ? 1 : 0;
   pounds += controls.downPressed ? 1 : 0;
 }
-assert.ok(bonus.won, 'both smash routes have usable exits to the goal');
+assert.ok(bonus.won, `both smash routes have usable exits to the goal x=${bonus.player.x} y=${bonus.player.y} roof=${roofIndex} power=${bonus.player.power} hurts=${bonusHurts}`);
 assert.equal(bonusHurts, 0);
 assert.equal(roofIndex, 2);
 assert.equal(pounds, 2);

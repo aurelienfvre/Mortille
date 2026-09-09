@@ -1,0 +1,96 @@
+{
+  "canvas": [
+    96,
+    96
+  ],
+  "anchor": [
+    48,
+    88
+  ],
+  "sharedScale": 0.19393939393939394,
+  "nominalStandingHeight": 64,
+  "frames": [
+    "jump-01.png",
+    "jump-02.png",
+    "jump-03.png",
+    "jump-04.png",
+    "jump-05.png",
+    "jump-06.png",
+    "jump-07.png",
+    "jump-08.png"
+  ],
+  "timingsMs": [
+    100,
+    70,
+    110,
+    180,
+    100,
+    100,
+    100,
+    180
+  ],
+  "poses": [
+    "anticipation",
+    "takeoff",
+    "rise",
+    "apex",
+    "fall",
+    "land",
+    "recover",
+    "idle"
+  ],
+  "binaryAlpha": true,
+  "bounds": [
+    [
+      16,
+      45,
+      70,
+      88
+    ],
+    [
+      20,
+      20,
+      74,
+      88
+    ],
+    [
+      21,
+      18,
+      73,
+      79
+    ],
+    [
+      22,
+      26,
+      74,
+      73
+    ],
+    [
+      14,
+      22,
+      81,
+      86
+    ],
+    [
+      18,
+      38,
+      76,
+      88
+    ],
+    [
+      19,
+      32,
+      75,
+      88
+    ],
+    [
+      19,
+      24,
+      75,
+      88
+    ]
+  ],
+  "sourceAlpha": "RGB checker removed by exterior neutral flood; enclosed white outfit preserved",
+  "status": "preview, not integrated",
+  "runtimeGuidance": "Jump is physics-driven: anticipation1, launch2, rise3, apex4, fall5, landing6 then7; idle8. Do not play full timeline irrespective of physics."
+}

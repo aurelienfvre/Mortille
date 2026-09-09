@@ -1,0 +1,119 @@
+{
+  "canvas": [
+    96,
+    96
+  ],
+  "anchor": [
+    48,
+    88
+  ],
+  "sharedScale": 0.21666666666666667,
+  "nominalStandingHeight": 52,
+  "frames": [
+    "jump-01.png",
+    "jump-02.png",
+    "jump-03.png",
+    "jump-04.png",
+    "jump-05.png",
+    "jump-06.png",
+    "jump-07.png",
+    "jump-08.png"
+  ],
+  "timingsMs": [
+    100,
+    70,
+    110,
+    180,
+    100,
+    100,
+    100,
+    180
+  ],
+  "poses": [
+    "anticipation",
+    "takeoff",
+    "rise",
+    "apex",
+    "fall",
+    "land",
+    "recover",
+    "idle"
+  ],
+  "binaryAlpha": true,
+  "bounds": [
+    [
+      23,
+      49,
+      67,
+      88
+    ],
+    [
+      17,
+      20,
+      69,
+      88
+    ],
+    [
+      17,
+      12,
+      70,
+      77
+    ],
+    [
+      2,
+      26,
+      92,
+      77
+    ],
+    [
+      8,
+      30,
+      76,
+      87
+    ],
+    [
+      21,
+      47,
+      68,
+      88
+    ],
+    [
+      23,
+      41,
+      68,
+      88
+    ],
+    [
+      24,
+      35,
+      61,
+      88
+    ]
+  ],
+  "sourceAlpha": "Native RGBA extraction; threshold200 makes binary alpha while preserving opaque white feathers",
+  "status": "preview, not integrated",
+  "runtimeGuidance": "Jump is physics-driven: anticipation1, launch2, rise3, apex4, fall5, landing6 then7; idle8. Do not play full timeline irrespective of physics.",
+  "frameAnchorX": [
+    48,
+    48,
+    48,
+    51,
+    48,
+    48,
+    48,
+    48
+  ],
+  "frameAnchorY": [
+    88,
+    88,
+    88,
+    88,
+    88,
+    88,
+    88,
+    88
+  ],
+  "normalizationNotes": [
+    "Pose4 stored3px right to preserve complete left wing; originX51 compensates body position."
+  ]
+}

@@ -1,0 +1,485 @@
+{
+  "version": 1,
+  "facing": "right",
+  "frameSize": [
+    32,
+    32
+  ],
+  "anchor": [
+    16,
+    28
+  ],
+  "runtimeScale": 1,
+  "placement": "enemy.x+10, enemy.y+20 using origin(0.5,0.875)",
+  "existingCollision": [
+    20,
+    20
+  ],
+  "animations": {
+    "guard": {
+      "idle": {
+        "frames": 4,
+        "fps": 6.25
+      },
+      "walk": {
+        "frames": 4,
+        "fps": 10
+      }
+    },
+    "pest": {
+      "idle": {
+        "frames": 4,
+        "fps": 6.25
+      },
+      "walk": {
+        "frames": 4,
+        "fps": 10
+      }
+    },
+    "rover": {
+      "idle": {
+        "frames": 4,
+        "fps": 6.25
+      },
+      "walk": {
+        "frames": 4,
+        "fps": 10
+      }
+    }
+  },
+  "frames": [
+    {
+      "key": "guard-idle-01",
+      "url": "/mariomortille/enemies/guard-idle-01.png",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        28
+      ],
+      "bbox": [
+        7,
+        4,
+        24,
+        28
+      ]
+    },
+    {
+      "key": "guard-idle-02",
+      "url": "/mariomortille/enemies/guard-idle-02.png",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        28
+      ],
+      "bbox": [
+        7,
+        5,
+        24,
+        28
+      ]
+    },
+    {
+      "key": "guard-idle-03",
+      "url": "/mariomortille/enemies/guard-idle-03.png",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        28
+      ],
+      "bbox": [
+        7,
+        4,
+        25,
+        28
+      ]
+    },
+    {
+      "key": "guard-idle-04",
+      "url": "/mariomortille/enemies/guard-idle-04.png",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        28
+      ],
+      "bbox": [
+        7,
+        4,
+        25,
+        28
+      ]
+    },
+    {
+      "key": "guard-walk-01",
+      "url": "/mariomortille/enemies/guard-walk-01.png",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        28
+      ],
+      "bbox": [
+        6,
+        5,
+        25,
+        28
+      ]
+    },
+    {
+      "key": "guard-walk-02",
+      "url": "/mariomortille/enemies/guard-walk-02.png",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        28
+      ],
+      "bbox": [
+        7,
+        4,
+        25,
+        28
+      ]
+    },
+    {
+      "key": "guard-walk-03",
+      "url": "/mariomortille/enemies/guard-walk-03.png",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        28
+      ],
+      "bbox": [
+        6,
+        4,
+        25,
+        28
+      ]
+    },
+    {
+      "key": "guard-walk-04",
+      "url": "/mariomortille/enemies/guard-walk-04.png",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        28
+      ],
+      "bbox": [
+        7,
+        5,
+        24,
+        28
+      ]
+    },
+    {
+      "key": "pest-idle-01",
+      "url": "/mariomortille/enemies/pest-idle-01.png",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        28
+      ],
+      "bbox": [
+        5,
+        12,
+        26,
+        28
+      ]
+    },
+    {
+      "key": "pest-idle-02",
+      "url": "/mariomortille/enemies/pest-idle-02.png",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        28
+      ],
+      "bbox": [
+        5,
+        13,
+        26,
+        28
+      ]
+    },
+    {
+      "key": "pest-idle-03",
+      "url": "/mariomortille/enemies/pest-idle-03.png",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        28
+      ],
+      "bbox": [
+        6,
+        12,
+        26,
+        28
+      ]
+    },
+    {
+      "key": "pest-idle-04",
+      "url": "/mariomortille/enemies/pest-idle-04.png",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        28
+      ],
+      "bbox": [
+        5,
+        13,
+        26,
+        28
+      ]
+    },
+    {
+      "key": "pest-walk-01",
+      "url": "/mariomortille/enemies/pest-walk-01.png",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        28
+      ],
+      "bbox": [
+        5,
+        13,
+        26,
+        28
+      ]
+    },
+    {
+      "key": "pest-walk-02",
+      "url": "/mariomortille/enemies/pest-walk-02.png",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        28
+      ],
+      "bbox": [
+        5,
+        12,
+        26,
+        28
+      ]
+    },
+    {
+      "key": "pest-walk-03",
+      "url": "/mariomortille/enemies/pest-walk-03.png",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        28
+      ],
+      "bbox": [
+        5,
+        11,
+        27,
+        28
+      ]
+    },
+    {
+      "key": "pest-walk-04",
+      "url": "/mariomortille/enemies/pest-walk-04.png",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        28
+      ],
+      "bbox": [
+        5,
+        12,
+        26,
+        28
+      ]
+    },
+    {
+      "key": "rover-idle-01",
+      "url": "/mariomortille/enemies/rover-idle-01.png",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        28
+      ],
+      "bbox": [
+        5,
+        5,
+        26,
+        28
+      ]
+    },
+    {
+      "key": "rover-idle-02",
+      "url": "/mariomortille/enemies/rover-idle-02.png",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        28
+      ],
+      "bbox": [
+        5,
+        5,
+        27,
+        28
+      ]
+    },
+    {
+      "key": "rover-idle-03",
+      "url": "/mariomortille/enemies/rover-idle-03.png",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        28
+      ],
+      "bbox": [
+        5,
+        6,
+        26,
+        28
+      ]
+    },
+    {
+      "key": "rover-idle-04",
+      "url": "/mariomortille/enemies/rover-idle-04.png",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        28
+      ],
+      "bbox": [
+        5,
+        5,
+        26,
+        28
+      ]
+    },
+    {
+      "key": "rover-walk-01",
+      "url": "/mariomortille/enemies/rover-walk-01.png",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        28
+      ],
+      "bbox": [
+        5,
+        5,
+        26,
+        28
+      ]
+    },
+    {
+      "key": "rover-walk-02",
+      "url": "/mariomortille/enemies/rover-walk-02.png",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        28
+      ],
+      "bbox": [
+        5,
+        5,
+        26,
+        28
+      ]
+    },
+    {
+      "key": "rover-walk-03",
+      "url": "/mariomortille/enemies/rover-walk-03.png",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        28
+      ],
+      "bbox": [
+        5,
+        6,
+        27,
+        28
+      ]
+    },
+    {
+      "key": "rover-walk-04",
+      "url": "/mariomortille/enemies/rover-walk-04.png",
+      "canvas": [
+        32,
+        32
+      ],
+      "anchor": [
+        16,
+        28
+      ],
+      "bbox": [
+        6,
+        4,
+        26,
+        28
+      ]
+    }
+  ],
+  "method": "imagegen coherent24frame sheet, imagegen background extraction, group sharedscale nearestneighbor, binaryalpha, no sourceatlasreuse"
+}

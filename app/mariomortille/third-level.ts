@@ -1,3 +1,5 @@
+import { boxLevelPowers } from './power-blocks';
+import { themeEnemies } from './enemy-roster';
 import type { Level, Tile, Pickup, Enemy } from './simulation';
 
 /** Rooftop crossings are spaced for the equipped cloud glide (hold jump).
@@ -37,3 +39,7 @@ for (const [i, section] of cloudSections.entries()) {
 export const thirdLevel: Level = { id: 'quartier-03', width: 1120 * 16, spawn: { x: 64, y: 240 }, tiles, pickups, enemies, checkpoint: 566 * 16, goal: 1114 * 16 };
 // Cloud is the only available power: the real maximum horizontal speed is 180.
 export const thirdLevelTiming = { minimumTravelSeconds: (thirdLevel.goal - thirdLevel.spawn.x) / 180 };
+
+thirdLevel.enemies = themeEnemies(thirdLevel);
+
+boxLevelPowers(thirdLevel);

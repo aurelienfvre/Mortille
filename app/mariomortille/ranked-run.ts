@@ -1,5 +1,5 @@
 import type { Controls } from './simulation';
-import { encodeControls, MAX_REPLAY_TICKS } from './replay-codec';
+import { encodeControls, encodeReplay, MAX_REPLAY_TICKS } from './replay-codec';
 export async function arcadeRequest<T>(path: string, data?: unknown, signal?: AbortSignal): Promise<T> {
   const response = await fetch(`/api/arcade/${path}`, { method: data ? 'POST' : 'GET', credentials: 'same-origin', cache: 'no-store', signal: signal ?? AbortSignal.timeout(12000),
     ...(data ? { headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) } : {}) });
@@ -25,8 +25,7 @@ export class RankedRun {
     this.sealed = true;
     if (this.overflow) return Promise.reject(new Error('Partie de plus de 10 minutes : progression conservée, classement non envoyé.'));
     if (!this.pending) {
-      let bytes = ''; for (const input of this.inputs) bytes += String.fromCharCode(input);
-      this.pending = arcadeRequest<SavedRun>('runs', { action: 'finish', runId: this.id, inputs: btoa(bytes) }).catch(error => { this.pending = undefined; throw error; });
+      this.pending = arcadeRequest<SavedRun>('runs', { action: 'finish', runId: this.id, inputs: encodeReplay(this.inputs) }).catch(error => { this.pending = undefined; throw error; });
     }
     return this.pending;
   }

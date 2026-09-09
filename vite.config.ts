@@ -1,3 +1,4 @@
+import vinextAlsGuard from './plugins/vinext-als-guard';
 import { sites } from '@openai/sites-vite-plugin';
 import tailwindcss from '@tailwindcss/postcss';
 import vinext from 'vinext';
@@ -50,6 +51,7 @@ export default defineConfig(async () => {
       ? { watch: { useFsEvents: false, usePolling: true } }
       : undefined,
     plugins: [
+      vinextAlsGuard(),
       vinext(),
       sites(),
       cloudflare({

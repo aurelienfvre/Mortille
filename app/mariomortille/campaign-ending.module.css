@@ -1,0 +1,8 @@
+.ending{--actor-size:96px;position:absolute;inset:0;z-index:40;overflow:hidden;isolation:isolate;background:#5092b8 url('/mariomortille/menu/village-background.png') center bottom/cover no-repeat;color:#fff3d5;image-rendering:pixelated;font-family:monospace;outline:none}
+.shade{position:absolute;inset:0;background:linear-gradient(#0a203ac9,transparent 65%);z-index:-1}
+.ending header{padding:5% 6%;text-align:center}.ending header p{letter-spacing:3px;font-size:13px;color:#aeeacd}.ending h1{margin:24px auto;max-width:800px;color:#ffc05a;filter:drop-shadow(3px 3px 0 #382318)}.ending svg{display:block;width:100%;height:auto}
+.actors{position:absolute;inset:0;pointer-events:none}.actors img{position:absolute;bottom:23%;width:var(--actor-size);height:var(--actor-size);image-rendering:pixelated}
+.ending footer{position:absolute;bottom:0;left:0;right:0;min-height:23%;padding:16px 6% 20px;box-sizing:border-box;background:#101d2ff5;border-top:4px solid #e8a84a;text-align:center}.ending footer p{min-height:2em;font-size:16px;line-height:1.5;margin:0 0 14px}.ending button{background:#192a3e;border:3px solid #e8a84a;color:#ffe2a8;padding:12px 22px;font:700 14px monospace;cursor:pointer}.ending button:focus-visible{outline:3px solid #fff5da;outline-offset:4px}.ending small{display:block;margin-top:12px;color:#c0cecc;font-size:11px}
+.srOnly{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+@media(min-width:900px){.ending{--actor-size:192px}}
+@media(max-height:500px){.ending header{padding:2% 8%}.ending h1{max-width:500px;margin:12px auto}.ending footer{padding:8px 4%}.ending footer p{font-size:12px;margin-bottom:6px;min-height:0}.ending small{display:none}.ending button{padding:8px 12px}}

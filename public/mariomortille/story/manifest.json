@@ -1,0 +1,329 @@
+{
+  "size": [
+    96,
+    96
+  ],
+  "anchor": [
+    48,
+    88
+  ],
+  "frames": [
+    {
+      "file": "aurelien-idle-01.png",
+      "source": "public/mariomortille/characters/aurelien/idle-01.png"
+    },
+    {
+      "file": "aurelien-idle-02.png",
+      "source": "public/mariomortille/characters/aurelien/idle-02.png"
+    },
+    {
+      "file": "aurelien-idle-03.png",
+      "source": "public/mariomortille/characters/aurelien/idle-03.png"
+    },
+    {
+      "file": "aurelien-idle-04.png",
+      "source": "public/mariomortille/characters/aurelien/idle-04.png"
+    },
+    {
+      "file": "aurelien-idle-05.png",
+      "source": "public/mariomortille/characters/aurelien/idle-05.png"
+    },
+    {
+      "file": "aurelien-idle-06.png",
+      "source": "public/mariomortille/characters/aurelien/idle-06.png"
+    },
+    {
+      "file": "aurelien-idle-07.png",
+      "source": "public/mariomortille/characters/aurelien/idle-07.png"
+    },
+    {
+      "file": "aurelien-idle-08.png",
+      "source": "public/mariomortille/characters/aurelien/idle-08.png"
+    },
+    {
+      "file": "aurelien-run-01.png",
+      "source": "public/mariomortille/characters/aurelien/run-01.png"
+    },
+    {
+      "file": "aurelien-run-02.png",
+      "source": "public/mariomortille/characters/aurelien/run-02.png"
+    },
+    {
+      "file": "aurelien-run-03.png",
+      "source": "public/mariomortille/characters/aurelien/run-03.png"
+    },
+    {
+      "file": "aurelien-run-04.png",
+      "source": "public/mariomortille/characters/aurelien/run-04.png"
+    },
+    {
+      "file": "aurelien-run-05.png",
+      "source": "public/mariomortille/characters/aurelien/run-05.png"
+    },
+    {
+      "file": "aurelien-run-06.png",
+      "source": "public/mariomortille/characters/aurelien/run-06.png"
+    },
+    {
+      "file": "aurelien-run-07.png",
+      "source": "public/mariomortille/characters/aurelien/run-07.png"
+    },
+    {
+      "file": "aurelien-run-08.png",
+      "source": "public/mariomortille/characters/aurelien/run-08.png"
+    },
+    {
+      "file": "julien-idle-01.png",
+      "source": "/Users/aurelien/Documents/Codex/2026-09-05/j-a/outputs/Mariomortille-PNG/restart/julien/idle-aligned/idle-01.png"
+    },
+    {
+      "file": "julien-idle-02.png",
+      "source": "/Users/aurelien/Documents/Codex/2026-09-05/j-a/outputs/Mariomortille-PNG/restart/julien/idle-aligned/idle-02.png"
+    },
+    {
+      "file": "julien-idle-03.png",
+      "source": "/Users/aurelien/Documents/Codex/2026-09-05/j-a/outputs/Mariomortille-PNG/restart/julien/idle-aligned/idle-03.png"
+    },
+    {
+      "file": "julien-idle-04.png",
+      "source": "/Users/aurelien/Documents/Codex/2026-09-05/j-a/outputs/Mariomortille-PNG/restart/julien/idle-aligned/idle-04.png"
+    },
+    {
+      "file": "julien-idle-05.png",
+      "source": "/Users/aurelien/Documents/Codex/2026-09-05/j-a/outputs/Mariomortille-PNG/restart/julien/idle-aligned/idle-05.png"
+    },
+    {
+      "file": "julien-idle-06.png",
+      "source": "/Users/aurelien/Documents/Codex/2026-09-05/j-a/outputs/Mariomortille-PNG/restart/julien/idle-aligned/idle-06.png"
+    },
+    {
+      "file": "julien-idle-07.png",
+      "source": "/Users/aurelien/Documents/Codex/2026-09-05/j-a/outputs/Mariomortille-PNG/restart/julien/idle-aligned/idle-07.png"
+    },
+    {
+      "file": "julien-idle-08.png",
+      "source": "/Users/aurelien/Documents/Codex/2026-09-05/j-a/outputs/Mariomortille-PNG/restart/julien/idle-aligned/idle-08.png"
+    },
+    {
+      "file": "ben-idle-01.png",
+      "source": "/Users/aurelien/Documents/Codex/2026-09-05/j-a/outputs/Mariomortille-PNG/restart/ben/idle-aligned/idle-01.png"
+    },
+    {
+      "file": "ben-idle-02.png",
+      "source": "/Users/aurelien/Documents/Codex/2026-09-05/j-a/outputs/Mariomortille-PNG/restart/ben/idle-aligned/idle-02.png"
+    },
+    {
+      "file": "ben-idle-03.png",
+      "source": "/Users/aurelien/Documents/Codex/2026-09-05/j-a/outputs/Mariomortille-PNG/restart/ben/idle-aligned/idle-03.png"
+    },
+    {
+      "file": "ben-idle-04.png",
+      "source": "/Users/aurelien/Documents/Codex/2026-09-05/j-a/outputs/Mariomortille-PNG/restart/ben/idle-aligned/idle-04.png"
+    },
+    {
+      "file": "ben-idle-05.png",
+      "source": "/Users/aurelien/Documents/Codex/2026-09-05/j-a/outputs/Mariomortille-PNG/restart/ben/idle-aligned/idle-05.png"
+    },
+    {
+      "file": "ben-idle-06.png",
+      "source": "/Users/aurelien/Documents/Codex/2026-09-05/j-a/outputs/Mariomortille-PNG/restart/ben/idle-aligned/idle-06.png"
+    },
+    {
+      "file": "ben-idle-07.png",
+      "source": "/Users/aurelien/Documents/Codex/2026-09-05/j-a/outputs/Mariomortille-PNG/restart/ben/idle-aligned/idle-07.png"
+    },
+    {
+      "file": "ben-idle-08.png",
+      "source": "/Users/aurelien/Documents/Codex/2026-09-05/j-a/outputs/Mariomortille-PNG/restart/ben/idle-aligned/idle-08.png"
+    },
+    {
+      "file": "raphael-idle-01.png",
+      "source": "/Users/aurelien/Documents/Codex/2026-09-05/j-a/outputs/Mariomortille-PNG/restart/raphael/idle-aligned/idle-01.png"
+    },
+    {
+      "file": "raphael-idle-02.png",
+      "source": "/Users/aurelien/Documents/Codex/2026-09-05/j-a/outputs/Mariomortille-PNG/restart/raphael/idle-aligned/idle-02.png"
+    },
+    {
+      "file": "raphael-idle-03.png",
+      "source": "/Users/aurelien/Documents/Codex/2026-09-05/j-a/outputs/Mariomortille-PNG/restart/raphael/idle-aligned/idle-03.png"
+    },
+    {
+      "file": "raphael-idle-04.png",
+      "source": "/Users/aurelien/Documents/Codex/2026-09-05/j-a/outputs/Mariomortille-PNG/restart/raphael/idle-aligned/idle-04.png"
+    },
+    {
+      "file": "raphael-idle-05.png",
+      "source": "/Users/aurelien/Documents/Codex/2026-09-05/j-a/outputs/Mariomortille-PNG/restart/raphael/idle-aligned/idle-05.png"
+    },
+    {
+      "file": "raphael-idle-06.png",
+      "source": "/Users/aurelien/Documents/Codex/2026-09-05/j-a/outputs/Mariomortille-PNG/restart/raphael/idle-aligned/idle-06.png"
+    },
+    {
+      "file": "raphael-idle-07.png",
+      "source": "/Users/aurelien/Documents/Codex/2026-09-05/j-a/outputs/Mariomortille-PNG/restart/raphael/idle-aligned/idle-07.png"
+    },
+    {
+      "file": "raphael-idle-08.png",
+      "source": "/Users/aurelien/Documents/Codex/2026-09-05/j-a/outputs/Mariomortille-PNG/restart/raphael/idle-aligned/idle-08.png"
+    },
+    {
+      "file": "raphael-run-01.png",
+      "source": "outputs/Mariomortille-PNG/restart/raphael/run-canonical8/run-01.png",
+      "sha256": "eef2f0b4a2d7a78309431b776034357927ed332e3f4ee92bebeb64e71339e6fd",
+      "bounds": [
+        24,
+        3,
+        75,
+        88
+      ]
+    },
+    {
+      "file": "raphael-run-02.png",
+      "source": "outputs/Mariomortille-PNG/restart/raphael/run-canonical8/run-02.png",
+      "sha256": "eea4c6cb938781afa9534739c60c0a633b3e373c07536c4121390c0ed8362e0b",
+      "bounds": [
+        23,
+        2,
+        62,
+        88
+      ]
+    },
+    {
+      "file": "raphael-run-03.png",
+      "source": "outputs/Mariomortille-PNG/restart/raphael/run-canonical8/run-03.png",
+      "sha256": "c842a651c435606e6f73fcc39488e3ae2f58defc990835df2ef8db1e227e9445",
+      "bounds": [
+        20,
+        1,
+        63,
+        87
+      ]
+    },
+    {
+      "file": "raphael-run-04.png",
+      "source": "outputs/Mariomortille-PNG/restart/raphael/run-canonical8/run-04.png",
+      "sha256": "43db8b042a6fa7d8cc77fbf35e60a640fd4b4aa3975b821092bb8c3f82a80046",
+      "bounds": [
+        17,
+        3,
+        77,
+        85
+      ]
+    },
+    {
+      "file": "raphael-run-05.png",
+      "source": "outputs/Mariomortille-PNG/restart/raphael/run-canonical8/run-05.png",
+      "sha256": "89d36cc3875cd9d5e4e02bc4d2e4b84e51f6bc54bc784f6f7039b628b303369b",
+      "bounds": [
+        21,
+        4,
+        75,
+        88
+      ]
+    },
+    {
+      "file": "raphael-run-06.png",
+      "source": "outputs/Mariomortille-PNG/restart/raphael/run-canonical8/run-06.png",
+      "sha256": "3a9b8e674959fb6535d686480f7af46c499c0580b54c2f7e14a68b8b24154eb2",
+      "bounds": [
+        22,
+        3,
+        73,
+        88
+      ]
+    },
+    {
+      "file": "raphael-run-07.png",
+      "source": "outputs/Mariomortille-PNG/restart/raphael/run-canonical8/run-07.png",
+      "sha256": "80c951d014a71a9abb1801f4a7f2c9ce491d535d528e5ec2929fb2867b225889",
+      "bounds": [
+        20,
+        0,
+        64,
+        88
+      ]
+    },
+    {
+      "file": "raphael-run-08.png",
+      "source": "outputs/Mariomortille-PNG/restart/raphael/run-canonical8/run-08.png",
+      "sha256": "9a94d9169b0559ea7e96678ed240f64d3cb479087605e9eb0de4bec8537eaefb",
+      "bounds": [
+        17,
+        2,
+        76,
+        86
+      ]
+    },
+    {
+      "file": "mango-idle-01.png",
+      "source": "/Users/aurelien/Documents/Codex/2026-09-05/j-a/outputs/Mariomortille-PNG/restart/mango/idle-aligned/idle-01.png"
+    },
+    {
+      "file": "mango-idle-02.png",
+      "source": "/Users/aurelien/Documents/Codex/2026-09-05/j-a/outputs/Mariomortille-PNG/restart/mango/idle-aligned/idle-02.png"
+    },
+    {
+      "file": "mango-idle-03.png",
+      "source": "/Users/aurelien/Documents/Codex/2026-09-05/j-a/outputs/Mariomortille-PNG/restart/mango/idle-aligned/idle-03.png"
+    },
+    {
+      "file": "mango-idle-04.png",
+      "source": "/Users/aurelien/Documents/Codex/2026-09-05/j-a/outputs/Mariomortille-PNG/restart/mango/idle-aligned/idle-04.png"
+    },
+    {
+      "file": "mango-idle-05.png",
+      "source": "/Users/aurelien/Documents/Codex/2026-09-05/j-a/outputs/Mariomortille-PNG/restart/mango/idle-aligned/idle-05.png"
+    },
+    {
+      "file": "mango-idle-06.png",
+      "source": "/Users/aurelien/Documents/Codex/2026-09-05/j-a/outputs/Mariomortille-PNG/restart/mango/idle-aligned/idle-06.png"
+    },
+    {
+      "file": "mango-idle-07.png",
+      "source": "/Users/aurelien/Documents/Codex/2026-09-05/j-a/outputs/Mariomortille-PNG/restart/mango/idle-aligned/idle-07.png"
+    },
+    {
+      "file": "mango-idle-08.png",
+      "source": "/Users/aurelien/Documents/Codex/2026-09-05/j-a/outputs/Mariomortille-PNG/restart/mango/idle-aligned/idle-08.png"
+    },
+    {
+      "file": "steve-idle-01.png",
+      "source": "/Users/aurelien/Documents/Codex/2026-09-05/j-a/outputs/Mariomortille-PNG/restart/steve/idle-aligned/idle-01.png"
+    },
+    {
+      "file": "steve-idle-02.png",
+      "source": "/Users/aurelien/Documents/Codex/2026-09-05/j-a/outputs/Mariomortille-PNG/restart/steve/idle-aligned/idle-02.png"
+    },
+    {
+      "file": "steve-idle-03.png",
+      "source": "/Users/aurelien/Documents/Codex/2026-09-05/j-a/outputs/Mariomortille-PNG/restart/steve/idle-aligned/idle-03.png"
+    },
+    {
+      "file": "steve-idle-04.png",
+      "source": "/Users/aurelien/Documents/Codex/2026-09-05/j-a/outputs/Mariomortille-PNG/restart/steve/idle-aligned/idle-04.png"
+    },
+    {
+      "file": "steve-idle-05.png",
+      "source": "/Users/aurelien/Documents/Codex/2026-09-05/j-a/outputs/Mariomortille-PNG/restart/steve/idle-aligned/idle-05.png"
+    },
+    {
+      "file": "steve-idle-06.png",
+      "source": "/Users/aurelien/Documents/Codex/2026-09-05/j-a/outputs/Mariomortille-PNG/restart/steve/idle-aligned/idle-06.png"
+    },
+    {
+      "file": "steve-idle-07.png",
+      "source": "/Users/aurelien/Documents/Codex/2026-09-05/j-a/outputs/Mariomortille-PNG/restart/steve/idle-aligned/idle-07.png"
+    },
+    {
+      "file": "steve-idle-08.png",
+      "source": "/Users/aurelien/Documents/Codex/2026-09-05/j-a/outputs/Mariomortille-PNG/restart/steve/idle-aligned/idle-08.png"
+    }
+  ],
+  "notes": "Existing PNGs copied without rescaling or repainting. Raphaël giraffe, Ben black hair.",
+  "raphaelRunCorrection": {
+    "source": "run-canonical8",
+    "scope": "Canonical head/neck and planted contacts only. Original eight-pose leg cycle retained; alternation still requires improvement."
+  }
+}

@@ -1,0 +1,462 @@
+{
+  "juju-stand-up": {
+    "frames": [
+      "party-extra-juju-stand-up-01",
+      "party-extra-juju-stand-up-02",
+      "party-extra-juju-stand-up-03",
+      "party-extra-juju-stand-up-04"
+    ],
+    "durations": [
+      66.66666666666667,
+      83.33333333333333,
+      100.0,
+      116.66666666666667
+    ],
+    "anchor": [
+      32,
+      58
+    ],
+    "source": "work/arcade/assets-source/party-extras"
+  },
+  "juju-ground-pound": {
+    "frames": [
+      "party-extra-juju-ground-pound-01",
+      "party-extra-juju-ground-pound-02",
+      "party-extra-juju-ground-pound-03",
+      "party-extra-juju-ground-pound-04",
+      "party-extra-juju-ground-pound-05",
+      "party-extra-juju-ground-pound-06",
+      "party-extra-juju-ground-pound-07",
+      "party-extra-juju-ground-pound-08"
+    ],
+    "durations": [
+      90,
+      90,
+      120,
+      90,
+      100,
+      120,
+      100,
+      160
+    ],
+    "anchor": [
+      32,
+      58
+    ],
+    "source": "work/arcade/assets-source/party-extras"
+  },
+  "juju-ember-stand-up": {
+    "frames": [
+      "party-extra-juju-ember-stand-up-01",
+      "party-extra-juju-ember-stand-up-02",
+      "party-extra-juju-ember-stand-up-03",
+      "party-extra-juju-ember-stand-up-04"
+    ],
+    "durations": [
+      66.66666666666667,
+      83.33333333333333,
+      100.0,
+      116.66666666666667
+    ],
+    "anchor": [
+      32,
+      58
+    ],
+    "source": "work/arcade/assets-source/party-extras"
+  },
+  "juju-ember-ground-pound": {
+    "frames": [
+      "party-extra-juju-ember-ground-pound-01",
+      "party-extra-juju-ember-ground-pound-02",
+      "party-extra-juju-ember-ground-pound-03",
+      "party-extra-juju-ember-ground-pound-04",
+      "party-extra-juju-ember-ground-pound-05",
+      "party-extra-juju-ember-ground-pound-06",
+      "party-extra-juju-ember-ground-pound-07",
+      "party-extra-juju-ember-ground-pound-08"
+    ],
+    "durations": [
+      90,
+      90,
+      120,
+      90,
+      100,
+      120,
+      100,
+      160
+    ],
+    "anchor": [
+      32,
+      58
+    ],
+    "source": "work/arcade/assets-source/party-extras"
+  },
+  "juju-turbo-stand-up": {
+    "frames": [
+      "party-extra-juju-turbo-stand-up-01",
+      "party-extra-juju-turbo-stand-up-02",
+      "party-extra-juju-turbo-stand-up-03",
+      "party-extra-juju-turbo-stand-up-04"
+    ],
+    "durations": [
+      66.66666666666667,
+      83.33333333333333,
+      100.0,
+      116.66666666666667
+    ],
+    "anchor": [
+      32,
+      58
+    ],
+    "source": "work/arcade/assets-source/party-extras"
+  },
+  "juju-turbo-ground-pound": {
+    "frames": [
+      "party-extra-juju-turbo-ground-pound-01",
+      "party-extra-juju-turbo-ground-pound-02",
+      "party-extra-juju-turbo-ground-pound-03",
+      "party-extra-juju-turbo-ground-pound-04",
+      "party-extra-juju-turbo-ground-pound-05",
+      "party-extra-juju-turbo-ground-pound-06",
+      "party-extra-juju-turbo-ground-pound-07",
+      "party-extra-juju-turbo-ground-pound-08"
+    ],
+    "durations": [
+      90,
+      90,
+      120,
+      90,
+      100,
+      120,
+      100,
+      160
+    ],
+    "anchor": [
+      32,
+      58
+    ],
+    "source": "work/arcade/assets-source/party-extras"
+  },
+  "juju-cloud-stand-up": {
+    "frames": [
+      "party-extra-juju-cloud-stand-up-01",
+      "party-extra-juju-cloud-stand-up-02",
+      "party-extra-juju-cloud-stand-up-03",
+      "party-extra-juju-cloud-stand-up-04"
+    ],
+    "durations": [
+      66.66666666666667,
+      83.33333333333333,
+      100.0,
+      116.66666666666667
+    ],
+    "anchor": [
+      32,
+      58
+    ],
+    "source": "work/arcade/assets-source/party-extras"
+  },
+  "juju-cloud-ground-pound": {
+    "frames": [
+      "party-extra-juju-cloud-ground-pound-01",
+      "party-extra-juju-cloud-ground-pound-02",
+      "party-extra-juju-cloud-ground-pound-03",
+      "party-extra-juju-cloud-ground-pound-04",
+      "party-extra-juju-cloud-ground-pound-05",
+      "party-extra-juju-cloud-ground-pound-06",
+      "party-extra-juju-cloud-ground-pound-07",
+      "party-extra-juju-cloud-ground-pound-08"
+    ],
+    "durations": [
+      90,
+      90,
+      120,
+      90,
+      100,
+      120,
+      100,
+      160
+    ],
+    "anchor": [
+      32,
+      58
+    ],
+    "source": "work/arcade/assets-source/party-extras"
+  },
+  "juju-cobalt-stand-up": {
+    "frames": [
+      "party-extra-juju-cobalt-stand-up-01",
+      "party-extra-juju-cobalt-stand-up-02",
+      "party-extra-juju-cobalt-stand-up-03",
+      "party-extra-juju-cobalt-stand-up-04"
+    ],
+    "durations": [
+      66.66666666666667,
+      83.33333333333333,
+      100.0,
+      116.66666666666667
+    ],
+    "anchor": [
+      32,
+      58
+    ],
+    "source": "work/arcade/assets-source/party-extras"
+  },
+  "juju-cobalt-ground-pound": {
+    "frames": [
+      "party-extra-juju-cobalt-ground-pound-01",
+      "party-extra-juju-cobalt-ground-pound-02",
+      "party-extra-juju-cobalt-ground-pound-03",
+      "party-extra-juju-cobalt-ground-pound-04",
+      "party-extra-juju-cobalt-ground-pound-05",
+      "party-extra-juju-cobalt-ground-pound-06",
+      "party-extra-juju-cobalt-ground-pound-07",
+      "party-extra-juju-cobalt-ground-pound-08"
+    ],
+    "durations": [
+      90,
+      90,
+      120,
+      90,
+      100,
+      120,
+      100,
+      160
+    ],
+    "anchor": [
+      32,
+      58
+    ],
+    "source": "work/arcade/assets-source/party-extras"
+  },
+  "ben-stand-up": {
+    "frames": [
+      "party-extra-ben-stand-up-01",
+      "party-extra-ben-stand-up-02",
+      "party-extra-ben-stand-up-03",
+      "party-extra-ben-stand-up-04"
+    ],
+    "durations": [
+      66.66666666666667,
+      83.33333333333333,
+      100.0,
+      116.66666666666667
+    ],
+    "anchor": [
+      32,
+      58
+    ],
+    "source": "work/arcade/assets-source/party-extras"
+  },
+  "ben-ground-pound": {
+    "frames": [
+      "party-extra-ben-ground-pound-01",
+      "party-extra-ben-ground-pound-02",
+      "party-extra-ben-ground-pound-03",
+      "party-extra-ben-ground-pound-04",
+      "party-extra-ben-ground-pound-05",
+      "party-extra-ben-ground-pound-06",
+      "party-extra-ben-ground-pound-07",
+      "party-extra-ben-ground-pound-08"
+    ],
+    "durations": [
+      90,
+      90,
+      120,
+      90,
+      100,
+      120,
+      100,
+      160
+    ],
+    "anchor": [
+      32,
+      58
+    ],
+    "source": "work/arcade/assets-source/party-extras"
+  },
+  "ben-ember-stand-up": {
+    "frames": [
+      "party-extra-ben-ember-stand-up-01",
+      "party-extra-ben-ember-stand-up-02",
+      "party-extra-ben-ember-stand-up-03",
+      "party-extra-ben-ember-stand-up-04"
+    ],
+    "durations": [
+      66.66666666666667,
+      83.33333333333333,
+      100.0,
+      116.66666666666667
+    ],
+    "anchor": [
+      32,
+      58
+    ],
+    "source": "work/arcade/assets-source/party-extras"
+  },
+  "ben-ember-ground-pound": {
+    "frames": [
+      "party-extra-ben-ember-ground-pound-01",
+      "party-extra-ben-ember-ground-pound-02",
+      "party-extra-ben-ember-ground-pound-03",
+      "party-extra-ben-ember-ground-pound-04",
+      "party-extra-ben-ember-ground-pound-05",
+      "party-extra-ben-ember-ground-pound-06",
+      "party-extra-ben-ember-ground-pound-07",
+      "party-extra-ben-ember-ground-pound-08"
+    ],
+    "durations": [
+      90,
+      90,
+      120,
+      90,
+      100,
+      120,
+      100,
+      160
+    ],
+    "anchor": [
+      32,
+      58
+    ],
+    "source": "work/arcade/assets-source/party-extras"
+  },
+  "ben-turbo-stand-up": {
+    "frames": [
+      "party-extra-ben-turbo-stand-up-01",
+      "party-extra-ben-turbo-stand-up-02",
+      "party-extra-ben-turbo-stand-up-03",
+      "party-extra-ben-turbo-stand-up-04"
+    ],
+    "durations": [
+      66.66666666666667,
+      83.33333333333333,
+      100.0,
+      116.66666666666667
+    ],
+    "anchor": [
+      32,
+      58
+    ],
+    "source": "work/arcade/assets-source/party-extras"
+  },
+  "ben-turbo-ground-pound": {
+    "frames": [
+      "party-extra-ben-turbo-ground-pound-01",
+      "party-extra-ben-turbo-ground-pound-02",
+      "party-extra-ben-turbo-ground-pound-03",
+      "party-extra-ben-turbo-ground-pound-04",
+      "party-extra-ben-turbo-ground-pound-05",
+      "party-extra-ben-turbo-ground-pound-06",
+      "party-extra-ben-turbo-ground-pound-07",
+      "party-extra-ben-turbo-ground-pound-08"
+    ],
+    "durations": [
+      90,
+      90,
+      120,
+      90,
+      100,
+      120,
+      100,
+      160
+    ],
+    "anchor": [
+      32,
+      58
+    ],
+    "source": "work/arcade/assets-source/party-extras"
+  },
+  "ben-cloud-stand-up": {
+    "frames": [
+      "party-extra-ben-cloud-stand-up-01",
+      "party-extra-ben-cloud-stand-up-02",
+      "party-extra-ben-cloud-stand-up-03",
+      "party-extra-ben-cloud-stand-up-04"
+    ],
+    "durations": [
+      66.66666666666667,
+      83.33333333333333,
+      100.0,
+      116.66666666666667
+    ],
+    "anchor": [
+      32,
+      58
+    ],
+    "source": "work/arcade/assets-source/party-extras"
+  },
+  "ben-cloud-ground-pound": {
+    "frames": [
+      "party-extra-ben-cloud-ground-pound-01",
+      "party-extra-ben-cloud-ground-pound-02",
+      "party-extra-ben-cloud-ground-pound-03",
+      "party-extra-ben-cloud-ground-pound-04",
+      "party-extra-ben-cloud-ground-pound-05",
+      "party-extra-ben-cloud-ground-pound-06",
+      "party-extra-ben-cloud-ground-pound-07",
+      "party-extra-ben-cloud-ground-pound-08"
+    ],
+    "durations": [
+      90,
+      90,
+      120,
+      90,
+      100,
+      120,
+      100,
+      160
+    ],
+    "anchor": [
+      32,
+      58
+    ],
+    "source": "work/arcade/assets-source/party-extras"
+  },
+  "ben-cobalt-stand-up": {
+    "frames": [
+      "party-extra-ben-cobalt-stand-up-01",
+      "party-extra-ben-cobalt-stand-up-02",
+      "party-extra-ben-cobalt-stand-up-03",
+      "party-extra-ben-cobalt-stand-up-04"
+    ],
+    "durations": [
+      66.66666666666667,
+      83.33333333333333,
+      100.0,
+      116.66666666666667
+    ],
+    "anchor": [
+      32,
+      58
+    ],
+    "source": "work/arcade/assets-source/party-extras"
+  },
+  "ben-cobalt-ground-pound": {
+    "frames": [
+      "party-extra-ben-cobalt-ground-pound-01",
+      "party-extra-ben-cobalt-ground-pound-02",
+      "party-extra-ben-cobalt-ground-pound-03",
+      "party-extra-ben-cobalt-ground-pound-04",
+      "party-extra-ben-cobalt-ground-pound-05",
+      "party-extra-ben-cobalt-ground-pound-06",
+      "party-extra-ben-cobalt-ground-pound-07",
+      "party-extra-ben-cobalt-ground-pound-08"
+    ],
+    "durations": [
+      90,
+      90,
+      120,
+      90,
+      100,
+      120,
+      100,
+      160
+    ],
+    "anchor": [
+      32,
+      58
+    ],
+    "source": "work/arcade/assets-source/party-extras"
+  }
+}

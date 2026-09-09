@@ -1,3 +1,5 @@
+import { boxLevelPowers } from './power-blocks';
+import { themeEnemies } from './enemy-roster';
 import type { Level, Tile, Pickup, Enemy } from './simulation';
 
 /** Distances are authored in 16px columns. The route is continuous, with no timed gates. */
@@ -82,7 +84,7 @@ for (const [index, section] of gardenSections.entries()) {
 for (const [i, [column, row]] of [[76,12], [625,9], [1413,10]].entries()) pickups.push({ id: `secret-${i+1}`, x: column * 16, y: row * 16, kind: 'secret', collected: false });
 
 export const firstLevel: Level = {
-  id: 'quartier-01', width: 1848 * 16, spawn: { x: 64, y: 240 }, tiles, pickups, enemies,
+  boss: 'pirate', id: 'quartier-01', width: 1848 * 16, spawn: { x: 64, y: 240 }, tiles, pickups, enemies,
   checkpoint: 924 * 16, goal: 1840 * 16,
 };
 
@@ -92,3 +94,7 @@ export const firstLevelTiming = {
   minimumTravelSeconds: (firstLevel.goal - firstLevel.spawn.x) / 320,
   unobstructedSprintSeconds: (firstLevel.goal - firstLevel.spawn.x) / 180,
 };
+
+firstLevel.enemies = themeEnemies(firstLevel);
+
+boxLevelPowers(firstLevel);

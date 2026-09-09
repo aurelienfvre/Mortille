@@ -1,11 +1,28 @@
 'use client';
-import {useEffect,useMemo} from 'react';
+import {useEffect,useMemo,useState} from 'react';
 import * as THREE from 'three';
 import {games} from './catalog';
 import {getConsole} from './console-catalog';
 import {createEngine,W,H} from './engine';
 import {pixelText} from './pixel-type';
 export function useMediaArtwork(index:number,consoleId:string,format:'disc'|'case'|'cartridge'){
+ const gameId=games[index].id;
+ const [cover,setCover]=useState<{id:string;image:HTMLImageElement}|null>(null);
+ useEffect(()=>{
+  if(gameId!=='mario')return;
+  let cancelled=false;
+  const load=(src:string)=>new Promise<HTMLImageElement>((resolve,reject)=>{const image=new Image();image.onload=()=>resolve(image);image.onerror=reject;image.src=src;});
+  Promise.all([load('/mariomortille/menu/village-background.png'),load('/mariomortille/story/current/aurelien-run-06.png')]).then(([background,hero])=>{
+   if(cancelled)return;
+   const canvas=document.createElement('canvas');canvas.width=768;canvas.height=1024;
+   const ctx=canvas.getContext('2d')!;ctx.imageSmoothingEnabled=false;
+   drawCoverImage(ctx,background,0,0,768,1024);
+   ctx.drawImage(hero,24,170,720,720);
+   const image=new Image();image.onload=()=>{if(!cancelled)setCover({id:gameId,image});};image.src=canvas.toDataURL('image/png');
+  }).catch(()=>{/* Keep the existing printable cover if an asset cannot load. */});
+  return()=>{cancelled=true;};
+ },[gameId]);
+ const artwork=cover?.id===gameId?cover.image:undefined;
  const material=useMemo(()=>{
   const game=games[index],device=getConsole(consoleId as any),c=document.createElement('canvas');c.width=768;c.height=format==='case'?1024:768;
   const x=c.getContext('2d')!,w=c.width,h=c.height,disc=format==='disc',ps3=consoleId==='ps3',xbox=consoleId.startsWith('xbox');
@@ -22,19 +39,23 @@ export function useMediaArtwork(index:number,consoleId:string,format:'disc'|'cas
   const preview=document.createElement('canvas');preview.width=W;preview.height=H;createEngine(game.id).draw(preview.getContext('2d')!);
   x.imageSmoothingEnabled=false;
   const pictureY=top+123,pictureH=disc?290:format==='case'?360:320;
-  x.drawImage(preview,0,0,W,H,42,pictureY,w-84,pictureH);
+  if(artwork)drawCoverImage(x,artwork,42,pictureY,w-84,pictureH);else x.drawImage(preview,0,0,W,H,42,pictureY,w-84,pictureH);
   x.fillStyle='#d1daeb';pixelText(x,game.genre.toUpperCase()+' / 1 JOUEUR',46,pictureY+pictureH+48,28,w-92);
   if(!disc){x.fillStyle='#8dcfe5';pixelText(x,'MORTIZLE ARCADE',46,h-82,27,w-92);x.fillStyle='#9aa6bd';pixelText(x,'COLLECTION PERSONNELLE / 0'+(index+1),46,h-39,21,w-92);}
   else{x.fillStyle='#a6b6cb';pixelText(x,'MORTIZLE / 0'+(index+1),110,ps3?h-139:h-66,25,w-220);}
-  if(format==='case')drawCaseCover(x,w,h,index,consoleId);
+  if(format==='case')drawCaseCover(x,w,h,index,consoleId,artwork);
   const tex=new THREE.CanvasTexture(c);tex.colorSpace=THREE.SRGBColorSpace;tex.anisotropy=4;tex.flipY=format!=='case';
   const mat=format==='disc'?new THREE.MeshPhysicalMaterial({map:tex,metalness:.24,roughness:.26,clearcoat:.9,clearcoatRoughness:.1,iridescence:.45,iridescenceThicknessRange:[100,380],envMapIntensity:1.3,polygonOffset:true,polygonOffsetFactor:-2,polygonOffsetUnits:-2}):new THREE.MeshBasicMaterial({map:tex,toneMapped:false,polygonOffset:true,polygonOffsetFactor:-2,polygonOffsetUnits:-2});mat.userData.inkShaded=true;mat.userData.title=game.name;mat.userData.platform=device.name;return mat;
- },[index,consoleId,format]);
+ },[index,consoleId,format,artwork]);
  useEffect(()=>()=>{material.map?.dispose();material.dispose();},[material]);return material;
 }
 
 // Printed jackets use the platform's packaging hierarchy and original in-game artwork.
-function drawCaseCover(x:CanvasRenderingContext2D,w:number,h:number,index:number,id:string){
+function drawCoverImage(x:CanvasRenderingContext2D,image:HTMLImageElement,dx:number,dy:number,dw:number,dh:number){
+ const scale=Math.max(dw/image.naturalWidth,dh/image.naturalHeight),sw=dw/scale,sh=dh/scale;
+ x.drawImage(image,(image.naturalWidth-sw)/2,(image.naturalHeight-sh)/2,sw,sh,dx,dy,dw,dh);
+}
+function drawCaseCover(x:CanvasRenderingContext2D,w:number,h:number,index:number,id:string,artwork?:HTMLImageElement){
  const game=games[index],name=getConsole(id as any).name;
  const preview=document.createElement('canvas');preview.width=W;preview.height=H;createEngine(game.id).draw(preview.getContext('2d')!);
  x.fillStyle='#09101c';x.fillRect(0,0,w,h);
@@ -42,7 +63,7 @@ function drawCaseCover(x:CanvasRenderingContext2D,w:number,h:number,index:number
  x.save();x.beginPath();x.rect(0,bandH,w,h-bandH);x.clip();
  x.imageSmoothingEnabled=false;
  // Full-bleed art, no tablet-like frame around the illustration.
- x.drawImage(preview,0,0,W,H,-w*.16,bandH,w*1.32,h-bandH);
+ if(artwork)drawCoverImage(x,artwork,0,bandH,w,h-bandH);else x.drawImage(preview,0,0,W,H,-w*.16,bandH,w*1.32,h-bandH);
  const shade=x.createLinearGradient(0,bandH,0,h);shade.addColorStop(0,'rgba(4,9,20,.05)');shade.addColorStop(.45,'rgba(4,9,20,.12)');shade.addColorStop(1,'rgba(4,9,20,.98)');x.fillStyle=shade;x.fillRect(0,bandH,w,h-bandH);
  x.restore();
  const metal=x.createLinearGradient(0,0,w,bandH);metal.addColorStop(0,id==='xbox360'?'#fafcf2':'#11141a');metal.addColorStop(1,id==='xbox360'?'#cddcb8':'#32353d');x.fillStyle=metal;x.fillRect(0,0,w,bandH);

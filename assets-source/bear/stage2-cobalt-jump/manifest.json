@@ -1,0 +1,91 @@
+{
+  "stage": 2,
+  "power": "cobalt",
+  "frameSize": [
+    96,
+    96
+  ],
+  "anchor": [
+    48,
+    88
+  ],
+  "standingHeight": 52,
+  "sharedScale": 0.1947565543071161,
+  "timingsMs": [
+    120,
+    90,
+    140,
+    180,
+    150,
+    100,
+    120,
+    220
+  ],
+  "frames": [
+    "jump-01.png",
+    "jump-02.png",
+    "jump-03.png",
+    "jump-04.png",
+    "jump-05.png",
+    "jump-06.png",
+    "jump-07.png",
+    "jump-08.png"
+  ],
+  "sourceAlpha": "Native RGBA hardened128, no background flood.",
+  "uniqueFrames": 8,
+  "bounds": [
+    [
+      28,
+      55,
+      68,
+      88
+    ],
+    [
+      29,
+      30,
+      67,
+      88
+    ],
+    [
+      30,
+      29,
+      66,
+      77
+    ],
+    [
+      24,
+      42,
+      72,
+      77
+    ],
+    [
+      25,
+      38,
+      72,
+      87
+    ],
+    [
+      29,
+      50,
+      68,
+      88
+    ],
+    [
+      30,
+      44,
+      67,
+      88
+    ],
+    [
+      32,
+      36,
+      64,
+      88
+    ]
+  ],
+  "status": "parent review, no runtime edits",
+  "limits": [
+    "Generated armor follows sourceposes; minor texture differences from neutralbase.",
+    "Physicsselectsframes; do not play timeline irrespective of velocity."
+  ]
+}

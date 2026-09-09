@@ -3,7 +3,8 @@ import { quartierLevels } from '../../app/mariomortille/levels.ts';
 import { createState, tick } from '../../app/mariomortille/simulation.ts';
 const idle = { direction: 0, jump: false, jumpPressed: false, run: false, downPressed: false, powerPressed: false };
 const ids = new Set();
-const encounterCounts = [20, 30, 20, 20, 24];
+// Mango arena reserves the final Cobalt patrol lane for the boss encounter.
+const encounterCounts = [18, 28, 20, 19, 24];
 for (const level of quartierLevels) {
   assert.equal(level.enemies.length, encounterCounts[quartierLevels.indexOf(level)], level.id + ': authored encounter population');
   assert.equal(new Set(level.enemies.map(e => e.id)).size, level.enemies.length, level.id + ': unique enemy IDs');

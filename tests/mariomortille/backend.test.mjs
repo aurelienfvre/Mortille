@@ -1,3 +1,5 @@
+import {minibossControls} from './miniboss-controls.mjs';
+import {createLevelParty,levelCompanions,stepPartyControls} from '../../app/mariomortille/party.ts';
 import { REPLAY_VERSION } from '../../app/mariomortille/scoring.ts';
 import { quartierLevels } from '../../app/mariomortille/levels.ts';
 import { test } from 'node:test';
@@ -8,7 +10,7 @@ import { Miniflare } from 'miniflare';
 import { leaderboardQuery, progressQuery } from '../../db/ranking.ts';
 import { firstLevel } from '../../app/mariomortille/first-level.ts';
 import { createState, tick, WIDTH, HEIGHT } from '../../app/mariomortille/simulation.ts';
-import { encodeControls } from '../../app/mariomortille/replay-codec.ts';
+import { encodeControls, encodeReplay } from '../../app/mariomortille/replay-codec.ts';
 registerHooks({ resolve(specifier, context, next) { if (specifier === 'cloudflare:workers') return { url: 'data:text/javascript,export const env = globalThis.__arcadeTestEnv', shortCircuit: true }; return next(specifier, context); } });
 globalThis.__arcadeTestEnv = {};
 const session = await import('../../app/api/arcade/session/route.ts');
@@ -31,17 +33,17 @@ test('D1 migration, cookie ownership, authoritative finish, idempotence and cohe
     const unauthorized = await runs.POST(request('runs', { action: 'start', gameId: 'mario', levelId: firstLevel.id })); assert.equal(unauthorized.status, 401);
     const start = await runs.POST(request('runs', { action: 'start', gameId: 'mario', levelId: firstLevel.id }, cookie)); assert.equal(start.status, 200);
     const { runId } = await start.json();
-    const state = createState(firstLevel), inputBytes = [], floor = new Map();
+    const state = createState(firstLevel), party=createLevelParty(state,firstLevel,levelCompanions(firstLevel)), inputBytes = [], floor = new Map();
     for (const t of firstLevel.tiles) if (t.kind === 'ground') floor.set(t.x / 16, Math.min(floor.get(t.x / 16) ?? Infinity, t.y));
     while (!state.won && inputBytes.length < 10800) {
       const p = state.player, h = floor.get(Math.floor((p.x + WIDTH + 34) / 16));
-      const obstacle = firstLevel.tiles.some(t => t.kind !== 'ground' && t.x > p.x + WIDTH && t.x < p.x + WIDTH + 38 && t.y < p.y + HEIGHT && t.y + 16 > p.y);
+      const obstacle = firstLevel.tiles.some(t => t.kind !== 'ground' && t.x >= p.x + WIDTH && t.x < p.x + WIDTH + 38 && t.y < p.y + HEIGHT && t.y + 16 > p.y);
       const enemy = state.enemies.some(e => !e.defeated && e.x > p.x && e.x - p.x < 64 && Math.abs(e.y + 20 - p.y - HEIGHT) < 20);
-      const controls = { direction: 1, run: true, jump: true, jumpPressed: p.grounded && (h === undefined || h < p.y + HEIGHT - 3 || obstacle || enemy), powerPressed: true, downPressed: false };
-      inputBytes.push(encodeControls(controls)); tick(state, firstLevel, controls);
+      let controls = { direction: 1, run: true, jump: true, jumpPressed: p.grounded && (h === undefined || h < p.y + HEIGHT - 3 || obstacle || enemy), powerPressed: p.power === 'turbo' && (!state.enemies.some(e => !e.defeated && e.x > p.x && e.x - p.x < 420) || state.enemies.some(e => !e.defeated && e.x > p.x && e.x - p.x < 90)), downPressed: false };
+      controls=minibossControls(state,controls); inputBytes.push(encodeControls(controls)); stepPartyControls(party,state,firstLevel,controls);
     }
     assert.ok(state.won);
-    const payload = { action: 'finish', runId, inputs: Buffer.from(inputBytes).toString('base64'), score: 99999999 };
+    const payload = { action: 'finish', runId, inputs: encodeReplay(inputBytes), score: 99999999 };
     assert.equal((await runs.POST(request('runs', payload, cookie))).status, 400, 'cannot submit the complete level immediately');
     await db.prepare('UPDATE arcade_runs SET started_at = ? WHERE id = ?').bind(Date.now() - state.ticks / 60 * 1000, runId).run();
     const before = performance.now();
@@ -67,12 +69,16 @@ test('D1 migration, cookie ownership, authoritative finish, idempotence and cohe
     assert.equal(apiProgress.status, 200); assert.equal((await apiProgress.json()).progress[0].ticks, 9000);
     const nextLevel = quartierLevels[1].id;
     assert.equal((await runs.POST(request('runs', { action: 'start', gameId: 'mario', levelId: nextLevel }, cookie))).status, 200, 'current victory unlocks next level');
-    // Keep an old completed record for another player: it cannot unlock the new
-    // route or mix into the new leaderboard, but its historical row is retained.
+    // Historical victories preserve campaign access without importing old competitive results.
     const oldPlayer = (await other.json()).player;
     await db.prepare('INSERT INTO arcade_runs(id, player_id, game_id, level_id, started_at, finished_at, score, ticks, secrets, replay_version) VALUES(?,?,?,?,?,?,?,?,?,?)').bind('previous-version-only', oldPlayer.id, 'mario', firstLevel.id, 1, 2, 9999999, 1, 3, REPLAY_VERSION - 1).run();
-    assert.equal((await runs.POST(request('runs', { action: 'start', gameId: 'mario', levelId: nextLevel }, otherCookie))).status, 403, 'old victory cannot unlock a revised route');
-    const oldSession = await session.GET(request('session', undefined, otherCookie)); assert.deepEqual((await oldSession.json()).progress, []);
+    assert.equal((await runs.POST(request('runs', { action: 'start', gameId: 'mario', levelId: nextLevel }, otherCookie))).status, 200, 'old victory preserves access to next level');
+    const oldSession = await session.GET(request('session', undefined, otherCookie)); assert.deepEqual((await oldSession.json()).progress, [{gameId:'mario',levelId:firstLevel.id,score:null,ticks:null,secrets:null}]);
+    const stillLocked = quartierLevels[2].id;
+    await db.prepare('INSERT INTO arcade_runs(id, player_id, game_id, level_id, started_at, replay_version) VALUES(?,?,?,?,?,?)').bind('unfinished-legacy', oldPlayer.id, 'mario', nextLevel, 1, REPLAY_VERSION-1).run();
+    assert.equal((await runs.POST(request('runs', {action:'start',gameId:'mario',levelId:stillLocked}, otherCookie))).status,403,'unfinished historical runs cannot unlock a stage');
+    const newRun = await db.prepare('SELECT replay_version FROM arcade_runs WHERE player_id = ? AND level_id = ? AND id != ?').bind(oldPlayer.id,nextLevel,'unfinished-legacy').first();
+    assert.equal(newRun.replay_version,REPLAY_VERSION,'unlocked run uses current simulation');
     assert.equal((await runs.POST(request('runs', { action: 'finish', runId: 'previous-version-only', inputs: payload.inputs }, otherCookie))).status, 409, 'old finish cannot silently return an obsolete result');
     const finalBoard = await board.GET(request(`leaderboard?game=mario&level=${firstLevel.id}`)); assert.deepEqual((await finalBoard.json()).entries, scoreRows.results);
     assert.ok(await db.prepare('SELECT id FROM arcade_runs WHERE id = ?').bind('previous-version-only').first(), 'history is preserved');

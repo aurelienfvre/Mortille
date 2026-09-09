@@ -1,0 +1,40 @@
+import assert from 'node:assert/strict';
+import { houseLevel, houseEntrance, canEnterHouse, canExitHouse, createHouseTransition, requestHouseTransition, advanceHouseTransition } from '../../app/mariomortille/house-level.ts';
+import { firstLevel } from '../../app/mariomortille/first-level.ts';
+import { createState, tick, HEIGHT } from '../../app/mariomortille/simulation.ts';
+const controls = {direction:0,run:false,jump:true,jumpPressed:false,powerPressed:false,downPressed:false};
+const outside=createState(firstLevel);
+for(let i=0;i<600&&outside.player.x<494;i++){const p=outside.player;const obstacle=outside.tiles.some(t=>t.x>=p.x+20-.01&&t.x<p.x+55&&t.y<p.y+42&&t.y+16>p.y);tick(outside,firstLevel,{...controls,direction:1,jumpPressed:p.grounded&&obstacle});}
+for(let i=0;i<90&&!outside.player.grounded;i++)tick(outside,firstLevel,controls);
+assert.ok(canEnterHouse(outside.player,firstLevel.id),'entrance is reachable from actual level spawn on safe floor');
+assert.ok(!canEnterHouse({...outside.player,grounded:false},firstLevel.id));
+assert.ok(!canEnterHouse(outside.player,'quartier-02'));
+const transition=createHouseTransition();
+assert.ok(requestHouseTransition(transition,outside.player,firstLevel.id));
+assert.ok(!requestHouseTransition(transition,outside.player,firstLevel.id),'active transition cannot be requested twice');
+const enterEvents=[];for(let i=0;i<30;i++)enterEvents.push(advanceHouseTransition(transition,1/60));
+assert.equal(enterEvents.filter(x=>x==='entered').length,1);
+const s=createState(houseLevel);
+let stage=0,hurts=0;
+const targets=[{x:160,feet:264},{x:248,feet:218},{x:368,feet:174},{x:64,feet:264}];
+for(let frame=0;frame<3600&&stage<targets.length;frame++){
+ const target=targets[stage],p=s.player;
+ const direction=Math.abs(target.x-p.x)<3?0:Math.sign(target.x-p.x);
+ tick(s,houseLevel,{...controls,direction,run:true,jumpPressed:p.grounded&&p.y+HEIGHT>target.feet+1});
+ hurts+=s.events.includes('hurt')?1:0;
+ if(p.grounded&&Math.abs(p.y+HEIGHT-target.feet)<1&&Math.abs(p.x-target.x)<7)stage++;
+}
+assert.equal(stage,targets.length,`interior route stalled ${s.player.x},${s.player.y}, stage${stage}`);
+assert.equal(hurts,0);
+assert.equal(s.pickups.filter(p=>p.collected).length,3,'floor,step and loft are truly reachable');
+assert.ok(canExitHouse(s.player));
+assert.ok(requestHouseTransition(transition,s.player,houseLevel.id));
+const exitEvents=[];for(let i=0;i<30;i++)exitEvents.push(advanceHouseTransition(transition,1/60));
+assert.equal(exitEvents.filter(x=>x==='exited').length,1);
+assert.equal(transition.mode,'outside');
+assert.equal(s.won,false,'room never completes or ranks the outdoor level');
+for(let i=0;i<300;i++)tick(s,houseLevel,{...controls,direction:-1,run:true});assert.ok(s.player.x>=16);
+for(let i=0;i<500;i++)tick(s,houseLevel,{...controls,direction:1,run:true});assert.ok(s.player.x<=604);
+assert.ok(Number.isFinite(JSON.parse(JSON.stringify(houseLevel)).goal));
+assert.ok(canEnterHouse({...houseEntrance.returnSpawn,grounded:true},firstLevel.id));
+console.log('House: actual outdoor entry, all3 interior coins with real platform jumps, safe walls, door exit, single transition callbacks; no outdoor simulation modified.');

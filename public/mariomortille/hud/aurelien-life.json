@@ -1,0 +1,18 @@
+{
+  "source": "/mariomortille/characters/aurelien/idle-01.png",
+  "crop": [
+    29,
+    12,
+    67,
+    44
+  ],
+  "size": [
+    40,
+    36
+  ],
+  "offset": [
+    1,
+    2
+  ],
+  "method": "exact RGBA crop, no redrawing or resampling"
+}

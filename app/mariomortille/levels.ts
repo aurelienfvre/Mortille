@@ -9,6 +9,5 @@ export const quartierLevels = [
   { ...secondLevel, title: 'La rue des braises' },
   { ...thirdLevel, title: 'Au-dessus des antennes' },
   { ...fourthLevel, title: 'Le chantier Cobalt' },
-  { ...fifthLevel, title: 'Raphaël, le guetteur des toits' },
+  { ...fifthLevel, title: 'Mango, le dernier rempart' },
 ];
-

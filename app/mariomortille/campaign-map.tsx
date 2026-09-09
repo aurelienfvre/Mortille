@@ -1,36 +1,60 @@
 'use client';
-/* oxlint-disable next/no-img-element -- Fixed pixel frames must retain their original PNG sampling. */
+/* oxlint-disable next/no-img-element -- Pixel PNG frames retain nearest-neighbour sampling. */
 import { useEffect, useRef, useState } from 'react';
 import { quartierLevels } from './levels';
-import { mapEdges, mapNodes, createMapWalker, advanceMapWalker, mapWalkerFrame, mapWalkerCanEnter, availableMapNode } from './map-route';
-import styles from './title-menu.module.css';
-type Props={selected:number;unlocked:number;completed:string[];idleFrame:number;onSelect:(i:number)=>void;onStart:(i:number)=>void;onSound:(cue:'move'|'confirm'|'back')=>void;buttonRef:(i:number,node:HTMLButtonElement|null)=>void};
-export default function CampaignMap(props:Props){
- const latest=useRef(props);
+import { bitmapText, menuIdleFrame } from './menu-art';
+import { campaignNodes, campaignMaxNode, createCampaignWalker, advanceCampaignWalker, campaignNeighbor } from './campaign-map-motion';
+import styles from './campaign-map.module.css';
+export type CampaignMapProps = {
+ initialNode?:number; prologueCompleted:boolean; completed:string[]; unlocked:number;
+ onStart:(index:number)=>void; onPrologue:()=>void; onBack:()=>void;
+ onSound?:(cue:'move'|'confirm'|'back')=>void;
+};
+function Heading({title}:{title:string}){const {pixels,width}=bitmapText(title.toUpperCase());return <svg className={styles.pixels} viewBox={`0 0 ${width} 9`} shapeRendering="crispEdges" aria-hidden="true"><g fill="currentColor">{pixels.map((p,i)=><rect key={i} {...p} width="1" height="1"/>)}</g></svg>;}
+const labels=['PROLOGUE',...quartierLevels.map((l,i)=>`${i+1}. ${l.title}`)];
+export default function CampaignMap(props:CampaignMapProps){
+ const initialNode = Math.max(0, Math.min(campaignMaxNode(props.prologueCompleted, props.unlocked), Number.isInteger(props.initialNode) ? props.initialNode! : 0));
+ const latest=useRef(props),root=useRef<HTMLDivElement>(null),selectedRef=useRef(initialNode),launch=useRef<number|null>(null);
+ const [selected,setSelected]=useState(initialNode),[hero,setHero]=useState({x:campaignNodes[initialNode][0],y:campaignNodes[initialNode][1],facing:1,frame:1,moving:false});
+ const max=campaignMaxNode(props.prologueCompleted,props.unlocked);
  useEffect(()=>{latest.current=props;},[props]);
- const launch=useRef<number|null>(null);
- const [hero,setHero]=useState({x:mapNodes[0][0],y:mapNodes[0][1],facing:1,frame:0,moving:false});
+ const choose=(i:number,enter=false)=>{
+  if(i<0||i>=campaignNodes.length)return;
+  selectedRef.current=i;setSelected(i);launch.current=enter&&i<=max?i:null;
+  props.onSound?.(i>max?'back':enter?'confirm':'move');
+ };
  useEffect(()=>{
-  const walker=createMapWalker();
-  let last=0,handle=0;
+  root.current?.focus();const walker=createCampaignWalker(initialNode);let last=0,elapsed=0,handle=0;
   const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
   const tick=(now:number)=>{
-   const dt=last?(now-last)/1000:0;last=now;
-   const p=latest.current;
-   // Moving focus to another level, a lock, or Back cancels an older confirmation.
-   if(launch.current!==null&&launch.current!==p.selected)launch.current=null;
-   advanceMapWalker(walker,p.selected,p.unlocked,dt,reduced.matches);
-   setHero({x:walker.x,y:walker.y,facing:walker.facing,frame:mapWalkerFrame(walker),moving:walker.moving});
-   if(launch.current!==null&&mapWalkerCanEnter(walker,p.selected,p.unlocked)){
-    launch.current=null;p.onStart(walker.node);return;
+   const dt=last?Math.min((now-last)/1000,.05):0;last=now;elapsed+=dt;
+   const p=latest.current,target=selectedRef.current,limit=campaignMaxNode(p.prologueCompleted,p.unlocked);
+   advanceCampaignWalker(walker,target,limit,dt,reduced.matches);
+   setHero({x:walker.x,y:walker.y,facing:walker.facing,moving:walker.moving,frame:walker.moving?Math.floor(walker.distance/2.4)%8+1:menuIdleFrame(reduced.matches?0:elapsed*1000)+1});
+   if(launch.current!==null&&launch.current===target&&target<=limit&&!walker.moving&&walker.node===target&&walker.settled>=.18){
+    launch.current=null;if(target===0)p.onPrologue();else p.onStart(target-1);return;
    }
    handle=requestAnimationFrame(tick);
-  };
-  handle=requestAnimationFrame(tick);return()=>cancelAnimationFrame(handle);
+  };handle=requestAnimationFrame(tick);return()=>cancelAnimationFrame(handle);
  },[]);
- return <div className={styles.worldMap}>
-  <svg viewBox="0 0 100 100" preserveAspectRatio="none" className={styles.mapPaths} aria-hidden="true">{mapEdges.map((edge,i)=><g key={i}><polyline points={edge.map(p=>p.join(',')).join(' ')} fill="none" stroke="#354b32" strokeWidth="3"/><polyline points={edge.map(p=>p.join(',')).join(' ')} fill="none" stroke={i<props.unlocked?'#f0ca7a':'#889570'} strokeWidth="1.5" strokeDasharray={i<props.unlocked?undefined:'2 2'}/></g>)}</svg>
-  {quartierLevels.map((level,i)=><button key={level.id} ref={node=>props.buttonRef(i,node)} style={{left:`${mapNodes[i][0]}%`,top:`${mapNodes[i][1]}%`,width:34,height:34,borderRadius:'50%'}} className={`${styles.mapNode} ${props.selected===i?styles.mapSelected:''} ${props.completed.includes(level.id)?styles.mapComplete:''}`} aria-disabled={i>props.unlocked} aria-label={`1–${i+1} ${level.title}, ${i>props.unlocked?'verrouillé':props.completed.includes(level.id)?'terminé':'disponible'}`} onFocus={()=>{launch.current=null;props.onSelect(i);}} onClick={()=>{props.onSelect(i);if(availableMapNode(i,props.unlocked)){launch.current=i;props.onSound('confirm');}else{launch.current=null;props.onSound('back');}}}>{i>props.unlocked?'×':props.completed.includes(level.id)?'✓':i+1}</button>)}
-  <img src={hero.moving?`/mariomortille/menu/aurelien/walk/walk-${String(hero.frame+1).padStart(2,'0')}.png`:`/mariomortille/menu/aurelien/idle-${String(props.idleFrame+1).padStart(2,'0')}.png`} className={styles.mapHero} style={{left:`${hero.x}%`,top:`${hero.y}%`,transform:`translate(-50%,-91%) scaleX(${hero.facing})`,transition:'none'}} alt="" aria-hidden="true"/>
+ const done=selected===0?props.prologueCompleted:props.completed.includes(quartierLevels[selected-1].id);
+ const locked=selected>max;
+ return <div ref={root} className={styles.screen} tabIndex={-1} role="region" aria-label="Carte du monde de Mariomortille" onKeyDown={e=>{
+  if(e.key==='Escape'){e.preventDefault();e.stopPropagation();launch.current=null;props.onSound?.('back');props.onBack();return;}
+  const vectors:Record<string,[number,number]>={ArrowLeft:[-1,0],q:[-1,0],Q:[-1,0],ArrowRight:[1,0],d:[1,0],D:[1,0],ArrowUp:[0,-1],z:[0,-1],Z:[0,-1],ArrowDown:[0,1],s:[0,1],S:[0,1]};
+  if(vectors[e.key]){e.preventDefault();e.stopPropagation();if(!e.repeat){const [x,y]=vectors[e.key];choose(campaignNeighbor(selectedRef.current,x,y));root.current?.focus();}return;}
+  if(e.key==='Enter'&&e.target===root.current){e.preventDefault();e.stopPropagation();choose(selectedRef.current,true);}
+ }}>
+  <div className={styles.world}>
+   <img className={styles.art} src="/mariomortille/campaign/world-v3.png" alt="Île verdoyante : maisons, jardins, village gelé, toits, chantier et château, reliés par des chemins et deux ponts." draggable={false}/>
+   <header className={styles.top}><h2 className={styles.heading} aria-label={labels[selected]}><Heading title={selected===0?'PROLOGUE':quartierLevels[selected-1].title}/></h2><button className={styles.back} onClick={()=>{launch.current=null;props.onSound?.('back');props.onBack();}}>← MENU</button></header>
+   {[{id:'pirate',name:'Pirate',x:31.8,y:37.5},{id:'lola',name:'Lola',x:46.6,y:14.1},{id:'raphael',name:'Raph',x:83.5,y:69.3},{id:'mango',name:'Mango',x:83,y:15.8}].map(b=><img key={b.id} className={styles.boss} src={`/mariomortille/campaign/${b.id}-throne.png`} alt={b.name} title={b.name} draggable={false} style={{left:`${b.x}%`,top:`${b.y}%`}}/>)}
+   {campaignNodes.map(([x,y],i)=>{const complete=i===0?props.prologueCompleted:props.completed.includes(quartierLevels[i-1].id);return <button key={i} type="button" style={{left:`${x}%`,top:`${y}%`}} className={`${styles.node} ${selected===i?styles.selected:''} ${i>max?styles.locked:''} ${complete?styles.complete:''}`} aria-label={`${labels[i]}, ${i>max?'verrouillé':complete?'terminé':'disponible'}`} aria-disabled={i>max} aria-current={selected===i?'step':undefined} onClick={()=>choose(i,true)}>{i>max?'×':complete?'✓':i===0?'P':i}</button>;})}
+   <img className={styles.hero} src={`/mariomortille/campaign/hero-current/${hero.moving?'walk':'idle'}-${String(hero.frame).padStart(2,'0')}.png`} alt="" aria-hidden="true" draggable={false} style={{left:`${hero.x}%`,top:`${hero.y}%`,transform:`translate(-50%,-${59 / 64 * 100}%) scaleX(${hero.facing})`}}/>
+   {[[45,52],[50,58],[57,64],[69,72],[91,91],[12,96],[4,60]].map(([x,y],i)=><i key={i} aria-hidden="true" className={styles.sparkle} style={{left:`${x}%`,top:`${y}%`,animationDelay:`${i*.43}s`}}/>)}
+   <footer className={styles.caption}>
+    <button className={styles.enter} disabled={locked} onClick={()=>choose(selected,true)}>{done?'REJOUER':'JOUER'} ▶</button>
+   </footer>
+  </div>
  </div>;
 }

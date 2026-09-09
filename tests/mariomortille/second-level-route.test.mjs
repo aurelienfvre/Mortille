@@ -1,3 +1,4 @@
+import {minibossControls} from './miniboss-controls.mjs';
 import { strict as assert } from 'node:assert';
 import { secondLevel, secondLevelTiming, emberSections } from '../../app/mariomortille/second-level.ts';
 import { createState, tick, WIDTH, HEIGHT } from '../../app/mariomortille/simulation.ts';
@@ -19,7 +20,7 @@ for (let frame = 0; frame < 180 * 60 && !state.won; frame++) {
   const stepAhead = secondLevel.tiles.some(t => t.kind !== 'ground' && t.x > p.x + WIDTH && t.x < p.x + WIDTH + 38 && t.y < p.y + HEIGHT && t.y + 16 > p.y);
   const terrainJump = height === undefined || height < p.y + HEIGHT - 3 || stepAhead;
   const enemyJump = state.enemies.some(e => !e.defeated && e.x > p.x && e.x - p.x < 64 && Math.abs(e.y + 20 - p.y - HEIGHT) < 20);
-  tick(state, secondLevel, { direction: 1, run: true, jump: true, jumpPressed: p.grounded && (terrainJump || enemyJump), powerPressed: true, downPressed: false });
+  tick(state, secondLevel, minibossControls(state, { direction: 1, run: true, jump: true, jumpPressed: p.grounded && (terrainJump || enemyJump), powerPressed: true, downPressed: false }));
   hurts += state.events.includes('hurt') ? 1 : 0;
   breaks += state.events.filter(e => e === 'break').length;
   shots += state.events.filter(e => e === 'fire').length;
@@ -30,7 +31,7 @@ assert.ok(state.won, `main-route bot did not finish: x=${state.player.x}, y=${st
 assert.equal(hurts, 0, 'route can be traversed without collisions or falls');
 assert.equal(checkpointEvents, 1);
 assert.ok(breaks >= 10, `fire melted only ${breaks} blocks`);
-assert.ok(shots > 100); 
+assert.ok(shots > 100);
 assert.ok(jumps >= 25, 'main route includes meaningful active jumps');
 assert.ok(state.ticks / 60 >= 90 && state.ticks / 60 <= 180);
 console.log(`Braises main route: ${(state.ticks / 60).toFixed(2)}s, ${jumps} jumps, ${hurts} hurts, ${breaks} melted blocks, automatic ember; optional three secrets not part of this timing.`);
@@ -59,7 +60,7 @@ for (let frame = 0; frame < 180 * 60 && !perfect.won; frame++) {
     const enemyJump = perfect.enemies.some(e => !e.defeated && e.x > p.x && e.x - p.x < 64 && Math.abs(e.y + 20 - p.y - HEIGHT) < 20);
     jumpPressed = p.grounded && (height === undefined || height < p.y + HEIGHT - 3 || stepAhead || enemyJump);
   }
-  tick(perfect, secondLevel, { direction, run: true, jump: true, jumpPressed, powerPressed: true, downPressed: false });
+  tick(perfect, secondLevel, minibossControls(perfect, { direction, run: true, jump: true, jumpPressed, powerPressed: true, downPressed: false }));
   perfectHurts += perfect.events.includes('hurt') ? 1 : 0;
 }
 assert.ok(perfect.won, `secret route did not finish: x=${perfect.player.x}, y=${perfect.player.y}, secret=${secretIndex}, step=${balconyStep}`);

@@ -1,3 +1,5 @@
+import { boxLevelPowers } from './power-blocks';
+import { themeEnemies } from './enemy-roster';
 import type { Level, Tile, Pickup, Enemy } from './simulation';
 
 /** Braises is a fire-power route: thaw gates, cross canals, then climb balconies. */
@@ -39,5 +41,9 @@ for (const [i, section] of emberSections.entries()) {
   const approachLeft = (start + 12) * 16, approachRight = approachLeft + 4 * 16;
   enemies.push({ id: `ember-approach-${i}`, x: approachRight, y: section.row * 16 - 20, left: approachLeft, right: approachRight, direction: -1, defeated: false });
 }
-export const secondLevel: Level = { id: 'quartier-02', width: 1840 * 16, spawn: { x: 64, y: 240 }, tiles, pickups, enemies, checkpoint: 926 * 16, goal: 1834 * 16 };
+export const secondLevel: Level = { boss: 'lola', id: 'quartier-02', width: 1840 * 16, spawn: { x: 64, y: 240 }, tiles, pickups, enemies, checkpoint: 926 * 16, goal: 1834 * 16 };
 export const secondLevelTiming = { minimumTravelSeconds: (secondLevel.goal - secondLevel.spawn.x) / 320 };
+
+secondLevel.enemies = themeEnemies(secondLevel);
+
+boxLevelPowers(secondLevel);

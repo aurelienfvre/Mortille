@@ -1,0 +1,164 @@
+{
+  "character": "julien",
+  "frameSize": [
+    96,
+    96
+  ],
+  "anchor": [
+    48,
+    88
+  ],
+  "standingHeight": 78,
+  "aurelStandingHeight": 72,
+  "assets": [
+    {
+      "file": "idle-01.png",
+      "source": "outputs/Sprites-reprise-2026-09-08/juju/native/idle/frames/poses-01.png",
+      "scale": 0.38613861386138615,
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "idle-02.png",
+      "source": "outputs/Sprites-reprise-2026-09-08/juju/native/idle/frames/poses-02.png",
+      "scale": 0.38613861386138615,
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "idle-03.png",
+      "source": "outputs/Sprites-reprise-2026-09-08/juju/native/idle/frames/poses-03.png",
+      "scale": 0.38613861386138615,
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "idle-04.png",
+      "source": "outputs/Sprites-reprise-2026-09-08/juju/native/idle/frames/poses-04.png",
+      "scale": 0.38613861386138615,
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "idle-05.png",
+      "source": "outputs/Sprites-reprise-2026-09-08/juju/native/idle/frames/poses-05.png",
+      "scale": 0.38613861386138615,
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "idle-06.png",
+      "source": "outputs/Sprites-reprise-2026-09-08/juju/native/idle/frames/poses-06.png",
+      "scale": 0.38613861386138615,
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "idle-07.png",
+      "source": "outputs/Sprites-reprise-2026-09-08/juju/native/idle/frames/poses-07.png",
+      "scale": 0.38613861386138615,
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "idle-08.png",
+      "source": "outputs/Sprites-reprise-2026-09-08/juju/native/idle/frames/poses-08.png",
+      "scale": 0.38613861386138615,
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "receive-01.png",
+      "source": "outputs/Sprites-reprise-2026-09-08/juju/receive-steve/frames/poses-01.png",
+      "scale": 0.38613861386138615,
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "receive-02.png",
+      "source": "outputs/Sprites-reprise-2026-09-08/juju/receive-steve/frames/poses-02.png",
+      "scale": 0.38613861386138615,
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "receive-03.png",
+      "source": "outputs/Sprites-reprise-2026-09-08/juju/receive-steve/frames/poses-03.png",
+      "scale": 0.38613861386138615,
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "receive-04.png",
+      "source": "outputs/Sprites-reprise-2026-09-08/juju/receive-steve/frames/poses-04.png",
+      "scale": 0.38613861386138615,
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "receive-05.png",
+      "source": "outputs/Sprites-reprise-2026-09-08/juju/receive-steve/frames/poses-05.png",
+      "scale": 0.38613861386138615,
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "receive-06.png",
+      "source": "outputs/Sprites-reprise-2026-09-08/juju/receive-steve/frames/poses-06.png",
+      "scale": 0.38613861386138615,
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "receive-07.png",
+      "source": "outputs/Sprites-reprise-2026-09-08/juju/receive-steve/frames/poses-07.png",
+      "scale": 0.38613861386138615,
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "receive-08.png",
+      "source": "outputs/Sprites-reprise-2026-09-08/juju/receive-steve/frames/poses-08.png",
+      "scale": 0.38613861386138615,
+      "alpha": [
+        0,
+        255
+      ]
+    }
+  ],
+  "missing": [
+    "walk",
+    "run"
+  ],
+  "note": "No rejected gait integrated. Receive contains distinct story key poses, not a locomotion loop."
+}

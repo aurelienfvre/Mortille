@@ -1,0 +1,218 @@
+{
+  "juju-ember": {
+    "frames": [
+      "party-juju-ember-equip-01",
+      "party-juju-ember-equip-02",
+      "party-juju-ember-equip-03",
+      "party-juju-ember-equip-04",
+      "party-juju-ember-equip-05",
+      "party-juju-ember-equip-06",
+      "party-juju-ember-equip-07",
+      "party-juju-ember-equip-08"
+    ],
+    "durations": [
+      140,
+      180,
+      220,
+      260,
+      260,
+      220,
+      240,
+      800
+    ],
+    "anchor": [
+      32,
+      58
+    ],
+    "source": "assets-source/mariomortille/party/juju/equip-ember"
+  },
+  "juju-turbo": {
+    "frames": [
+      "party-juju-turbo-equip-01",
+      "party-juju-turbo-equip-02",
+      "party-juju-turbo-equip-03",
+      "party-juju-turbo-equip-04",
+      "party-juju-turbo-equip-05",
+      "party-juju-turbo-equip-06",
+      "party-juju-turbo-equip-07",
+      "party-juju-turbo-equip-08"
+    ],
+    "durations": [
+      140,
+      180,
+      220,
+      260,
+      260,
+      220,
+      240,
+      800
+    ],
+    "anchor": [
+      32,
+      58
+    ],
+    "source": "assets-source/mariomortille/party/juju/equip-turbo"
+  },
+  "juju-cloud": {
+    "frames": [
+      "party-juju-cloud-equip-01",
+      "party-juju-cloud-equip-02",
+      "party-juju-cloud-equip-03",
+      "party-juju-cloud-equip-04",
+      "party-juju-cloud-equip-05",
+      "party-juju-cloud-equip-06",
+      "party-juju-cloud-equip-07",
+      "party-juju-cloud-equip-08"
+    ],
+    "durations": [
+      140,
+      180,
+      220,
+      260,
+      260,
+      220,
+      240,
+      800
+    ],
+    "anchor": [
+      32,
+      58
+    ],
+    "source": "assets-source/mariomortille/party/juju/equip-cloud"
+  },
+  "juju-cobalt": {
+    "frames": [
+      "party-juju-cobalt-equip-01",
+      "party-juju-cobalt-equip-02",
+      "party-juju-cobalt-equip-03",
+      "party-juju-cobalt-equip-04",
+      "party-juju-cobalt-equip-05",
+      "party-juju-cobalt-equip-06",
+      "party-juju-cobalt-equip-07",
+      "party-juju-cobalt-equip-08"
+    ],
+    "durations": [
+      140,
+      180,
+      220,
+      260,
+      260,
+      220,
+      240,
+      800
+    ],
+    "anchor": [
+      32,
+      58
+    ],
+    "source": "assets-source/mariomortille/party/juju/equip-cobalt"
+  },
+  "ben-ember": {
+    "frames": [
+      "party-ben-ember-equip-01",
+      "party-ben-ember-equip-02",
+      "party-ben-ember-equip-03",
+      "party-ben-ember-equip-04",
+      "party-ben-ember-equip-05",
+      "party-ben-ember-equip-06",
+      "party-ben-ember-equip-07",
+      "party-ben-ember-equip-08"
+    ],
+    "durations": [
+      160,
+      220,
+      260,
+      300,
+      300,
+      240,
+      220,
+      400
+    ],
+    "anchor": [
+      32,
+      58
+    ],
+    "source": "assets-source/mariomortille/party/ben/equip-ember"
+  },
+  "ben-turbo": {
+    "frames": [
+      "party-ben-turbo-equip-01",
+      "party-ben-turbo-equip-02",
+      "party-ben-turbo-equip-03",
+      "party-ben-turbo-equip-04",
+      "party-ben-turbo-equip-05",
+      "party-ben-turbo-equip-06",
+      "party-ben-turbo-equip-07",
+      "party-ben-turbo-equip-08"
+    ],
+    "durations": [
+      160,
+      220,
+      260,
+      300,
+      300,
+      240,
+      220,
+      400
+    ],
+    "anchor": [
+      32,
+      58
+    ],
+    "source": "assets-source/mariomortille/party/ben/equip-turbo"
+  },
+  "ben-cloud": {
+    "frames": [
+      "party-ben-cloud-equip-01",
+      "party-ben-cloud-equip-02",
+      "party-ben-cloud-equip-03",
+      "party-ben-cloud-equip-04",
+      "party-ben-cloud-equip-05",
+      "party-ben-cloud-equip-06",
+      "party-ben-cloud-equip-07",
+      "party-ben-cloud-equip-08"
+    ],
+    "durations": [
+      160,
+      220,
+      260,
+      300,
+      300,
+      240,
+      220,
+      400
+    ],
+    "anchor": [
+      32,
+      58
+    ],
+    "source": "assets-source/mariomortille/party/ben/equip-cloud"
+  },
+  "ben-cobalt": {
+    "frames": [
+      "party-ben-cobalt-equip-01",
+      "party-ben-cobalt-equip-02",
+      "party-ben-cobalt-equip-03",
+      "party-ben-cobalt-equip-04",
+      "party-ben-cobalt-equip-05",
+      "party-ben-cobalt-equip-06",
+      "party-ben-cobalt-equip-07",
+      "party-ben-cobalt-equip-08"
+    ],
+    "durations": [
+      160,
+      220,
+      260,
+      300,
+      300,
+      240,
+      220,
+      400
+    ],
+    "anchor": [
+      32,
+      58
+    ],
+    "source": "assets-source/mariomortille/party/ben/equip-cobalt"
+  }
+}

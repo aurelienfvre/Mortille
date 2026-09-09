@@ -1,0 +1,242 @@
+[
+  {
+    "file": "capture-01.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/steve/prologue/native/being-picked-up-01.png",
+    "bellyAnchor": [
+      48,
+      60
+    ],
+    "bbox": [
+      33,
+      41,
+      69,
+      74
+    ],
+    "scale": 0.2925
+  },
+  {
+    "file": "capture-02.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/steve/prologue/native/being-picked-up-01.png",
+    "bellyAnchor": [
+      48,
+      60
+    ],
+    "bbox": [
+      33,
+      41,
+      69,
+      74
+    ],
+    "scale": 0.2925
+  },
+  {
+    "file": "capture-03.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/steve/prologue/native/being-picked-up-02.png",
+    "bellyAnchor": [
+      48,
+      60
+    ],
+    "bbox": [
+      31,
+      38,
+      66,
+      74
+    ],
+    "scale": 0.2925
+  },
+  {
+    "file": "capture-04.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/steve/prologue/native/being-picked-up-03.png",
+    "bellyAnchor": [
+      48,
+      60
+    ],
+    "bbox": [
+      31,
+      36,
+      66,
+      75
+    ],
+    "scale": 0.2925
+  },
+  {
+    "file": "capture-05.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/steve/prologue/native/being-picked-up-05.png",
+    "bellyAnchor": [
+      48,
+      60
+    ],
+    "bbox": [
+      29,
+      32,
+      63,
+      76
+    ],
+    "scale": 0.2925
+  },
+  {
+    "file": "capture-06.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/steve/prologue/native/being-picked-up-07.png",
+    "bellyAnchor": [
+      48,
+      60
+    ],
+    "bbox": [
+      28,
+      40,
+      67,
+      70
+    ],
+    "scale": 0.2925
+  },
+  {
+    "file": "capture-07.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/steve/prologue/native/carried-squirm-01.png",
+    "bellyAnchor": [
+      48,
+      60
+    ],
+    "bbox": [
+      31,
+      41,
+      68,
+      71
+    ],
+    "scale": 0.2925
+  },
+  {
+    "file": "capture-08.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/steve/prologue/native/carried-squirm-02.png",
+    "bellyAnchor": [
+      48,
+      60
+    ],
+    "bbox": [
+      31,
+      41,
+      68,
+      69
+    ],
+    "scale": 0.2925
+  },
+  {
+    "file": "capture-09.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/steve/prologue/native/carried-squirm-03.png",
+    "bellyAnchor": [
+      48,
+      60
+    ],
+    "bbox": [
+      32,
+      37,
+      67,
+      69
+    ],
+    "scale": 0.2925
+  },
+  {
+    "file": "capture-10.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/steve/prologue/native/carried-squirm-04.png",
+    "bellyAnchor": [
+      48,
+      60
+    ],
+    "bbox": [
+      29,
+      42,
+      67,
+      71
+    ],
+    "scale": 0.2925
+  },
+  {
+    "file": "capture-11.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/steve/prologue/native/carried-squirm-05.png",
+    "bellyAnchor": [
+      48,
+      60
+    ],
+    "bbox": [
+      29,
+      42,
+      65,
+      71
+    ],
+    "scale": 0.2925
+  },
+  {
+    "file": "capture-12.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/steve/prologue/native/carried-squirm-06.png",
+    "bellyAnchor": [
+      48,
+      60
+    ],
+    "bbox": [
+      29,
+      38,
+      64,
+      70
+    ],
+    "scale": 0.2925
+  },
+  {
+    "file": "capture-13.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/steve/prologue/native/carried-squirm-07.png",
+    "bellyAnchor": [
+      48,
+      60
+    ],
+    "bbox": [
+      29,
+      42,
+      67,
+      71
+    ],
+    "scale": 0.2925
+  },
+  {
+    "file": "capture-14.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/steve/prologue/native/carried-squirm-08.png",
+    "bellyAnchor": [
+      48,
+      60
+    ],
+    "bbox": [
+      28,
+      41,
+      66,
+      70
+    ],
+    "scale": 0.2925
+  },
+  {
+    "file": "capture-15.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/steve/prologue/native/carried-squirm-01.png",
+    "bellyAnchor": [
+      48,
+      60
+    ],
+    "bbox": [
+      31,
+      41,
+      68,
+      71
+    ],
+    "scale": 0.2925
+  },
+  {
+    "file": "capture-16.png",
+    "source": "outputs/Sprites-reprise-2026-09-08/steve/prologue/native/carried-squirm-02.png",
+    "bellyAnchor": [
+      48,
+      60
+    ],
+    "bbox": [
+      31,
+      41,
+      68,
+      69
+    ],
+    "scale": 0.2925
+  }
+]

@@ -1,0 +1,62 @@
+{
+  "stage": 3,
+  "power": "ember",
+  "frames": [
+    "idle-01.png",
+    "idle-02.png",
+    "idle-03.png",
+    "idle-04.png"
+  ],
+  "durations": [
+    500,
+    200,
+    120,
+    380
+  ],
+  "canvas": [
+    96,
+    96
+  ],
+  "anchor": [
+    48,
+    88
+  ],
+  "scale": 0.13168724279835392,
+  "alpha": [
+    0,
+    255
+  ],
+  "uniqueFrames": 4,
+  "bbox": [
+    [
+      15,
+      26,
+      82,
+      88
+    ],
+    [
+      15,
+      24,
+      82,
+      88
+    ],
+    [
+      15,
+      25,
+      82,
+      88
+    ],
+    [
+      15,
+      26,
+      82,
+      88
+    ]
+  ],
+  "cleanup": "Native RGBA source preserved, alpha hardened at128, detached tiny components removed, hiddenRGBzero.",
+  "status": "candidate-for-parent-review",
+  "limits": [
+    "New generated drawings have minor outline and clothing detail drift against static base.",
+    "Only equipped idle; attacks/walking not generated in this batch."
+  ]
+}

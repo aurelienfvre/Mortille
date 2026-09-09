@@ -1,0 +1,1388 @@
+{
+  "character": "julien",
+  "status": "partial story integration; character not selectable in gameplay",
+  "playable": false,
+  "canvas": [
+    96,
+    96
+  ],
+  "anchor": [
+    48,
+    88
+  ],
+  "format": "PNG RGBA",
+  "alpha": [
+    0,
+    255
+  ],
+  "available": [
+    "idle",
+    "walk",
+    "run",
+    "jump",
+    "hurt",
+    "dash",
+    "turbo-equip",
+    "turbo-idle",
+    "turbo-walk",
+    "turbo-run"
+  ],
+  "remaining": [
+    "equip",
+    "powers"
+  ],
+  "animations": {
+    "idle": {
+      "files": [
+        "idle-01.png",
+        "idle-02.png",
+        "idle-03.png",
+        "idle-04.png",
+        "idle-05.png",
+        "idle-06.png",
+        "idle-07.png",
+        "idle-08.png"
+      ],
+      "durationMs": [
+        650,
+        650,
+        45,
+        45,
+        45,
+        45,
+        650,
+        650
+      ],
+      "loop": true
+    },
+    "walk": {
+      "files": [
+        "walk-01.png",
+        "walk-02.png",
+        "walk-03.png",
+        "walk-04.png",
+        "walk-05.png",
+        "walk-06.png",
+        "walk-07.png",
+        "walk-08.png"
+      ],
+      "durationMs": [
+        110,
+        110,
+        110,
+        110,
+        110,
+        110,
+        110,
+        110
+      ],
+      "loop": true,
+      "source": "locomotion-final",
+      "review": "parent accepted visually coherent; gait not claimed perfect"
+    },
+    "run": {
+      "files": [
+        "run-01.png",
+        "run-02.png",
+        "run-03.png",
+        "run-04.png",
+        "run-05.png",
+        "run-06.png",
+        "run-07.png",
+        "run-08.png"
+      ],
+      "durationMs": [
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80
+      ],
+      "loop": true,
+      "source": "locomotion-final",
+      "review": "parent accepted visually coherent; gait not claimed perfect"
+    },
+    "jump": {
+      "files": [
+        "jump-01.png",
+        "jump-02.png",
+        "jump-03.png",
+        "jump-04.png",
+        "jump-05.png",
+        "jump-06.png",
+        "jump-07.png",
+        "jump-08.png"
+      ],
+      "durationMs": [
+        100,
+        90,
+        100,
+        120,
+        100,
+        100,
+        100,
+        200
+      ],
+      "loop": false
+    },
+    "hurt": {
+      "files": [
+        "hurt-01.png",
+        "hurt-02.png",
+        "hurt-03.png",
+        "hurt-04.png"
+      ],
+      "durationMs": [
+        80,
+        110,
+        90,
+        110
+      ],
+      "anchor": [
+        48,
+        88
+      ],
+      "usage": "brief startle during abduction; no health change",
+      "review": "canonical head and alpha checked; slight body clothing pixel differences from idle"
+    },
+    "dash": {
+      "files": [
+        "dash-01.png",
+        "dash-02.png",
+        "dash-03.png",
+        "dash-04.png",
+        "dash-05.png",
+        "dash-06.png",
+        "dash-07.png",
+        "dash-08.png"
+      ],
+      "durationMs": [
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70
+      ],
+      "loop": false
+    },
+    "turbo-equip": {
+      "files": [
+        "turbo-equip-01.png",
+        "turbo-equip-02.png",
+        "turbo-equip-03.png",
+        "turbo-equip-04.png",
+        "turbo-equip-05.png",
+        "turbo-equip-06.png",
+        "turbo-equip-07.png",
+        "turbo-equip-08.png"
+      ],
+      "durationMs": [
+        70,
+        90,
+        110,
+        120,
+        120,
+        100,
+        90,
+        90
+      ],
+      "loop": false
+    },
+    "turbo-idle": {
+      "files": [
+        "turbo-idle-01.png",
+        "turbo-idle-02.png",
+        "turbo-idle-03.png",
+        "turbo-idle-04.png",
+        "turbo-idle-05.png",
+        "turbo-idle-06.png",
+        "turbo-idle-07.png",
+        "turbo-idle-08.png"
+      ],
+      "durationMs": [
+        650,
+        650,
+        45,
+        45,
+        45,
+        45,
+        650,
+        650
+      ],
+      "loop": true
+    },
+    "turbo-walk": {
+      "files": [
+        "turbo-walk-01.png",
+        "turbo-walk-02.png",
+        "turbo-walk-03.png",
+        "turbo-walk-04.png",
+        "turbo-walk-05.png",
+        "turbo-walk-06.png",
+        "turbo-walk-07.png",
+        "turbo-walk-08.png",
+        "turbo-walk-09.png",
+        "turbo-walk-10.png",
+        "turbo-walk-11.png",
+        "turbo-walk-12.png",
+        "turbo-walk-13.png",
+        "turbo-walk-14.png",
+        "turbo-walk-15.png",
+        "turbo-walk-16.png"
+      ],
+      "durationMs": [
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70
+      ],
+      "loop": true
+    },
+    "turbo-run": {
+      "files": [
+        "turbo-run-01.png",
+        "turbo-run-02.png",
+        "turbo-run-03.png",
+        "turbo-run-04.png",
+        "turbo-run-05.png",
+        "turbo-run-06.png",
+        "turbo-run-07.png",
+        "turbo-run-08.png",
+        "turbo-run-09.png",
+        "turbo-run-10.png",
+        "turbo-run-11.png",
+        "turbo-run-12.png",
+        "turbo-run-13.png",
+        "turbo-run-14.png",
+        "turbo-run-15.png",
+        "turbo-run-16.png"
+      ],
+      "durationMs": [
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45
+      ],
+      "loop": true
+    }
+  },
+  "validation": {
+    "files": 104,
+    "declaredAnchor": [
+      48,
+      88
+    ],
+    "observedBottomExclusive": [
+      85,
+      86,
+      88
+    ],
+    "crossStateAlignmentPassed": true,
+    "walkRunCorrection": {
+      "translation": [
+        0,
+        -1
+      ],
+      "resized": false,
+      "appliedToAllFrames": true
+    },
+    "pixelChecksPassed": true,
+    "visualApproval": false,
+    "notes": [
+      "Walk/run contact sheets inspected: alternating limbs and knee flexion visible. Playback quality remains to be reviewed.",
+      "Idle outline shifts by up to one pixel; retain for review, not final approval.",
+      "Walk/run copied with common integer y=-1 translation, contact now exclusive88 matching idle/jump. Run suspension retains its original lift at bottom85\u201386.",
+      "Jump candidates need visual approval before runtime use.",
+      "Dash v2 sheet reviewed: canonical head, shared outfit palette, integer alignment. Asset pack only; Juju is not yet a playable character.",
+      "Turbo equip v2 visually reviewed. Entry exact idle01, exit exact equipped idle01. RGBA96 hardalpha, common floor88. Full equipped locomotion/powers incomplete, not playable.",
+      "Turbo locomotion: 40 PNG with exact original silhouette/alpha/head and knee gait; footwear palette only. Full idle8 now replaces the one-frame placeholder. Jump/dash/power equipped variants incomplete."
+    ]
+  },
+  "frames": [
+    {
+      "file": "idle-01.png",
+      "bounds": [
+        33,
+        9,
+        71,
+        88
+      ],
+      "sha256": "47dcc6b683ea50f9f63293ae8ca4398e4f985c2a0e296fc60a6386bde833ee89"
+    },
+    {
+      "file": "idle-02.png",
+      "bounds": [
+        33,
+        9,
+        71,
+        88
+      ],
+      "sha256": "eb381cd41e7ee3de04f4a2962a8dbcd5b68afafba767b55a216db40a76a7ea2e"
+    },
+    {
+      "file": "idle-03.png",
+      "bounds": [
+        33,
+        9,
+        71,
+        88
+      ],
+      "sha256": "2b69409fc13a42f344fb756ccb840d2e711c35c0de40a5965c55a099cfbc0831"
+    },
+    {
+      "file": "idle-04.png",
+      "bounds": [
+        33,
+        9,
+        71,
+        88
+      ],
+      "sha256": "ebf3918aeaa574da8f6d308708e36679a35e60c1c4d1249b641b429de67fef3f"
+    },
+    {
+      "file": "idle-05.png",
+      "bounds": [
+        33,
+        9,
+        71,
+        88
+      ],
+      "sha256": "8ba317b0539119ed05352bf3a5139b19ad95d68fde4e7efa2213abc8fc25a4f5"
+    },
+    {
+      "file": "idle-06.png",
+      "bounds": [
+        32,
+        9,
+        70,
+        88
+      ],
+      "sha256": "f79a1d564960e2e2cce03783a3e1fbea25c412bf250cbd60df59e5dacb1ec802"
+    },
+    {
+      "file": "idle-07.png",
+      "bounds": [
+        32,
+        9,
+        71,
+        88
+      ],
+      "sha256": "568d9ad262c6df2f7a16be0997860f18590cbb8394cbba9ee37bc95fe056814f"
+    },
+    {
+      "file": "idle-08.png",
+      "bounds": [
+        33,
+        9,
+        71,
+        88
+      ],
+      "sha256": "1dbe3c71acb6033fb305bba3b8e4d7a350329280ef0b0018d5d5a18322bbec59"
+    },
+    {
+      "file": "walk-01.png",
+      "bounds": [
+        30,
+        8,
+        73,
+        88
+      ],
+      "sha256": "894cebd1cc208afd76cf9fe2358231f53986268eebd7322e0d9361de43f8c147"
+    },
+    {
+      "file": "walk-02.png",
+      "bounds": [
+        32,
+        8,
+        73,
+        88
+      ],
+      "sha256": "9927a24dc0dcd76ae84371aacaee690f1381e7b0082a513fe2a16fe46dc06210"
+    },
+    {
+      "file": "walk-03.png",
+      "bounds": [
+        35,
+        8,
+        73,
+        88
+      ],
+      "sha256": "d7efea93c56b4faa1be215ca92067faa471b65bbe0a6a016ac08f802faf49957"
+    },
+    {
+      "file": "walk-04.png",
+      "bounds": [
+        35,
+        8,
+        73,
+        88
+      ],
+      "sha256": "3573183bc090ab63751e0b71782e4a8eb35cc1caf94ccca4c29274a35b67af2a"
+    },
+    {
+      "file": "walk-05.png",
+      "bounds": [
+        35,
+        8,
+        73,
+        88
+      ],
+      "sha256": "4c7a21673daebc2c836f66071c3358f1c7fad58915d26cf91fdff69f596f2812"
+    },
+    {
+      "file": "walk-06.png",
+      "bounds": [
+        35,
+        8,
+        73,
+        88
+      ],
+      "sha256": "beec26483d717484b4304f96c4cc47fa19e33772984a45fe949468612104ed39"
+    },
+    {
+      "file": "walk-07.png",
+      "bounds": [
+        34,
+        8,
+        73,
+        88
+      ],
+      "sha256": "d533307234033f57c3199866428ae13d8fd80b1deda9b5438a5da73e5e1748be"
+    },
+    {
+      "file": "walk-08.png",
+      "bounds": [
+        32,
+        8,
+        73,
+        88
+      ],
+      "sha256": "eff68cc1d7c48ec50a8b4babb2bd48e5d8be2b56631aa84edfa171b8daedba8d"
+    },
+    {
+      "file": "walk-09.png",
+      "bounds": [
+        30,
+        8,
+        73,
+        88
+      ],
+      "sha256": "8d93e0f4cac26e957af762e347400e4bc5c44814f09bfeb5825fb27d392ebb43"
+    },
+    {
+      "file": "walk-10.png",
+      "bounds": [
+        32,
+        8,
+        73,
+        88
+      ],
+      "sha256": "a6fefd455832693fa237ee08115f909863686fc15100a26fcb064711809f1d51"
+    },
+    {
+      "file": "walk-11.png",
+      "bounds": [
+        35,
+        8,
+        73,
+        88
+      ],
+      "sha256": "ea27d78bdb0b3e869178a18c93f2ffcc01acdeca40f7a9d6fbf4bbd2f5a90142"
+    },
+    {
+      "file": "walk-12.png",
+      "bounds": [
+        35,
+        8,
+        73,
+        88
+      ],
+      "sha256": "c473e80db800fb8904d3a3e6de551d423cfc6d98efce8ee307691f71946d0e68"
+    },
+    {
+      "file": "walk-13.png",
+      "bounds": [
+        35,
+        8,
+        73,
+        88
+      ],
+      "sha256": "400c91eaab77239b133fa6e708c221184239e733d242159ce26a7bb2a87d5965"
+    },
+    {
+      "file": "walk-14.png",
+      "bounds": [
+        35,
+        8,
+        73,
+        88
+      ],
+      "sha256": "de6436ec480c6b656491a2df04c8b1f68f96a0557f25b393a07fb77356e7070c"
+    },
+    {
+      "file": "walk-15.png",
+      "bounds": [
+        34,
+        8,
+        73,
+        88
+      ],
+      "sha256": "b9e82048c298240d5be60308a66aa0ceb31fea361e98a663604f213281f2ba4d"
+    },
+    {
+      "file": "walk-16.png",
+      "bounds": [
+        32,
+        8,
+        73,
+        88
+      ],
+      "sha256": "979a16582c9715341d1f4c53feba209e95473f0c9220e96dd0ec814f863f7d20"
+    },
+    {
+      "file": "run-01.png",
+      "bounds": [
+        33,
+        8,
+        77,
+        88
+      ],
+      "sha256": "93d57126d0ce0eac03ae2c23462e4f3db07f2ad119f200c72d4bcb37867f5cc8"
+    },
+    {
+      "file": "run-02.png",
+      "bounds": [
+        38,
+        8,
+        77,
+        88
+      ],
+      "sha256": "31b1c0ebe55e5cf533a428ad3eac6c1a9fe0dfe5779cec6e54ce8f7428c1436e"
+    },
+    {
+      "file": "run-03.png",
+      "bounds": [
+        39,
+        8,
+        77,
+        88
+      ],
+      "sha256": "39b5944e174085f9ffc39753f9d22f9be38e2d1552067ca8f12a3ad407ef68cd"
+    },
+    {
+      "file": "run-04.png",
+      "bounds": [
+        38,
+        8,
+        77,
+        88
+      ],
+      "sha256": "91def0a013f5ddccd5bdb347818a4bb4da95f2add773b87eef31b7a59bbafb00"
+    },
+    {
+      "file": "run-05.png",
+      "bounds": [
+        31,
+        8,
+        77,
+        88
+      ],
+      "sha256": "243db43b4dc5775f64dfec2ce4c95efc7ea6e80aa7c2490c9bc3ab158489a2ab"
+    },
+    {
+      "file": "run-06.png",
+      "bounds": [
+        30,
+        8,
+        77,
+        85
+      ],
+      "sha256": "51431db9a40276e8518ea6a462a9cd810ebe8ad349fbcdc036fd754e4dfceb33"
+    },
+    {
+      "file": "run-07.png",
+      "bounds": [
+        29,
+        8,
+        77,
+        86
+      ],
+      "sha256": "9dac1b0b0189ae89352b09666d96f4bb174d3fa00a1fc82c67a3e5c77dfa67f3"
+    },
+    {
+      "file": "run-08.png",
+      "bounds": [
+        31,
+        8,
+        77,
+        86
+      ],
+      "sha256": "e57c5cca20ed8ed380e967063a073220047f8206ff8d99cb792e8baa9cc594b2"
+    },
+    {
+      "file": "run-09.png",
+      "bounds": [
+        33,
+        8,
+        77,
+        88
+      ],
+      "sha256": "6aae93d6000de6911350ddee7e13fb63f5f1dae1bdeaa0fa7855a5d87233bd07"
+    },
+    {
+      "file": "run-10.png",
+      "bounds": [
+        38,
+        8,
+        77,
+        88
+      ],
+      "sha256": "65ea2b481201a4a614927b36d63b6de70105cde0b9e3e610956bc4f7aecae561"
+    },
+    {
+      "file": "run-11.png",
+      "bounds": [
+        39,
+        8,
+        77,
+        88
+      ],
+      "sha256": "7b712463facac34718ecee613736352aef0602a1ba938c4bfdb2376562ad46cd"
+    },
+    {
+      "file": "run-12.png",
+      "bounds": [
+        38,
+        8,
+        77,
+        88
+      ],
+      "sha256": "7458c49a55fbbe74606597f58e5f5152bff39a4695f474cc9abd501682e23b3c"
+    },
+    {
+      "file": "run-13.png",
+      "bounds": [
+        31,
+        8,
+        77,
+        88
+      ],
+      "sha256": "a54cb188283ad2b86603c36b12405cba291b2ecd191d1e4373f514d525ac4faf"
+    },
+    {
+      "file": "run-14.png",
+      "bounds": [
+        30,
+        8,
+        77,
+        85
+      ],
+      "sha256": "e349c2986db4815e4cb72f8f8b91413dc42dd9c03579cfee5aaecd0bc04e39d0"
+    },
+    {
+      "file": "run-15.png",
+      "bounds": [
+        29,
+        8,
+        77,
+        86
+      ],
+      "sha256": "caff1851908d10ef86f926d5d07ab2313af1ededc486007dd8c263138c0aa7e6"
+    },
+    {
+      "file": "run-16.png",
+      "bounds": [
+        31,
+        8,
+        77,
+        86
+      ],
+      "sha256": "386c1e7da7b5063cb773bf12cda3cdeafb990f3e4959e15fa88e234c4588bbb8"
+    },
+    {
+      "file": "jump-01.png",
+      "bounds": [
+        24,
+        24,
+        75,
+        88
+      ],
+      "sha256": "f08e77af60bcb26ebdc696c470f0292a345bce1bf248075132850790f01109ff"
+    },
+    {
+      "file": "jump-02.png",
+      "bounds": [
+        27,
+        6,
+        70,
+        88
+      ],
+      "sha256": "72ca8c77a1dbc2a986c860f8c565bc4f73544ed7a54b74c794858871fb8da361"
+    },
+    {
+      "file": "jump-03.png",
+      "bounds": [
+        28,
+        8,
+        71,
+        88
+      ],
+      "sha256": "a5c80af86a42347791cd3ba5f12ea2d95a527d2fd7a9e7473d59264dce5ec6fa"
+    },
+    {
+      "file": "jump-04.png",
+      "bounds": [
+        31,
+        20,
+        69,
+        88
+      ],
+      "sha256": "87433e63f7adc5cf4f9426f9b67d2b8410aada6360b04164d94076c39a328daf"
+    },
+    {
+      "file": "jump-05.png",
+      "bounds": [
+        31,
+        11,
+        69,
+        88
+      ],
+      "sha256": "c5f0844b30d80474631593615701f3f9bb828edf0f9cb1506829387c481ca024"
+    },
+    {
+      "file": "jump-06.png",
+      "bounds": [
+        29,
+        17,
+        69,
+        88
+      ],
+      "sha256": "00211afa30610778fe07366a29da03ba4f325b43f4d279ef3be06829f86a47ef"
+    },
+    {
+      "file": "jump-07.png",
+      "bounds": [
+        27,
+        32,
+        69,
+        88
+      ],
+      "sha256": "796384c40aaacd1e5cd85687006dcb0ab7441a57abeb9f449cf06dd342f6cfe8"
+    },
+    {
+      "file": "jump-08.png",
+      "bounds": [
+        33,
+        9,
+        71,
+        88
+      ],
+      "sha256": "47dcc6b683ea50f9f63293ae8ca4398e4f985c2a0e296fc60a6386bde833ee89"
+    },
+    {
+      "file": "dash-01.png",
+      "bounds": [
+        23,
+        28,
+        73,
+        88
+      ],
+      "sha256": "d5c0cad6ffd9d4dd56cc03c9c7db4e4c3f48525b45fb3a438340d9b7fbdae979"
+    },
+    {
+      "file": "dash-02.png",
+      "bounds": [
+        10,
+        19,
+        79,
+        88
+      ],
+      "sha256": "12315325d05889cc34607fef821200a2154836e48f656b358048df3522b4bb3b"
+    },
+    {
+      "file": "dash-03.png",
+      "bounds": [
+        5,
+        33,
+        85,
+        88
+      ],
+      "sha256": "37f95aacf91e5763016c4ad9e5c916c085dd803dd1a9370fcf342276a8ec1e5f"
+    },
+    {
+      "file": "dash-04.png",
+      "bounds": [
+        24,
+        15,
+        77,
+        88
+      ],
+      "sha256": "0204533fa556372ceab9f0d0abdeae7af1d666d24ce54faa49a38694b6e724a5"
+    },
+    {
+      "file": "dash-05.png",
+      "bounds": [
+        13,
+        16,
+        78,
+        88
+      ],
+      "sha256": "d9c1fb2f206f63bf384f665d4855ce547a011720f4dc9a7d6be5c0c56b58850e"
+    },
+    {
+      "file": "dash-06.png",
+      "bounds": [
+        31,
+        13,
+        73,
+        88
+      ],
+      "sha256": "8f00ae4f77fc79c2067d5b356ed837591dec920e50beb917cd76ed49972ee936"
+    },
+    {
+      "file": "dash-07.png",
+      "bounds": [
+        28,
+        20,
+        73,
+        88
+      ],
+      "sha256": "5d79ebf98ed1f4c7c4390e52cf1a71adbf7056b75c9e9d07803ee4e06c408113"
+    },
+    {
+      "file": "dash-08.png",
+      "bounds": [
+        33,
+        9,
+        71,
+        88
+      ],
+      "sha256": "59451b846f28452a96bbad8872c2d13cd868adf97cd3dcb55da4de568f9f917f"
+    },
+    {
+      "file": "turbo-equip-01.png",
+      "bounds": [
+        33,
+        9,
+        71,
+        88
+      ],
+      "sha256": "47dcc6b683ea50f9f63293ae8ca4398e4f985c2a0e296fc60a6386bde833ee89"
+    },
+    {
+      "file": "turbo-equip-02.png",
+      "bounds": [
+        33,
+        22,
+        75,
+        88
+      ],
+      "sha256": "da2b3a952ef6df5b3143e3319907d4ab1016b42246bcde7504c6014a00fc16e3"
+    },
+    {
+      "file": "turbo-equip-03.png",
+      "bounds": [
+        35,
+        36,
+        79,
+        88
+      ],
+      "sha256": "2b4290c3e741a1fd43706e18e11800239ffd92766f4a71fad6565d88467621cc"
+    },
+    {
+      "file": "turbo-equip-04.png",
+      "bounds": [
+        35,
+        36,
+        79,
+        88
+      ],
+      "sha256": "d473295fe77c9ba2f921cb1703183bdd7359bd2481ec3032e0f3c216efb5c625"
+    },
+    {
+      "file": "turbo-equip-05.png",
+      "bounds": [
+        36,
+        36,
+        79,
+        88
+      ],
+      "sha256": "b7b2b934d677460216123f053181d0e2f29d3c6bbae394feef5fbae82c2fac4c"
+    },
+    {
+      "file": "turbo-equip-06.png",
+      "bounds": [
+        31,
+        17,
+        75,
+        88
+      ],
+      "sha256": "fb678813d8de7466e722177e77e6acb87bc3abee6058a5a04886e90c4cc46bfc"
+    },
+    {
+      "file": "turbo-equip-07.png",
+      "bounds": [
+        33,
+        9,
+        71,
+        88
+      ],
+      "sha256": "faa78036808af5eb31d104e64f66cc092820a559c952e6b1315fad47e0614b47"
+    },
+    {
+      "file": "turbo-equip-08.png",
+      "bounds": [
+        33,
+        9,
+        71,
+        88
+      ],
+      "sha256": "faa78036808af5eb31d104e64f66cc092820a559c952e6b1315fad47e0614b47"
+    },
+    {
+      "file": "turbo-idle-01.png",
+      "bounds": [
+        33,
+        9,
+        71,
+        88
+      ],
+      "sha256": "faa78036808af5eb31d104e64f66cc092820a559c952e6b1315fad47e0614b47"
+    },
+    {
+      "file": "turbo-idle-02.png",
+      "bounds": [
+        33,
+        9,
+        71,
+        88
+      ],
+      "sha256": "67a18c4415699fa906629648634372c371716e21fbe3c511ff1ebba6238321bf"
+    },
+    {
+      "file": "turbo-idle-03.png",
+      "bounds": [
+        33,
+        9,
+        71,
+        88
+      ],
+      "sha256": "b08bf1232152c8ae8c533abb1cac492be00a3177b57fd7b5a459512df04328c1"
+    },
+    {
+      "file": "turbo-idle-04.png",
+      "bounds": [
+        33,
+        9,
+        71,
+        88
+      ],
+      "sha256": "7e83e96fc44841ba1e4526ff0209d6705d6b739517b1bfbcd52a39ed9a2e62b6"
+    },
+    {
+      "file": "turbo-idle-05.png",
+      "bounds": [
+        33,
+        9,
+        71,
+        88
+      ],
+      "sha256": "b7f85a81d668f58ed76f9ea236822e8078ebeb0b1d88e667fa345ff2715abf17"
+    },
+    {
+      "file": "turbo-idle-06.png",
+      "bounds": [
+        32,
+        9,
+        70,
+        88
+      ],
+      "sha256": "b1fe934b8a4e1ccafff55d01d4bf429b107a5251f955072d6148fdb627263bed"
+    },
+    {
+      "file": "turbo-idle-07.png",
+      "bounds": [
+        32,
+        9,
+        71,
+        88
+      ],
+      "sha256": "7977ffb45a18f6df276a9589cf0886f2998fd9aeabcee5f1769e462d67ea3823"
+    },
+    {
+      "file": "turbo-idle-08.png",
+      "bounds": [
+        33,
+        9,
+        71,
+        88
+      ],
+      "sha256": "7b4391557abd0d9c387b106ba8046a6f13b49213429ecb3b7f4261d9d4e90988"
+    },
+    {
+      "file": "turbo-walk-01.png",
+      "bounds": [
+        30,
+        8,
+        73,
+        88
+      ],
+      "sha256": "3ea9dae24321a31a0689c0e9b8ff51b03d71b69e1bf9b4cc633a68889026c325"
+    },
+    {
+      "file": "turbo-walk-02.png",
+      "bounds": [
+        32,
+        8,
+        73,
+        88
+      ],
+      "sha256": "c0c9e563fb04dfd8e4400a8a7e1d01640623ae672dac48e58e1b5f0afa731d6b"
+    },
+    {
+      "file": "turbo-walk-03.png",
+      "bounds": [
+        35,
+        8,
+        73,
+        88
+      ],
+      "sha256": "80559bd2b8de51afa994d2df99d514779267965bd1d9bcc76e4fab2f610a7c18"
+    },
+    {
+      "file": "turbo-walk-04.png",
+      "bounds": [
+        35,
+        8,
+        73,
+        88
+      ],
+      "sha256": "4e03b6a9aea0493585fde9a8c33c1df9fbbce2c5fa40c58ff6dc244bd52c7cd4"
+    },
+    {
+      "file": "turbo-walk-05.png",
+      "bounds": [
+        35,
+        8,
+        73,
+        88
+      ],
+      "sha256": "2d6d9bfe1dbeaf57f824e9b05e89d4e795adaf5f74ff5d5ee4f96a1f8d7e0e41"
+    },
+    {
+      "file": "turbo-walk-06.png",
+      "bounds": [
+        35,
+        8,
+        73,
+        88
+      ],
+      "sha256": "484c086db0898dbebaaea4e1262de4f6ca31896de94062517f6dd5660eff1077"
+    },
+    {
+      "file": "turbo-walk-07.png",
+      "bounds": [
+        34,
+        8,
+        73,
+        88
+      ],
+      "sha256": "3a3c760cf795dcf4db82bd422abcf685d61a781b0a280271eadb615e4fb120da"
+    },
+    {
+      "file": "turbo-walk-08.png",
+      "bounds": [
+        32,
+        8,
+        73,
+        88
+      ],
+      "sha256": "b8c9cac7abe128ce794c4fc1530a82b60e331b356987d0f04f5ba22cc487106b"
+    },
+    {
+      "file": "turbo-walk-09.png",
+      "bounds": [
+        30,
+        8,
+        73,
+        88
+      ],
+      "sha256": "c4fc7c8602bdc6f4dc89f359b49a37ac3c8b9120b7f65bf1f2a4756c8241938f"
+    },
+    {
+      "file": "turbo-walk-10.png",
+      "bounds": [
+        32,
+        8,
+        73,
+        88
+      ],
+      "sha256": "36be1b2495196edad4bf7008695867f8f6f8c7f9898a8617a30c1a99e0f61812"
+    },
+    {
+      "file": "turbo-walk-11.png",
+      "bounds": [
+        35,
+        8,
+        73,
+        88
+      ],
+      "sha256": "083c7cf32214925b3d416e9f05b3fc3f8238776ed2fbb40ee466ac49b0693873"
+    },
+    {
+      "file": "turbo-walk-12.png",
+      "bounds": [
+        35,
+        8,
+        73,
+        88
+      ],
+      "sha256": "b18eb8e7bf0cfa0ec228763d9ce04b1c6687ce431b98f79c00e340a6adce8e25"
+    },
+    {
+      "file": "turbo-walk-13.png",
+      "bounds": [
+        35,
+        8,
+        73,
+        88
+      ],
+      "sha256": "4b41de6bd0ef8aafc653069b0e96989207dc13fe8ca04d769a15e655d6ec654c"
+    },
+    {
+      "file": "turbo-walk-14.png",
+      "bounds": [
+        35,
+        8,
+        73,
+        88
+      ],
+      "sha256": "42c3498d73379060b64e16b657fdd1574a8aa18559b4582f90f7eae882fcc074"
+    },
+    {
+      "file": "turbo-walk-15.png",
+      "bounds": [
+        34,
+        8,
+        73,
+        88
+      ],
+      "sha256": "bdd7b6e029cfe9137871a77a36fe07346cf48765e3a4d94ad99454e76aa2f61b"
+    },
+    {
+      "file": "turbo-walk-16.png",
+      "bounds": [
+        32,
+        8,
+        73,
+        88
+      ],
+      "sha256": "b75e999aab85cfb8d2870b94d52f78a9e9a2f6a53b4e408ff49ef43a9d16c7cf"
+    },
+    {
+      "file": "turbo-run-01.png",
+      "bounds": [
+        33,
+        8,
+        77,
+        88
+      ],
+      "sha256": "98654b2c32063ed28eb799668ec7a4fef509f33ce9010bf051b95d906a998ae0"
+    },
+    {
+      "file": "turbo-run-02.png",
+      "bounds": [
+        38,
+        8,
+        77,
+        88
+      ],
+      "sha256": "32017ba9f6cb17bcf3798827fafb71db763f696a2b719da20a8a10a1b8857376"
+    },
+    {
+      "file": "turbo-run-03.png",
+      "bounds": [
+        39,
+        8,
+        77,
+        88
+      ],
+      "sha256": "33ca9892a53aaeecc63a52fb8ab513e51f91f68e624bf788f7f20ba41ccae780"
+    },
+    {
+      "file": "turbo-run-04.png",
+      "bounds": [
+        38,
+        8,
+        77,
+        88
+      ],
+      "sha256": "e7ccfeff5452e86b8e24fb181df93ab9424d5dbec0f7371acae860e6da3f7c18"
+    },
+    {
+      "file": "turbo-run-05.png",
+      "bounds": [
+        31,
+        8,
+        77,
+        88
+      ],
+      "sha256": "639738243e36a14a53a7e60141608d254798a8f16036c389dc53fc7e4a37b56c"
+    },
+    {
+      "file": "turbo-run-06.png",
+      "bounds": [
+        30,
+        8,
+        77,
+        85
+      ],
+      "sha256": "b5a51ced20e7bf3c2558f4ee48fe515371a0382c29e63b65ea515f3f1151ac99"
+    },
+    {
+      "file": "turbo-run-07.png",
+      "bounds": [
+        29,
+        8,
+        77,
+        86
+      ],
+      "sha256": "d218c41fbd6cf37fa25cdab7bc449cda3fc52362a2edc75352b34775ed91f883"
+    },
+    {
+      "file": "turbo-run-08.png",
+      "bounds": [
+        31,
+        8,
+        77,
+        86
+      ],
+      "sha256": "f90114d091fd54e66b772000903740c16d00715559da6b902fc6479a4d60de5f"
+    },
+    {
+      "file": "turbo-run-09.png",
+      "bounds": [
+        33,
+        8,
+        77,
+        88
+      ],
+      "sha256": "f1567af1f61e46eae61eb935cd30061bbf6b0023c3d08f6158d37e729da2dba6"
+    },
+    {
+      "file": "turbo-run-10.png",
+      "bounds": [
+        38,
+        8,
+        77,
+        88
+      ],
+      "sha256": "5c44e9cfaa2ca9fce57516bc81d56611de659b5b493937fee0bb50f2636c4216"
+    },
+    {
+      "file": "turbo-run-11.png",
+      "bounds": [
+        39,
+        8,
+        77,
+        88
+      ],
+      "sha256": "e85b6347602618b31ce80e821d3cdb69b355a15ea039f3544c9b2c4a7345b0d3"
+    },
+    {
+      "file": "turbo-run-12.png",
+      "bounds": [
+        38,
+        8,
+        77,
+        88
+      ],
+      "sha256": "1dda255a266c259b18a4ac192f8b0e879bf8cfb0d1d978b411dff2e5de06e7b9"
+    },
+    {
+      "file": "turbo-run-13.png",
+      "bounds": [
+        31,
+        8,
+        77,
+        88
+      ],
+      "sha256": "9cb54532ee99dcfd02c2b6b551d8d812a95aabde50b6576b2d0b1efac2452c3c"
+    },
+    {
+      "file": "turbo-run-14.png",
+      "bounds": [
+        30,
+        8,
+        77,
+        85
+      ],
+      "sha256": "20fa7db3284fd938c546977d7c5a158986cde7036880af38f6f51e9492c7738d"
+    },
+    {
+      "file": "turbo-run-15.png",
+      "bounds": [
+        29,
+        8,
+        77,
+        86
+      ],
+      "sha256": "1d6f40726341a753223ab125071a78fc89eef217c2943195aa2354dc80546b60"
+    },
+    {
+      "file": "turbo-run-16.png",
+      "bounds": [
+        31,
+        8,
+        77,
+        86
+      ],
+      "sha256": "5e82034a54fc669db2991baef39d4982efc8da5843869d91650b728ef5e99624"
+    }
+  ],
+  "storyAnimations": [
+    "idle",
+    "walk",
+    "run",
+    "hurt"
+  ],
+  "runRevision": "native16-20260908: full body drawing, constant canonical head, true near/far alternation; body shading simpler than detailed reference",
+  "locomotionRevision": {
+    "version": "from-zero-20260908",
+    "walk": 8,
+    "run": 8,
+    "source": "outputs/Mariomortille-PNG/from-zero/julien",
+    "oldSpritePixelsReused": false,
+    "status": "new artwork integrated; passing-pose polish and browser QA pending"
+  }
+}

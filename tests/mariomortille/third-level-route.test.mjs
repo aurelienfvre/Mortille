@@ -1,3 +1,4 @@
+import {enemyDodgeControls} from './miniboss-controls.mjs';
 import { strict as assert } from 'node:assert';
 import { thirdLevel, thirdLevelTiming, cloudSections } from '../../app/mariomortille/third-level.ts';
 import { createState, tick, WIDTH, HEIGHT } from '../../app/mariomortille/simulation.ts';
@@ -19,7 +20,7 @@ for (let frame = 0; frame < 180 * 60 && !state.won; frame++) {
   const stepAhead = thirdLevel.tiles.some(t => t.kind !== 'ground' && t.x > p.x + WIDTH && t.x < p.x + WIDTH + 38 && t.y < p.y + HEIGHT && t.y + 16 > p.y);
   const terrainJump = height === undefined || height < p.y + HEIGHT - 3 || stepAhead;
   const enemyJump = state.enemies.some(e => !e.defeated && e.x > p.x && e.x - p.x < 64 && Math.abs(e.y + 20 - p.y - HEIGHT) < 20);
-  tick(state, thirdLevel, { direction: 1, run: true, jump: p.vy < 0 || !floor.has(Math.floor((p.x + WIDTH + 28) / 16)), jumpPressed: p.grounded && (terrainJump || enemyJump), powerPressed: false, downPressed: false });
+  tick(state, thirdLevel, enemyDodgeControls(state, { direction: 1, run: true, jump: p.vy < 0 || !floor.has(Math.floor((p.x + WIDTH + 28) / 16)), jumpPressed: p.grounded && (terrainJump || enemyJump), powerPressed: false, downPressed: false }));
   hurts += state.events.includes('hurt') ? 1 : 0;
   glideFrames += p.power === 'cloud' && !p.grounded && p.vy > 0 && p.vy <= 85 ? 1 : 0;
   jumps += state.events.includes('jump') ? 1 : 0;
@@ -57,7 +58,7 @@ for (let frame = 0; frame < 180 * 60 && !perfect.won; frame++) {
     const enemyJump = perfect.enemies.some(e => !e.defeated && e.x > p.x && e.x - p.x < 64 && Math.abs(e.y + 20 - p.y - HEIGHT) < 20);
     jumpPressed = p.grounded && (height === undefined || height < p.y + HEIGHT - 3 || stepAhead || enemyJump);
   }
-  tick(perfect, thirdLevel, { direction, run: true, jump: p.vy < 0 || !floor.has(Math.floor((p.x + WIDTH + 28) / 16)), jumpPressed, powerPressed: false, downPressed: false });
+  tick(perfect, thirdLevel, enemyDodgeControls(perfect, { direction, run: true, jump: p.vy < 0 || !floor.has(Math.floor((p.x + WIDTH + 28) / 16)), jumpPressed, powerPressed: false, downPressed: false }));
   perfectHurts += perfect.events.includes('hurt') ? 1 : 0;
 }
 assert.ok(perfect.won, `secret route did not finish: x=${perfect.player.x}, y=${perfect.player.y}, secret=${secretIndex}, step=${balconyStep}`);

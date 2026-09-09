@@ -1,3 +1,5 @@
+import { boxLevelPowers } from './power-blocks';
+import { themeEnemies } from './enemy-roster';
 import type { Level, Tile, Pickup, Enemy } from './simulation';
 
 /** Worksite terraces have a walkable lower bypass under every smash deck.
@@ -40,5 +42,9 @@ for (const [i, section] of cobaltSections.entries()) {
   const yardLeft = (start + 11) * 16, yardRight = (start + 15) * 16;
   enemies.push({ id: `cobalt-yard-${i}`, x: yardRight, y: r * 16 - 20, left: yardLeft, right: yardRight, direction: -1, defeated: false });
 }
-export const fourthLevel: Level = { id: 'quartier-04', width: 1120 * 16, spawn: { x: 64, y: 250 }, tiles, pickups, enemies, checkpoint: 566 * 16, goal: 1114 * 16 };
+export const fourthLevel: Level = { boss: 'raphael', id: 'quartier-04', width: 1120 * 16, spawn: { x: 64, y: 250 }, tiles, pickups, enemies, checkpoint: 566 * 16, goal: 1114 * 16 };
 export const fourthLevelTiming = { minimumTravelSeconds: (fourthLevel.goal - fourthLevel.spawn.x) / 180 };
+
+fourthLevel.enemies = themeEnemies(fourthLevel);
+
+boxLevelPowers(fourthLevel);

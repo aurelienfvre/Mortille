@@ -1,0 +1,126 @@
+{
+  "ember": {
+    "unique": 4,
+    "binaryAlpha": true,
+    "hiddenRGBzero": true,
+    "bounds": [
+      [
+        15,
+        26,
+        82,
+        88
+      ],
+      [
+        15,
+        24,
+        82,
+        88
+      ],
+      [
+        15,
+        25,
+        82,
+        88
+      ],
+      [
+        15,
+        26,
+        82,
+        88
+      ]
+    ]
+  },
+  "turbo": {
+    "unique": 4,
+    "binaryAlpha": true,
+    "hiddenRGBzero": true,
+    "bounds": [
+      [
+        19,
+        25,
+        78,
+        88
+      ],
+      [
+        18,
+        24,
+        78,
+        88
+      ],
+      [
+        18,
+        26,
+        78,
+        88
+      ],
+      [
+        19,
+        26,
+        78,
+        88
+      ]
+    ]
+  },
+  "cloud": {
+    "unique": 4,
+    "binaryAlpha": true,
+    "hiddenRGBzero": true,
+    "bounds": [
+      [
+        16,
+        24,
+        80,
+        88
+      ],
+      [
+        16,
+        24,
+        80,
+        88
+      ],
+      [
+        16,
+        25,
+        80,
+        88
+      ],
+      [
+        16,
+        24,
+        80,
+        88
+      ]
+    ]
+  },
+  "cobalt": {
+    "unique": 4,
+    "binaryAlpha": true,
+    "hiddenRGBzero": true,
+    "bounds": [
+      [
+        17,
+        26,
+        79,
+        88
+      ],
+      [
+        17,
+        24,
+        79,
+        88
+      ],
+      [
+        17,
+        26,
+        79,
+        88
+      ],
+      [
+        17,
+        26,
+        79,
+        88
+      ]
+    ]
+  }
+}

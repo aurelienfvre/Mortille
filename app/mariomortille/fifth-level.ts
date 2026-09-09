@@ -1,3 +1,5 @@
+import { boxLevelPowers } from './power-blocks';
+import { themeEnemies } from './enemy-roster';
 import type { Level, Tile, Pickup, Enemy } from './simulation';
 
 /** A final promenade through eight distinct courtyards before the rooftop duel. */
@@ -26,5 +28,9 @@ for (let i = 0; i < finaleSections.length; i++) {
 export const finaleArenaStart = 1024 * 16;
 for (let c = 1024; c < 1088; c++) for (let r = 19; r < 23; r++) tiles.push({ x: c * 16, y: r * 16, kind: 'ground' });
 pickups.push({ id: 'final-arena-ember', x: finaleArenaStart + 32, y: 280, kind: 'ember', collected: false });
-export const fifthLevel: Level = { id: 'quartier-05', width: 1088 * 16, spawn: { x: 64, y: 240 }, tiles, pickups, enemies, checkpoint: finaleArenaStart + 64, goal: 1082 * 16, boss: 'raphael' };
+export const fifthLevel: Level = { id: 'quartier-05', width: 1088 * 16, spawn: { x: 64, y: 240 }, tiles, pickups, enemies, checkpoint: finaleArenaStart + 64, goal: 1082 * 16, boss: 'mango' };
 export const fifthLevelTiming = { minimumTravelSeconds: (fifthLevel.goal - fifthLevel.spawn.x) / 180 };
+
+fifthLevel.enemies = themeEnemies(fifthLevel);
+
+boxLevelPowers(fifthLevel);

@@ -1,0 +1,42 @@
+{
+  "status": "PARENT_REVIEW",
+  "qa": [
+    {
+      "frame": 1,
+      "changedPixels": 0
+    },
+    {
+      "frame": 2,
+      "changedPixels": 0
+    },
+    {
+      "frame": 3,
+      "changedPixels": 0
+    },
+    {
+      "frame": 4,
+      "changedPixels": 0
+    },
+    {
+      "frame": 5,
+      "changedPixels": 0
+    },
+    {
+      "frame": 6,
+      "changedPixels": 184
+    },
+    {
+      "frame": 7,
+      "changedPixels": 0
+    },
+    {
+      "frame": 8,
+      "changedPixels": 0
+    }
+  ],
+  "uniqueFrames": 8,
+  "limits": [
+    "SourceRGB exterior removed; only generatedhead6 applied.",
+    "Below neckline byteidentical; othersevenposes entirelyunchanged."
+  ]
+}

@@ -1,3 +1,4 @@
+import {powerBlockControls} from './power-block-controls.mjs';
 import { strict as assert } from 'node:assert';
 import { fifthLevel as level, fifthLevelTiming, finaleArenaStart } from '../../app/mariomortille/fifth-level.ts';
 import { createState, tick, WIDTH, HEIGHT } from '../../app/mariomortille/simulation.ts';
@@ -20,6 +21,8 @@ for (let f = 0; f < 180 * 60 && !s.won; f++) {
  } else if (p.x < finaleArenaStart + 90) {
   const h = floor.get(Math.floor((p.x + WIDTH + 8) / 16));
   jumpPressed = p.grounded && (h === undefined || h < p.y + HEIGHT - 3 || level.tiles.some(t => t.kind !== 'ground' && t.x > p.x + WIDTH && t.x < p.x + WIDTH + 38 && t.y < p.y + HEIGHT && t.y + 16 > p.y) || s.enemies.some(e => !e.defeated && e.x > p.x && e.x - p.x < 64 && Math.abs(e.y + 20 - p.y - HEIGHT) < 20));
+ } else if (!b.activated) {
+  direction=1;
  } else if (b.phase !== 'defeated') {
   if (!arenaTick) arenaTick = f;
   // The west alcove is outside the charge lane. Face the boss and fire when
@@ -28,7 +31,7 @@ for (let f = 0; f < 180 * 60 && !s.won; f++) {
   if (direction === 0 && p.facing !== 1) direction = 1;
   powerPressed = b.phase === 'stunned';
  }
- tick(s, level, { direction, run: true, jump: true, jumpPressed, powerPressed, downPressed: false });
+ tick(s, level, powerBlockControls(s,{ direction, run: true, jump: true, jumpPressed, powerPressed, downPressed: false }) ?? { direction, run: true, jump: true, jumpPressed, powerPressed, downPressed: false });
  hurts += s.events.includes('hurt') ? 1 : 0;
  jumps += s.events.includes('jump') ? 1 : 0;
 }

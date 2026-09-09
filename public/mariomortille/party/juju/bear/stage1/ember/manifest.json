@@ -1,0 +1,62 @@
+{
+  "stage": 1,
+  "power": "ember",
+  "frames": [
+    "idle-01.png",
+    "idle-02.png",
+    "idle-03.png",
+    "idle-04.png"
+  ],
+  "durations": [
+    500,
+    200,
+    120,
+    380
+  ],
+  "canvas": [
+    96,
+    96
+  ],
+  "anchor": [
+    48,
+    88
+  ],
+  "scale": 0.08918406072106262,
+  "alpha": [
+    0,
+    255
+  ],
+  "uniqueFrames": 4,
+  "bbox": [
+    [
+      33,
+      41,
+      63,
+      88
+    ],
+    [
+      33,
+      41,
+      63,
+      88
+    ],
+    [
+      33,
+      41,
+      63,
+      88
+    ],
+    [
+      34,
+      41,
+      63,
+      88
+    ]
+  ],
+  "cleanup": "RGB painted checker exterior flood, retain character connected component; enclosed white retained.",
+  "status": "candidate-for-parent-review",
+  "limits": [
+    "New generated drawings have minor outline and clothing detail drift against static base.",
+    "Only equipped idle; attacks/walking not generated in this batch."
+  ]
+}

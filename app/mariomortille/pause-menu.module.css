@@ -1,0 +1,18 @@
+.overlay{--pause-gold:#ffc15c;--pause-ink:#fff1cf;position:absolute;inset:0;z-index:30;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(10px,2vh,22px);padding:clamp(14px,3vw,30px);overflow:auto;background:rgb(6 11 19 / .76);color:var(--pause-ink);font-family:monospace;isolation:isolate}
+.title{margin:0 0 clamp(4px,1vh,12px);color:var(--pause-gold);width:clamp(150px,30%,280px);filter:drop-shadow(0 5px 0 #4c2c14)}
+.title svg{display:block;width:100%;height:auto}
+.choices{display:grid;gap:clamp(5px,1vh,10px);width:min(590px,90%)}
+.row{position:relative;min-height:clamp(38px,6vh,52px);background:rgb(8 16 24 / .46);outline:3px solid transparent;outline-offset:0}
+.choice{display:flex;align-items:center;justify-content:center;width:100%;height:100%;min-height:inherit;border:0;padding:11px 60px;background:none;color:inherit;cursor:pointer;outline:none}
+.choice svg{display:block;height:clamp(13px,1.75vw,20px);max-width:100%;width:auto;overflow:visible}
+.selected{color:var(--pause-gold);outline-color:#e89724;background:rgb(8 12 18 / .84)}
+.selected::before,.selected::after{position:absolute;top:50%;transform:translateY(-50%);font-size:22px;font-weight:bold;color:var(--pause-gold);pointer-events:none}
+.selected::before{content:'›';left:-20px}.selected::after{content:'‹';right:-20px}
+.volumeButtons{position:absolute;inset:0;display:flex;justify-content:space-between;pointer-events:none}
+.volumeButtons button{pointer-events:auto;width:44px;border:0;background:none;color:inherit;font:bold 22px monospace;cursor:pointer;outline-offset:-4px}
+.volumeButtons button:hover{background:rgb(255 193 92 / .16)}
+.help{display:flex;flex-direction:column;gap:5px;text-align:center;color:#c7cab8;font-size:clamp(9px,1.3vw,12px);letter-spacing:1px;margin:0;line-height:1.5}
+.message{max-width:560px;margin:0;text-align:center;color:#ded3bb;font-size:12px;line-height:1.4}
+.srOnly{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+@media(max-height:460px){.overlay{gap:8px;padding:12px;justify-content:flex-start}.title{width:140px;margin:0}.choices{gap:5px}.row{min-height:31px}.choice{padding:8px 44px}.choice svg{height:12px}.help{font-size:9px}.message{font-size:10px}}
+@media(max-width:430px){.choices{width:94%}.choice{padding-left:38px;padding-right:38px}.choice svg{height:12px}.volumeButtons button{width:34px}.selected::before{left:-13px}.selected::after{right:-13px}}

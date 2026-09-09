@@ -1,3 +1,4 @@
+import {minibossControls} from './miniboss-controls.mjs';
 import { strict as assert } from 'node:assert';
 import { fourthLevel, fourthLevelTiming, cobaltSections } from '../../app/mariomortille/fourth-level.ts';
 import { createState, tick, damage, WIDTH, HEIGHT } from '../../app/mariomortille/simulation.ts';
@@ -19,7 +20,7 @@ for (let frame = 0; frame < 180 * 60 && !state.won; frame++) {
   const stepAhead = fourthLevel.tiles.some(t => t.kind !== 'ground' && t.x > p.x + WIDTH && t.x < p.x + WIDTH + 38 && t.y < p.y + HEIGHT && t.y + 16 > p.y);
   const terrainJump = height === undefined || height < p.y + HEIGHT - 3 || stepAhead;
   const enemyJump = state.enemies.some(e => !e.defeated && e.x > p.x && e.x - p.x < 64 && Math.abs(e.y + 20 - p.y - HEIGHT) < 20);
-  tick(state, fourthLevel, { direction: 1, run: true, jump: true, jumpPressed: p.grounded && (terrainJump || enemyJump), powerPressed: false, downPressed: false });
+  tick(state, fourthLevel, minibossControls(state, { direction: 1, run: true, jump: true, jumpPressed: p.grounded && (terrainJump || enemyJump), powerPressed: false, downPressed: false }));
   hurts += state.events.includes('hurt') ? 1 : 0;
   jumps += state.events.includes('jump') ? 1 : 0;
   checkpointEvents += state.events.includes('checkpoint') ? 1 : 0;
@@ -59,7 +60,7 @@ for (let frame = 0; frame < 180 * 60 && !perfect.won; frame++) {
     const enemyJump = perfect.enemies.some(e => !e.defeated && e.x > p.x && e.x - p.x < 64 && Math.abs(e.y + 20 - p.y - HEIGHT) < 20);
     jumpPressed = p.grounded && (height === undefined || height < p.y + HEIGHT - 3 || stepAhead || enemyJump);
   }
-  tick(perfect, fourthLevel, { direction, run: true, jump: true, jumpPressed, powerPressed: false, downPressed });
+  tick(perfect, fourthLevel, minibossControls(perfect, { direction, run: true, jump: true, jumpPressed, powerPressed: false, downPressed }));
   perfectHurts += perfect.events.includes('hurt') ? 1 : 0;
   breaks += perfect.events.filter(e => e === 'break').length;
 }
@@ -85,7 +86,7 @@ for (let frame = 0; frame < 180 * 60 && !recovery.won; frame++) {
   const height = floor.get(Math.floor((p.x + WIDTH + 8) / 16));
   const stepAhead = fourthLevel.tiles.some(t => t.kind !== 'ground' && t.x > p.x + WIDTH && t.x < p.x + WIDTH + 38 && t.y < p.y + HEIGHT && t.y + 16 > p.y);
   const enemyJump = recovery.enemies.some(e => !e.defeated && e.x > p.x && e.x - p.x < 64 && Math.abs(e.y + 20 - p.y - HEIGHT) < 20);
-  tick(recovery, fourthLevel, { direction: 1, run: true, jump: true, jumpPressed: p.grounded && (height === undefined || height < p.y + HEIGHT - 3 || stepAhead || enemyJump), powerPressed: false, downPressed: false });
+  tick(recovery, fourthLevel, minibossControls(recovery, { direction: 1, run: true, jump: true, jumpPressed: p.grounded && (height === undefined || height < p.y + HEIGHT - 3 || stepAhead || enemyJump), powerPressed: false, downPressed: false }));
 }
 assert.ok(injected && recovered && recovery.won, 'lost Cobalt must permit an ordinary bypass and a later refill');
 console.log(`Cobalt recovery route after forced damage: ${(recovery.ticks / 60).toFixed(2)}s, power reacquired, finish reached.`);

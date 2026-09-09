@@ -5,11 +5,11 @@ export const games = [
     short: 'Aventure',
     genre: 'Plateforme',
     color: '#6ddce9',
-    tag: 'Sautez. Collectez. Rénovez.',
+    tag: 'Sautez. Équipez-vous. Sauvez Steve.',
     description:
-      'Traversez les toits, récupérez les cellules d’énergie et rejoignez la maison à rénover.',
-    keys: '← → ou Q D : bouger · Espace : sauter',
-    goal: 'Rejoindre la maison au bout du quartier.',
+      'Partez avec Aurel à la poursuite de Raph et Mango pour sauver Steve. Traversez le quartier, affrontez les ennemis et équipez vos pouvoirs.',
+    keys: '← → ou Q D : bouger · ↑ ou Espace : sauter',
+    goal: 'Terminer les niveaux de la campagne pour retrouver Steve.',
   },
   {
     id: 'pac',

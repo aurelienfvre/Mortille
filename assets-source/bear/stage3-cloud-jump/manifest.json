@@ -1,0 +1,121 @@
+{
+  "canvas": [
+    96,
+    96
+  ],
+  "anchor": [
+    48,
+    88
+  ],
+  "frameAnchorY": [
+    88,
+    88,
+    92,
+    88,
+    88,
+    88,
+    88,
+    88
+  ],
+  "frameAnchorX": [
+    48,
+    48,
+    48,
+    48,
+    51,
+    48,
+    48,
+    48
+  ],
+  "sharedScale": 0.22614840989399293,
+  "nominalStandingHeight": 64,
+  "frames": [
+    "jump-01.png",
+    "jump-02.png",
+    "jump-03.png",
+    "jump-04.png",
+    "jump-05.png",
+    "jump-06.png",
+    "jump-07.png",
+    "jump-08.png"
+  ],
+  "timingsMs": [
+    100,
+    70,
+    110,
+    180,
+    100,
+    100,
+    100,
+    180
+  ],
+  "poses": [
+    "anticipation",
+    "takeoff",
+    "rise",
+    "apex",
+    "fall",
+    "land",
+    "recover",
+    "idle"
+  ],
+  "binaryAlpha": true,
+  "bounds": [
+    [
+      11,
+      37,
+      73,
+      88
+    ],
+    [
+      4,
+      12,
+      81,
+      88
+    ],
+    [
+      6,
+      2,
+      81,
+      83
+    ],
+    [
+      4,
+      3,
+      92,
+      73
+    ],
+    [
+      3,
+      14,
+      92,
+      86
+    ],
+    [
+      9,
+      29,
+      79,
+      88
+    ],
+    [
+      8,
+      26,
+      77,
+      88
+    ],
+    [
+      15,
+      24,
+      78,
+      88
+    ]
+  ],
+  "sourceAlpha": "RGB checker removed by exterior neutral flood; enclosed white outfit preserved",
+  "status": "preview, not integrated",
+  "runtimeGuidance": "Jump is physics-driven: anticipation1, launch2, rise3, apex4, fall5, landing6 then7; idle8. Do not play full timeline irrespective of physics.",
+  "normalizationNotes": [
+    "Frame1 white wing restored from source with exact interior mask after exterior flood leaked through an outline gap.",
+    "Frame3 stored4px lower: originY92 preserves complete feathers and the same body position.",
+    "Frame5 stored3px right: originX51 preserves left wing and same body position."
+  ]
+}

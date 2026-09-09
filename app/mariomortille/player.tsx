@@ -1,18 +1,40 @@
 'use client';
+import {encounterMusic} from './music';
 import { useEffect, useRef, useState } from 'react';
+import type { Player, Power } from './simulation';
 import type { Bridge } from './scene';
 import { quartierLevels } from './levels';
 import { prologueLevel, prologueHints } from './prologue-level';
 import { AdventureAudio } from './audio';
 import { RankedRun, arcadeRequest } from './ranked-run';
-import TitleMenu, { PixelText } from './title-menu';
+import HouseVisit from './house-visit';
+import { useHouseDoorway } from './use-house-doorway';
+import doorwayStyles from './house-doorway.module.css';
+import PrologueIntro from './prologue-intro';
+import PauseMenu from './pause-menu';
+import type { PartyId } from './party';
+import AdventureHud from './adventure-hud';
+import { pixelDisplay } from './pixel-display';
+import TitleMenu from './title-menu';
+import StageResult from './stage-result';
+import CampaignEnding from './campaign-ending';
 import { completeStage, progressKey, readProgress, unlockedThrough, type CampaignProgress } from './progress';
 const levelIds = quartierLevels.map(level => level.id);
 const powerNames = { none: 'AUCUN', turbo: 'BASKETS TURBO', ember: 'GANT BRAISE', cloud: 'VESTE NUAGE', cobalt: 'CARAPACE COBALT' };
 export default function Mariomortille({ onExit, muted = false }: { onExit: () => void; muted?: boolean }) {
   const host = useRef<HTMLDivElement>(null);
-  const [phase, setPhase] = useState<'menu' | 'play' | 'pause' | 'finish'>('menu');
+  const outdoorAppearance = useRef<Pick<Player, 'power' | 'health'> & {character?:PartyId}>({ power: 'none', health: 3 });
+  const [house, setHouse] = useState(false);
+  const doorway = useHouseDoorway(setHouse);
+  const [houseError, setHouseError] = useState(false);
+  const [intro, setIntro] = useState(false);
+  const [menuPage, setMenuPage] = useState<'main'|'campaign'>('main');
+  const [mapNode, setMapNode] = useState(0);
+  const returnToMap = () => { setMapNode(mode === 'prologue' ? 0 : levelIndex + 1); setMenuPage('campaign'); setPhase('menu'); };
+  const [phase, setPhase] = useState<'menu' | 'play' | 'pause' | 'finish' | 'ending'>('menu');
   const [levelIndex, setLevelIndex] = useState(0);
+  const [prologueCompleted, setPrologueCompleted] = useState(false);
+  useEffect(() => { try { setPrologueCompleted(localStorage.getItem('mariomortille-prologue-complete') === '1'); } catch {} }, []);
   const [mode, setMode] = useState<'campaign' | 'prologue'>('campaign');
   const currentLevel = mode === 'prologue' ? prologueLevel : quartierLevels[levelIndex];
   const [round, setRound] = useState(0);
@@ -51,37 +73,56 @@ export default function Mariomortille({ onExit, muted = false }: { onExit: () =>
   }, []);
   const audioUnlock = useRef<Promise<void> | null>(null);
   useEffect(() => { const timer = setTimeout(() => { try { const value = localStorage.getItem('mariomortille-last-level'); if (value !== null && Number.isInteger(Number(value)) && Number(value) >= 0 && Number(value) < quartierLevels.length) setSavedLevel(Number(value)); } catch { /* Storage can be disabled. */ } }, 0); return () => clearTimeout(timer); }, []);
-  const [hud, setHud] = useState({ score: 0, power: 'AUCUN', checkpoint: false, health: 3, secrets: 0, bossHealth: -1, x: 0 });
+  const [partyInfo,setPartyInfo]=useState<{active:PartyId;members:PartyId[]}>({active:'aurel',members:['aurel']});
+  const [hud, setHud] = useState({ score: 0, power: 'AUCUN', checkpoint: false, health: 3, secrets: 0, bossHealth: -1, bossName:'RAPHAEL', x: 0, powerId: 'none' as Power, dashCooldown: 0, ticks: 0 });
   const audio = useRef<AdventureAudio | null>(null);
   const [musicVolume, setMusicVolume] = useState(.25);
   const [effectsVolume, setEffectsVolume] = useState(.8);
   const bridge = useRef<Bridge>({ paused: true, muted, pause: () => {}, update: () => {}, sound: () => {} });
   useEffect(() => {
-  bridge.current.paused = phase !== 'play'; bridge.current.muted = muted;
+  bridge.current.paused = phase !== 'play' || house || doorway.active;
+  bridge.current.visitHouse = () => { bridge.current.paused = true; setHouseError(false); doorway.request(true); }; bridge.current.muted = muted;
   bridge.current.pause = () => setPhase(p => p === 'play' ? 'pause' : p === 'pause' ? 'play' : p);
+  bridge.current.party = (active,members)=>setPartyInfo({active,members});
   bridge.current.update = state => {
-    if (state.won || state.ticks % 6 === 0 || state.events.length) setHud({ score: state.score, power: powerNames[state.player.power], checkpoint: state.checkpoint, health: state.player.health, secrets: state.pickups.filter(i => i.kind === 'secret' && i.collected).length, bossHealth: state.boss?.health ?? -1, x: state.player.x });
+    audio.current?.setTheme(encounterMusic(state.boss));
+    outdoorAppearance.current = { power: state.player.power, health: state.player.health, character:partyInfo.active };
+    if (state.won || state.ticks % 6 === 0 || state.events.length) setHud({ score: state.score, power: powerNames[state.player.power], checkpoint: state.checkpoint, health: state.player.health, secrets: state.pickups.filter(i => i.kind === 'secret' && i.collected).length, bossHealth: state.boss?.health ?? -1, bossName:state.boss?.kind==='pirate'?'PIRATE':state.boss?.kind==='lola'?'LOLA':state.boss?.kind==='mango'?'MANGO':'RAPHAEL', x: state.player.x, powerId: state.player.power, dashCooldown: state.player.dashCooldown, ticks: state.ticks });
     if (state.won && !completedRun.current) {
       completedRun.current = true; bridge.current.paused = true;
-      if (mode === 'prologue') { try { localStorage.setItem('mariomortille-prologue-complete', '1'); } catch { /* Optional local record. */ } }
+      if (mode === 'prologue') { setPrologueCompleted(true); try { localStorage.setItem('mariomortille-prologue-complete', '1'); } catch { /* Optional local record. */ } }
       else { setProgress(previous => completeStage(previous, levelIds[levelIndex], levelIds)); submitScore(); }
-      setPhase('finish');
+      setPhase(mode === 'campaign' && levelIndex === quartierLevels.length - 1 ? 'ending' : 'finish');
     }
   };
   bridge.current.sound = event => audio.current?.play(event);
   bridge.current.record = input => ranked.current?.record(input);
-  }, [phase, muted, levelIndex, mode]);
+  }, [phase, muted, levelIndex, mode, house, doorway.active, doorway.request]);
   useEffect(() => {
+    let resizeObserver: ResizeObserver | undefined;
     let disposed = false; let game: { destroy: (children: boolean) => void } | undefined;
     void Promise.all([import('phaser'), import('./scene')]).then(([Phaser, { createScene }]) => {
       if (disposed || !host.current) return;
-      game = new Phaser.Game({ type: Phaser.AUTO, parent: host.current, width: 640, height: 360, canvasStyle: 'image-rendering: pixelated;', pixelArt: true, roundPixels: true, antialias: false, scale: { mode: Phaser.Scale.FIT, autoCenter: Phaser.Scale.CENTER_BOTH }, scene: createScene(bridge.current, currentLevel), audio: { noAudio: true }, input: { keyboard: true } });
+      const view = pixelDisplay(host.current.clientWidth,host.current.clientHeight,window.devicePixelRatio);
+      const instance = new Phaser.Game({ type: Phaser.AUTO, parent: host.current, width: 640, height: 360, canvasStyle: 'image-rendering: pixelated;', pixelArt: true, roundPixels: true, antialias: false, scale: { mode: Phaser.Scale.NONE, zoom:view.zoom, autoCenter: Phaser.Scale.CENTER_BOTH }, scene: createScene(bridge.current, currentLevel), audio: { noAudio: true }, input: { keyboard: true } });
+      game = instance;
+      const resize = () => {
+        if (!host.current) return;
+        const v = pixelDisplay(host.current.clientWidth,host.current.clientHeight,window.devicePixelRatio);
+        if (instance.canvas) instance.scale.setZoom(v.zoom);
+        const el = host.current.parentElement;
+        el?.style.setProperty('--playfield-top',`${v.top}px`);
+        el?.style.setProperty('--playfield-height',`${v.height}px`);
+        el?.style.setProperty('--playfield-left',`${v.left}px`);
+      };
+      instance.events.once(Phaser.Core.Events.READY,resize);
+      resizeObserver = new ResizeObserver(resize); resizeObserver.observe(host.current); resize();
     });
-    return () => { disposed = true; game?.destroy(true); };
+    return () => { disposed = true; resizeObserver?.disconnect(); game?.destroy(true); };
   }, [round, levelIndex, mode]);
   useEffect(() => {
     audio.current?.mix(muted, musicVolume, effectsVolume);
-    audio.current?.setPlaying(phase === 'play', !!currentLevel.boss);
+    audio.current?.setPlaying(phase === 'play');
   }, [muted, musicVolume, effectsVolume, phase, levelIndex, mode]);
   useEffect(() => () => { audio.current?.dispose(); audio.current = null; }, []);
   const unlockAudio = () => {
@@ -94,7 +135,7 @@ export default function Mariomortille({ onExit, muted = false }: { onExit: () =>
   const start = () => {
     audio.current ??= new AdventureAudio();
     audio.current.mix(muted, musicVolume, effectsVolume);
-    audio.current.setPlaying(true, !!currentLevel.boss);
+    audio.current.setTheme('exploration');audio.current.setPlaying(true);
     void unlockAudio();
     if (mode === 'campaign') {
       setSavedLevel(levelIndex);
@@ -103,7 +144,7 @@ export default function Mariomortille({ onExit, muted = false }: { onExit: () =>
     setPhase('play');
   };
   const startLevel = async (index: number) => {
-    if (startingRef.current || !Number.isInteger(index) || index < 0 || index > unlockedThrough(progress, levelIds)) return;
+    if (!prologueCompleted || startingRef.current || !Number.isInteger(index) || index < 0 || index > unlockedThrough(progress, levelIds)) return;
     startingRef.current = true; setStarting(true); bridge.current.paused = true;
     void unlockAudio();
     const current = ++generation.current;
@@ -113,9 +154,9 @@ export default function Mariomortille({ onExit, muted = false }: { onExit: () =>
     catch (error) { message = `Partie non classée : ${error instanceof Error ? error.message : 'connexion indisponible.'}`; }
     if (current !== generation.current) return;
     ranked.current = run; completedRun.current = false; setSaveFailed(false); setRankMessage(message);
-    setMode('campaign'); setLevelIndex(index); setRound(r => r + 1); setSavedLevel(index);
+    setMenuPage('main'); setMode('campaign'); setLevelIndex(index); setRound(r => r + 1); setSavedLevel(index);
     try { localStorage.setItem('mariomortille-last-level', String(index)); } catch { /* Storage can be disabled. */ }
-    void unlockAudio(); audio.current?.setPlaying(true, !!quartierLevels[index].boss); setPhase('play');
+    void unlockAudio(); audio.current?.setTheme('exploration');audio.current?.setPlaying(true); setPhase('play');
     startingRef.current = false; setStarting(false);
   };
   const startPrologue = async () => {
@@ -124,33 +165,23 @@ export default function Mariomortille({ onExit, muted = false }: { onExit: () =>
     const current = ++generation.current; await pendingSave.current;
     if (current !== generation.current) return;
     ranked.current = null; completedRun.current = false; setSaveFailed(false); setRankMessage('');
-    setMode('prologue'); setRound(r => r + 1); setPhase('play');
+    setMenuPage('main'); setMode('prologue'); setRound(r => r + 1); setPhase('play');
     startingRef.current = false; setStarting(false);
   };
+  const finishIntro = () => { setIntro(false); void startPrologue(); };
+  const beginPrologue = () => { bridge.current.paused = true; setIntro(true); void unlockAudio(); };
   const tutorialHint = mode === 'prologue' ? prologueHints.find(hint => hud.x >= hint.fromX && hud.x < hint.toX) : undefined;
   return <div style={{ position: 'fixed', inset: 0, zIndex: 100, background: '#141d2a', color: '#fff4d6', fontFamily: 'monospace' }}>
     <div ref={host} style={{ position: 'absolute', inset: 0 }} />
-    {phase === 'play' && !ranked.current && rankMessage && <button onClick={() => setPhase('pause')} style={{ position: 'absolute', top: 52, left: '4%', padding: '5px 8px', color: '#ffdc9c', background: '#142c39dd', border: '1px solid #80673c', font: '12px monospace', cursor: 'pointer' }}>PARTIE NON CLASSÉE · DÉTAILS</button>}
-    {phase !== 'menu' && <div style={{ position: 'absolute', top: 20, left: '4%', right: '4%', display: 'flex', justifyContent: 'space-between', pointerEvents: 'none', textShadow: '2px 2px #152638' }}><b>{mode === 'prologue' ? 'PROLOGUE · PRISE EN MAIN' : `QUARTIER MORTILLE · 1–${levelIndex + 1}`}</b><b>{'♥'.repeat(hud.health)} · {hud.power} · {hud.score} PTS · {hud.bossHealth < 0 ? `${hud.secrets}/3 ✦` : ''} {hud.checkpoint ? '⚑' : ''}{hud.bossHealth >= 0 ? ` · RAPHAËL ${'◆'.repeat(hud.bossHealth)}` : ''}</b></div>}
-    {phase === 'menu' && <TitleMenu onPrologue={startPrologue} onStart={startLevel} onExit={onExit} music={musicVolume} effects={effectsVolume} onMusic={setMusicVolume} onEffects={setEffectsVolume} onSound={menuSound} savedLevel={savedLevel === null ? null : Math.min(savedLevel, unlockedThrough(progress, levelIds))} completed={progress.completed} unlocked={unlockedThrough(progress, levelIds)} />}
-    {phase !== 'play' && phase !== 'menu' && <div style={{ position: 'absolute', inset: 0, display: 'grid', placeItems: 'center', background: '#132237c9' }}><div style={{ textAlign: 'center', width: 'min(86vw,650px)', maxHeight: '88vh', overflowY: 'auto', padding: 24, background: '#142c39ed', border: '4px solid #efac37', boxShadow: '5px 5px #614c27' }}>
-      <p style={{ color: '#62dfb4', letterSpacing: 5 }}>L’AVENTURE D’AURÉLIEN</p>
-      <h1 style={{ fontSize: 'clamp(25px,5vw,58px)', color: '#ffc669', textShadow: '4px 4px #3c2846', margin: '12px 0 24px' }}><span style={{display:'block',height:'clamp(28px,6vh,56px)'}}><PixelText text={phase === 'pause' ? 'PAUSE' : 'NIVEAU TERMINE !'} /></span><span style={{position:'absolute',width:1,height:1,overflow:'hidden',clipPath:'inset(50%)'}}>{phase === 'pause' ? 'Pause' : 'Niveau terminé'}</span></h1>
-      <p>{phase === 'finish' ? `${hud.score} points · ${currentLevel.title} terminé.` : `${currentLevel.title} — Ramasse ton équipement pour découvrir son pouvoir.`}</p>
-      <p style={{ lineHeight: 2, color: '#b8d5d8' }}>← → / Q D : bouger · ↑ / ESPACE : sauter<br/>MAJ : courir · X : pouvoir · ↓ en l’air : écraser</p>
-      {rankMessage && <p role="status" style={{ color: '#ffdc9c' }}>{rankMessage}</p>}
-      {phase === 'finish' && saveFailed && <button onClick={submitScore} style={{ padding: 10, marginBottom: 12 }}>RÉESSAYER L’ENREGISTREMENT</button>}
-      <button onClick={() => { if (phase === 'finish') { if (mode === 'prologue') void startPrologue(); else void startLevel(levelIndex); } else start(); }} style={{ padding: '15px 30px', background: '#ffca70', color: '#242537', border: '3px solid #fff0c7', fontWeight: 900, cursor: 'pointer' }}>{phase === 'pause' ? 'REPRENDRE' : phase === 'finish' ? 'REJOUER' : 'COMMENCER L’AVENTURE'}</button>
-      {phase === 'finish' && mode === 'campaign' && levelIndex < quartierLevels.length - 1 && <button onClick={() => startLevel(levelIndex + 1)} style={{ display: 'block', margin: '18px auto', padding: '12px 24px', background: '#62dfb4', color: '#162838', border: 0, cursor: 'pointer' }}>NIVEAU SUIVANT →</button>}
-      <div style={{ display: 'flex', justifyContent: 'center', gap: 24, marginTop: 20, flexWrap: 'wrap' }}>
-        <label>Musique {Math.round(musicVolume * 100)} %<br/><input aria-label="Volume de la musique" type="range" min="0" max="1" step="0.05" value={musicVolume} onChange={e => setMusicVolume(Number(e.target.value))} /></label>
-        <label>Effets {Math.round(effectsVolume * 100)} %<br/><input aria-label="Volume des effets sonores" type="range" min="0" max="1" step="0.05" value={effectsVolume} onChange={e => setEffectsVolume(Number(e.target.value))} /></label>
-      </div>
-      <button onClick={() => setPhase('menu')} style={{ display: 'block', margin: '22px auto', background: 'none', border: 0, color: '#ffc669', cursor: 'pointer' }}>MENU DU JEU</button>
-      <button onClick={onExit} style={{ display: 'block', margin: '22px auto', background: 'none', border: 0, color: '#fff4d6', cursor: 'pointer' }}>RETOUR À L’ARCADE</button>
-    </div></div>}
-    {phase === 'play' && tutorialHint && <aside aria-live="polite" style={{ position: 'absolute', top: 56, left: '4%', maxWidth: 'min(540px,82vw)', padding: '10px 14px', border: '2px solid #f1b74f', background: '#152b3de8', pointerEvents: 'none', lineHeight: 1.5 }}><strong style={{ color: '#ffc76e' }}>{tutorialHint.title}</strong><div>{tutorialHint.text}</div></aside>}
-    {phase === 'finish' && mode === 'prologue' && <button onClick={() => startLevel(0)} style={{ position: 'absolute', bottom: '8%', left: '50%', transform: 'translateX(-50%)', padding: '14px 24px', background: '#62dfb4', color: '#132b36', border: '3px solid #c7ffe8', fontWeight: 900, cursor: 'pointer' }}>COMMENCER LA CAMPAGNE →</button>}
+    {(phase === 'play' || phase === 'pause') && !house && <AdventureHud active={partyInfo.active} partySize={partyInfo.members.length} bossName={hud.bossName} prologue={mode === 'prologue'} level={levelIndex} health={hud.health} power={hud.powerId} score={hud.score} ticks={hud.ticks} secrets={hud.secrets} secretTotal={currentLevel.pickups.filter(p => p.kind === 'secret').length} bossHealth={hud.bossHealth} checkpoint={hud.checkpoint} dashCooldown={hud.dashCooldown} showDash={phase === 'play'} unranked={phase === 'play' && !ranked.current && !!rankMessage} onDetails={() => setPhase('pause')} hint={phase === 'play' ? tutorialHint : undefined} />}
+    {phase === 'menu' && !intro && <TitleMenu initialPage={menuPage} initialNode={mapNode} prologueCompleted={prologueCompleted} onPrologue={beginPrologue} onStart={startLevel} onExit={onExit} music={musicVolume} effects={effectsVolume} onMusic={setMusicVolume} onEffects={setEffectsVolume} onSound={menuSound} savedLevel={savedLevel === null ? null : Math.min(savedLevel, unlockedThrough(progress, levelIds))} completed={progress.completed} unlocked={unlockedThrough(progress, levelIds)} />}
+    {phase === 'pause' && <PauseMenu onResume={start} onRestart={() => { doorway.cancel(); setHouse(false); if (mode === 'prologue') void startPrologue(); else void startLevel(levelIndex); }} onMenu={() => { doorway.cancel(); setHouse(false); setPhase('menu'); }} onArcade={onExit} music={musicVolume} effects={effectsVolume} onMusic={setMusicVolume} onEffects={setEffectsVolume} onSound={menuSound} message={[rankMessage, hud.powerId !== 'none' ? `${hud.power} : reste équipé jusqu’au prochain dégât.` : 'C : dash disponible sans équipement.'].filter(Boolean).join(' ')} />}
+    {phase === 'ending' && <CampaignEnding onComplete={() => setPhase('finish')} />}
+    {phase === 'finish' && <StageResult title={currentLevel.title} prologue={mode === 'prologue'} score={hud.score} ticks={hud.ticks} secrets={hud.secrets} secretTotal={currentLevel.pickups.filter(p => p.kind === 'secret').length} rankMessage={rankMessage} saveFailed={saveFailed} onRetry={submitScore} onReplay={() => { if (mode === 'prologue') void startPrologue(); else void startLevel(levelIndex); }} onMap={returnToMap} onMenu={() => { setMenuPage('main'); setPhase('menu'); }} onArcade={onExit} onSound={menuSound} />}
+    {house && <HouseVisit appearance={outdoorAppearance.current} paused={phase !== 'play' || doorway.active} onReady={doorway.rendered} onError={() => { doorway.cancel(); setHouse(false); setHouseError(true); }} onExit={() => doorway.request(false)} onPause={() => setPhase('pause')} onSound={event => { if (!muted) audio.current?.play(event); }} />}
+    {houseError && phase === 'play' && <div role="alert" style={{position:'absolute',bottom:56,left:'4%',zIndex:6,background:'#171321',padding:12}}>La maison n’a pas pu se charger. Appuie sur E pour réessayer. <button onClick={() => setHouseError(false)}>FERMER</button></div>}
+    {doorway.active && <div aria-label="Passage de la porte" className={`${doorwayStyles.cover} ${doorway.stage === 'waiting' ? '' : doorwayStyles[doorway.stage]}`} />}
+    {intro && <PrologueIntro onComplete={finishIntro} onSkip={finishIntro} onSound={cue => audio.current?.play(cue === 'dash' ? 'boost' : cue === 'surprise' ? 'hurt' : 'land')} />}
     {starting && <div role="status" style={{ position: 'absolute', inset: 0, display: 'grid', placeItems: 'center', background: '#142c39e8', zIndex: 5, color: '#ffc776' }}>PRÉPARATION DE LA PARTIE…</div>}
   </div>;
 }

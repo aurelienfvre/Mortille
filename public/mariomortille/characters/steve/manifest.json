@@ -1,0 +1,53 @@
+{
+  "status": "integrated-prologue-ending",
+  "source": "from-zero/steve/ready",
+  "canvas": [
+    96,
+    96
+  ],
+  "anchor": [
+    48,
+    88
+  ],
+  "actions": {
+    "idle": {
+      "count": 8,
+      "files": [
+        "idle-01.png",
+        "idle-02.png",
+        "idle-03.png",
+        "idle-04.png",
+        "idle-05.png",
+        "idle-06.png",
+        "idle-07.png",
+        "idle-08.png"
+      ]
+    },
+    "walk": {
+      "count": 8,
+      "files": [
+        "walk-01.png",
+        "walk-02.png",
+        "walk-03.png",
+        "walk-04.png",
+        "walk-05.png",
+        "walk-06.png",
+        "walk-07.png",
+        "walk-08.png"
+      ]
+    },
+    "run": {
+      "count": 8,
+      "files": [
+        "run-01.png",
+        "run-02.png",
+        "run-03.png",
+        "run-04.png",
+        "run-05.png",
+        "run-06.png",
+        "run-07.png",
+        "run-08.png"
+      ]
+    }
+  }
+}

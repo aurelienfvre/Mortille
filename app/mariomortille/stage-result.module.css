@@ -1,0 +1,20 @@
+.overlay{--result-gold:#ffc15c;--result-ink:#fff1cf;position:absolute;inset:0;z-index:30;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(9px,1.7vh,18px);padding:clamp(18px,3vw,32px);overflow:auto;background:rgb(6 11 19 / .88);color:var(--result-ink);font-family:monospace;isolation:isolate}
+.eyebrow{margin:0;color:#a9dca3;width:min(320px,70%)}
+.eyebrow svg,.title svg{display:block;width:100%;height:auto;max-height:72px}
+.title{margin:0;color:var(--result-gold);width:min(640px,88%);filter:drop-shadow(0 4px 0 #4c2c14)}
+.results{display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:20px;width:min(550px,90%);margin:4px 0;padding:18px 10px;border-top:2px solid #87602b;border-bottom:2px solid #87602b;background:rgb(8 16 24 / .5);text-align:center}
+.results dt svg{height:11px;max-width:100%;width:auto;color:#c7cab8}
+.results dd{margin:12px 0 0;color:var(--result-gold)}
+.results dd svg{height:20px;max-width:100%;width:auto}
+.message{max-width:580px;min-height:1.4em;margin:0;text-align:center;color:#ded3bb;font-size:12px;line-height:1.5}
+.failure{color:#ffb49c}
+.choices{display:grid;gap:clamp(6px,1vh,10px);width:min(590px,90%)}
+.choice{position:relative;display:flex;align-items:center;justify-content:center;min-height:clamp(38px,6vh,48px);padding:10px 26px;border:0;outline:3px solid transparent;outline-offset:0;background:rgb(8 16 24 / .6);color:inherit;cursor:pointer}
+.choice svg{display:block;height:clamp(12px,1.7vw,18px);max-width:100%;width:auto}
+.selected{outline-color:#e89724;color:var(--result-gold);background:#11151a}
+.selected::before,.selected::after{position:absolute;top:50%;transform:translateY(-50%);font:bold 22px monospace;color:var(--result-gold);pointer-events:none}
+.selected::before{content:'›';left:-20px}.selected::after{content:'‹';right:-20px}
+.help{margin:0;text-align:center;font-size:clamp(9px,1.3vw,12px);line-height:1.5;letter-spacing:1px;color:#c7cab8}
+.srOnly{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+@media(max-height:560px){.overlay{justify-content:flex-start;gap:8px;padding:14px}.eyebrow{width:220px}.title{width:min(470px,85%)}.title svg{max-height:38px}.results{margin:0;padding:10px;gap:12px}.results dd{margin-top:7px}.results dd svg{height:15px}.choice{min-height:31px;padding:7px 20px}.choice svg{height:12px}.message{font-size:10px}.help{font-size:9px}}
+@media(max-width:430px){.overlay{padding:18px 12px}.choices{width:92%}.results{width:95%;gap:8px;padding:12px 4px}.results dt svg{height:9px}.results dd svg{height:15px}.choice{padding-inline:14px}.choice svg{height:12px}.selected::before{left:-12px}.selected::after{right:-12px}.message{font-size:11px}}

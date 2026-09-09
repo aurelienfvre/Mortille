@@ -1,0 +1,49 @@
+{
+  "exterior": {
+    "size": [
+      176,
+      192
+    ],
+    "alpha": true
+  },
+  "facade": {
+    "size": [
+      176,
+      192
+    ],
+    "alpha": true
+  },
+  "roof": {
+    "size": [
+      176,
+      192
+    ],
+    "alpha": true
+  },
+  "door": {
+    "size": [
+      176,
+      192
+    ],
+    "alpha": true
+  },
+  "opening": {
+    "size": [
+      176,
+      192
+    ],
+    "alpha": true
+  },
+  "interior": {
+    "size": [
+      640,
+      360
+    ],
+    "floorY": 264,
+    "platformTops": [
+      218,
+      174
+    ]
+  },
+  "layersRecomposeExact": true
+}

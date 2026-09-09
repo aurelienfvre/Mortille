@@ -1,0 +1,807 @@
+{
+  "character": "ben",
+  "status": "asset-pack-review-only",
+  "playable": false,
+  "canvas": [
+    96,
+    96
+  ],
+  "anchor": [
+    48,
+    88
+  ],
+  "format": "PNG RGBA",
+  "alpha": [
+    0,
+    255
+  ],
+  "available": [
+    "idle",
+    "walk",
+    "run",
+    "jump",
+    "hurt",
+    "dash"
+  ],
+  "remaining": [
+    "equip",
+    "powers"
+  ],
+  "animations": {
+    "idle": {
+      "files": [
+        "idle-01.png",
+        "idle-02.png",
+        "idle-03.png",
+        "idle-04.png",
+        "idle-05.png",
+        "idle-06.png",
+        "idle-07.png",
+        "idle-08.png"
+      ],
+      "durationMs": [
+        650,
+        650,
+        45,
+        45,
+        45,
+        45,
+        650,
+        650
+      ],
+      "loop": true
+    },
+    "walk": {
+      "files": [
+        "walk-01.png",
+        "walk-02.png",
+        "walk-03.png",
+        "walk-04.png",
+        "walk-05.png",
+        "walk-06.png",
+        "walk-07.png",
+        "walk-08.png"
+      ],
+      "durationMs": [
+        110,
+        110,
+        110,
+        110,
+        110,
+        110,
+        110,
+        110
+      ],
+      "loop": true,
+      "source": "unified-walk-run-v1",
+      "review": "parent accepted coherent body"
+    },
+    "run": {
+      "files": [
+        "run-01.png",
+        "run-02.png",
+        "run-03.png",
+        "run-04.png",
+        "run-05.png",
+        "run-06.png",
+        "run-07.png",
+        "run-08.png"
+      ],
+      "durationMs": [
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80
+      ],
+      "loop": true,
+      "source": "unified-walk-run-v1",
+      "review": "parent accepted coherent body"
+    },
+    "jump": {
+      "files": [
+        "jump-01.png",
+        "jump-02.png",
+        "jump-03.png",
+        "jump-04.png",
+        "jump-05.png",
+        "jump-06.png",
+        "jump-07.png",
+        "jump-08.png"
+      ],
+      "durationMs": [
+        100,
+        90,
+        100,
+        120,
+        100,
+        100,
+        100,
+        200
+      ],
+      "loop": false
+    },
+    "hurt": {
+      "files": [
+        "hurt-01.png",
+        "hurt-02.png",
+        "hurt-03.png",
+        "hurt-04.png"
+      ],
+      "durationMs": [
+        90,
+        130,
+        120,
+        120
+      ],
+      "loop": false
+    },
+    "dash": {
+      "files": [
+        "dash-01.png",
+        "dash-02.png",
+        "dash-03.png",
+        "dash-04.png",
+        "dash-05.png",
+        "dash-06.png",
+        "dash-07.png",
+        "dash-08.png"
+      ],
+      "durationMs": [
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70
+      ],
+      "loop": false
+    }
+  },
+  "validation": {
+    "files": 60,
+    "declaredAnchor": [
+      48,
+      88
+    ],
+    "observedBottomExclusive": [
+      85,
+      86,
+      88
+    ],
+    "crossStateAlignmentPassed": true,
+    "walkRunCorrection": {
+      "translation": [
+        0,
+        -1
+      ],
+      "resized": false,
+      "appliedToAllFrames": true
+    },
+    "pixelChecksPassed": true,
+    "visualApproval": false,
+    "notes": [
+      "Walk/run contact sheets inspected: alternating limbs and knee flexion visible. Playback quality remains to be reviewed.",
+      "Idle outline shifts by up to one pixel; retain for review, not final approval.",
+      "Walk/run copied with common integer y=-1 translation, contact now exclusive88 matching idle/jump. Run suspension retains its original lift at bottom85\u201386.",
+      "Jump candidates need visual approval before runtime use.",
+      "Hurt v2 contact sheet reviewed, head aligned by integer translation; used as brief prologue startle, not playable character damage logic.",
+      "Dash v2: contact sheet reviewed, canonical head retained, short collar and thicker suit. Eight hard-alpha96 frames, floor88. Asset pack only; no playable Ben runtime yet."
+    ]
+  },
+  "frames": [
+    {
+      "file": "idle-01.png",
+      "bounds": [
+        31,
+        9,
+        64,
+        88
+      ],
+      "sha256": "f35ab03ca67c6a439cd76768f2f813edc84d833ed1674f2b34d8d8f1d6116721"
+    },
+    {
+      "file": "idle-02.png",
+      "bounds": [
+        31,
+        9,
+        64,
+        88
+      ],
+      "sha256": "7aa7105d3d8c2168008f2294769c7c0552b04a2c1b808a564b0c97914119bdb6"
+    },
+    {
+      "file": "idle-03.png",
+      "bounds": [
+        31,
+        9,
+        64,
+        88
+      ],
+      "sha256": "daf5c5aa9ecde274920194d01e584bca5905876825a324cc1551fa992576a464"
+    },
+    {
+      "file": "idle-04.png",
+      "bounds": [
+        31,
+        9,
+        64,
+        88
+      ],
+      "sha256": "424e60f19f5cad691f691fb009d0d88ee15f73b90a75476acf8fe745eca0c2a0"
+    },
+    {
+      "file": "idle-05.png",
+      "bounds": [
+        30,
+        10,
+        64,
+        88
+      ],
+      "sha256": "7579091f23342ca0b89b0410a3c9df8790ebc956286fe6f3a666f556412fcae8"
+    },
+    {
+      "file": "idle-06.png",
+      "bounds": [
+        30,
+        10,
+        64,
+        88
+      ],
+      "sha256": "0f731952f28951aa6adbe7fc53dce54153a35d3b86fc74fc1f4e13b54577dc7e"
+    },
+    {
+      "file": "idle-07.png",
+      "bounds": [
+        30,
+        10,
+        64,
+        88
+      ],
+      "sha256": "66fc2b66f272d5d8c5ba6144655d11b2eee64a4c61757f51f7dbe0707b3c3080"
+    },
+    {
+      "file": "idle-08.png",
+      "bounds": [
+        30,
+        10,
+        64,
+        88
+      ],
+      "sha256": "2442437b4a54b7d6e12b576f080b912eb02e1fd68954eea0dc2851bde3a95f8e"
+    },
+    {
+      "file": "walk-01.png",
+      "bounds": [
+        30,
+        8,
+        69,
+        88
+      ],
+      "sha256": "235d4a6390f465ed6e7d296102a78285b813722860b62493f5252eec03e5036f"
+    },
+    {
+      "file": "walk-02.png",
+      "bounds": [
+        32,
+        8,
+        66,
+        88
+      ],
+      "sha256": "6c1b9b81c964d0efd9c84364f0dc3d8c057e5e159605dee1da02b0a70bea1c33"
+    },
+    {
+      "file": "walk-03.png",
+      "bounds": [
+        33,
+        8,
+        66,
+        88
+      ],
+      "sha256": "6742c2b0ac825625365cc3c9c5e52e8e8377871cf61d9008fd92edfc09ac3053"
+    },
+    {
+      "file": "walk-04.png",
+      "bounds": [
+        33,
+        8,
+        66,
+        88
+      ],
+      "sha256": "2a6fede3ad99c66f0e212ba177ee386137e6b6162ae7a7eee4690b87b5c8132e"
+    },
+    {
+      "file": "walk-05.png",
+      "bounds": [
+        33,
+        8,
+        66,
+        88
+      ],
+      "sha256": "9e2f91d1ea911e295553c2cfb172513b80fc2032f51298751d96f6337753068e"
+    },
+    {
+      "file": "walk-06.png",
+      "bounds": [
+        33,
+        8,
+        66,
+        88
+      ],
+      "sha256": "fd6b2d4048af50ae541b24bbfa0229eb30b12062735633d8b5a3e614dbc789eb"
+    },
+    {
+      "file": "walk-07.png",
+      "bounds": [
+        33,
+        8,
+        66,
+        88
+      ],
+      "sha256": "1b991c3f105d39a2d31d5daacf988ac61a578a60960260ebc8bc86b930c29c47"
+    },
+    {
+      "file": "walk-08.png",
+      "bounds": [
+        32,
+        8,
+        67,
+        88
+      ],
+      "sha256": "927e2ce0ddbbc60276830bab79f1581c8d289c4e027089e1ee6bc73860be15f1"
+    },
+    {
+      "file": "walk-09.png",
+      "bounds": [
+        30,
+        8,
+        69,
+        88
+      ],
+      "sha256": "e8e44f9b0b8a5c4356b4e2dc158e736fe15018e469c6af9bd14a2565db219dc4"
+    },
+    {
+      "file": "walk-10.png",
+      "bounds": [
+        32,
+        8,
+        66,
+        88
+      ],
+      "sha256": "ea000e3aef755d4b8912098a2246df34b2d79768a9cb080b6e68c802ffa871cc"
+    },
+    {
+      "file": "walk-11.png",
+      "bounds": [
+        33,
+        8,
+        66,
+        88
+      ],
+      "sha256": "ab9c2e954941032430a0d80468a2b9c5916ed1bc68a76d5266f2696eeabcf4c7"
+    },
+    {
+      "file": "walk-12.png",
+      "bounds": [
+        33,
+        8,
+        66,
+        88
+      ],
+      "sha256": "49f2fdbdb20a8d3954f1a8601e61b2d12cbba32bffe1ef2fd4a3601aa7518516"
+    },
+    {
+      "file": "walk-13.png",
+      "bounds": [
+        33,
+        8,
+        66,
+        88
+      ],
+      "sha256": "ef1b864c54f0ebd779349dd13ee9facaed5a7807b045003d9590cedb673ed1e3"
+    },
+    {
+      "file": "walk-14.png",
+      "bounds": [
+        33,
+        8,
+        66,
+        88
+      ],
+      "sha256": "cb5fc63fa6f20ccce43b0a357e4dbf7112e775474ef8b7bf13fae3281ba79ab8"
+    },
+    {
+      "file": "walk-15.png",
+      "bounds": [
+        33,
+        8,
+        66,
+        88
+      ],
+      "sha256": "41e28b3db2cb199ac4f1223501e0cb85206907120fe9a6ff895bee0e87c20565"
+    },
+    {
+      "file": "walk-16.png",
+      "bounds": [
+        32,
+        8,
+        67,
+        88
+      ],
+      "sha256": "ad7e3c2bfb0c6887bb5de34b6da9c75be3b0cca43c1b401c2e4d540faafc4d0d"
+    },
+    {
+      "file": "run-01.png",
+      "bounds": [
+        33,
+        8,
+        72,
+        88
+      ],
+      "sha256": "eb93c92cd0b959f6f03f7e54d236802c337914ea64bc0b4edfe9eb02089073e0"
+    },
+    {
+      "file": "run-02.png",
+      "bounds": [
+        37,
+        8,
+        72,
+        88
+      ],
+      "sha256": "fca4985b96c473d71041ae986c16d04a99ae5467989ac934c2f58aad6d58bc5f"
+    },
+    {
+      "file": "run-03.png",
+      "bounds": [
+        37,
+        8,
+        70,
+        88
+      ],
+      "sha256": "8cd05d418e618446da5493a3247a3512166dc44b4da6d15483d3e6eb31a8773b"
+    },
+    {
+      "file": "run-04.png",
+      "bounds": [
+        37,
+        8,
+        70,
+        88
+      ],
+      "sha256": "6791364f7534966140cee354f3b45d42f046eb187758dfe84ee6f48905059310"
+    },
+    {
+      "file": "run-05.png",
+      "bounds": [
+        31,
+        8,
+        70,
+        88
+      ],
+      "sha256": "eaa3d667770a9bad8785b02fd03eefd3a98fdc8e8ab009f1628f81d82a8bead0"
+    },
+    {
+      "file": "run-06.png",
+      "bounds": [
+        30,
+        8,
+        70,
+        85
+      ],
+      "sha256": "7d59704c3266551fe3000966461c1273574edd6e3a261855475ce0b225a48ef9"
+    },
+    {
+      "file": "run-07.png",
+      "bounds": [
+        29,
+        8,
+        72,
+        86
+      ],
+      "sha256": "18b7b15af5ce63cffeefeee636673f43b0ece2773c65d327bf6eabee4111b162"
+    },
+    {
+      "file": "run-08.png",
+      "bounds": [
+        31,
+        8,
+        71,
+        86
+      ],
+      "sha256": "6ddab993b7902ec1ea410969505734a7a2936d77ae889eec11778db2db29347f"
+    },
+    {
+      "file": "run-09.png",
+      "bounds": [
+        33,
+        8,
+        71,
+        88
+      ],
+      "sha256": "e4a3011c8cb41c9a223f58714ccee88d9e387c4320bffdeedc7bb923863288c0"
+    },
+    {
+      "file": "run-10.png",
+      "bounds": [
+        37,
+        8,
+        70,
+        88
+      ],
+      "sha256": "6ad247f72a3894a81a174a47514d17ed8a7b2c4aa7d00b47cb3dbabce83aaefa"
+    },
+    {
+      "file": "run-11.png",
+      "bounds": [
+        37,
+        8,
+        70,
+        88
+      ],
+      "sha256": "2ee6aed954aa592afddc332fc561f668826797aa217440e5d79c7a20a6bcca41"
+    },
+    {
+      "file": "run-12.png",
+      "bounds": [
+        37,
+        8,
+        70,
+        88
+      ],
+      "sha256": "de91d0f710e06e52f5002278a6a0b9907724c156b408883e45bb6aadd6c7db8d"
+    },
+    {
+      "file": "run-13.png",
+      "bounds": [
+        31,
+        8,
+        70,
+        88
+      ],
+      "sha256": "95f07064225fac5d8c36fc44f23f9e66e8d433684cea95c205e91cdfe72c914c"
+    },
+    {
+      "file": "run-14.png",
+      "bounds": [
+        30,
+        8,
+        70,
+        85
+      ],
+      "sha256": "9c5d2baedaa6446f83b86fb2bf6035193bc857ac35da3fd56a84b23a7ee9a88f"
+    },
+    {
+      "file": "run-15.png",
+      "bounds": [
+        29,
+        8,
+        72,
+        86
+      ],
+      "sha256": "fb9c6391fd39f5200e5a3d7a7071e04cd2a2a5b5a27f50775a954f9dabfe68d7"
+    },
+    {
+      "file": "run-16.png",
+      "bounds": [
+        31,
+        8,
+        72,
+        86
+      ],
+      "sha256": "23475da63f01d6b0dba84200730228f29da90ef3469a9a016e89ce7d0bb654d2"
+    },
+    {
+      "file": "jump-01.png",
+      "bounds": [
+        26,
+        28,
+        69,
+        88
+      ],
+      "sha256": "ba03fedc544d5ca5a6ec19d1c6d5e4c9ea74a788b6d3f1656a2ba2c83ab64379"
+    },
+    {
+      "file": "jump-02.png",
+      "bounds": [
+        28,
+        13,
+        66,
+        88
+      ],
+      "sha256": "78959c0ff10a3d94ab57e81b4d11a2f0e227981a5cdb45af7b2bc28adc60c3ba"
+    },
+    {
+      "file": "jump-03.png",
+      "bounds": [
+        31,
+        15,
+        65,
+        88
+      ],
+      "sha256": "787944a51c95c1393b525166c1540d1cca27f220185f93ae5309ca1f2656a3ad"
+    },
+    {
+      "file": "jump-04.png",
+      "bounds": [
+        29,
+        27,
+        65,
+        88
+      ],
+      "sha256": "4beb7421515662692b6c3914afe6ed0d4e6a309a54b12e535b544a2ae052729a"
+    },
+    {
+      "file": "jump-05.png",
+      "bounds": [
+        29,
+        17,
+        64,
+        88
+      ],
+      "sha256": "adb33feded3d48aef29c3ec64a30fa4e1eab76493c34246066446ffe7e41a3c0"
+    },
+    {
+      "file": "jump-06.png",
+      "bounds": [
+        30,
+        16,
+        65,
+        88
+      ],
+      "sha256": "353dcd109fc0e4beea085c179cd6a438c17d6e6e4d7f334752c933410fb83471"
+    },
+    {
+      "file": "jump-07.png",
+      "bounds": [
+        28,
+        36,
+        66,
+        88
+      ],
+      "sha256": "7fe62baad06c8d6d9c9a63b061e974fc1160769bc46a58174803ab4b1a6ee18b"
+    },
+    {
+      "file": "jump-08.png",
+      "bounds": [
+        31,
+        9,
+        64,
+        88
+      ],
+      "sha256": "f35ab03ca67c6a439cd76768f2f813edc84d833ed1674f2b34d8d8f1d6116721"
+    },
+    {
+      "file": "hurt-01.png",
+      "bounds": [
+        31,
+        16,
+        64,
+        88
+      ],
+      "sha256": "cdc86c6749045a6e45cdd9b5ffe44fd7efaed574f114e229647a0a5327bdc947"
+    },
+    {
+      "file": "hurt-02.png",
+      "bounds": [
+        29,
+        15,
+        65,
+        88
+      ],
+      "sha256": "abebfdab6c639c2c2f9a245cc26ec6218df654bcd3632c7c480fb8bfc86e9667"
+    },
+    {
+      "file": "hurt-03.png",
+      "bounds": [
+        31,
+        9,
+        64,
+        88
+      ],
+      "sha256": "7a178435c7d822dfb220294b95e808299adeb8cebc3cd9353f75589fe6e31db2"
+    },
+    {
+      "file": "hurt-04.png",
+      "bounds": [
+        31,
+        9,
+        64,
+        88
+      ],
+      "sha256": "f35ab03ca67c6a439cd76768f2f813edc84d833ed1674f2b34d8d8f1d6116721"
+    },
+    {
+      "file": "dash-01.png",
+      "bounds": [
+        25,
+        24,
+        66,
+        88
+      ],
+      "sha256": "a812a91e02d59d120895aa662688b5a610be4fbe1edc51a4e3a5f3e516fedddf"
+    },
+    {
+      "file": "dash-02.png",
+      "bounds": [
+        17,
+        20,
+        72,
+        88
+      ],
+      "sha256": "eaf81134f095029c9804997b63e3580acad5d06e5ae6c46bb93ae57c97f89c48"
+    },
+    {
+      "file": "dash-03.png",
+      "bounds": [
+        13,
+        26,
+        78,
+        88
+      ],
+      "sha256": "568cb9bb234f3fe856f2a514ddb3e0b887f7114853069cf83212eca79f18665c"
+    },
+    {
+      "file": "dash-04.png",
+      "bounds": [
+        22,
+        19,
+        68,
+        88
+      ],
+      "sha256": "a690293bd623384bc427f8526f395a76399d7382d0384bdc23a092d654f1500b"
+    },
+    {
+      "file": "dash-05.png",
+      "bounds": [
+        20,
+        14,
+        69,
+        88
+      ],
+      "sha256": "d6c4c1e2b12ea88df8260077b2dba25a113b130085a51367a876541ef44a65f6"
+    },
+    {
+      "file": "dash-06.png",
+      "bounds": [
+        30,
+        18,
+        66,
+        88
+      ],
+      "sha256": "4397dfb8162c01e6e034b8f5c74dc049f10852518faf5511973fd533a1b88fab"
+    },
+    {
+      "file": "dash-07.png",
+      "bounds": [
+        24,
+        26,
+        66,
+        88
+      ],
+      "sha256": "59f40ae3671ce250e9be282813aa7da25db0f7a31ba0fdc8c4f8aeec166b0c93"
+    },
+    {
+      "file": "dash-08.png",
+      "bounds": [
+        31,
+        9,
+        64,
+        88
+      ],
+      "sha256": "f35ab03ca67c6a439cd76768f2f813edc84d833ed1674f2b34d8d8f1d6116721"
+    }
+  ],
+  "locomotionRevision": {
+    "version": "from-zero-20260908",
+    "walk": 8,
+    "run": 8,
+    "source": "outputs/Mariomortille-PNG/from-zero/ben/chibi-v2",
+    "oldSpritePixelsReused": false,
+    "status": "new artwork integrated; passing-pose polish and browser QA pending"
+  }
+}

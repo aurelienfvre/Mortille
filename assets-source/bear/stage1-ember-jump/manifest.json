@@ -1,0 +1,88 @@
+{
+  "status": "PARENT_REVIEW",
+  "frameSize": [
+    96,
+    96
+  ],
+  "anchor": [
+    48,
+    88
+  ],
+  "sourceMode": "RGBA",
+  "sharedScale": 0.18007662835249041,
+  "frames": [
+    "jump-01.png",
+    "jump-02.png",
+    "jump-03.png",
+    "jump-04.png",
+    "jump-05.png",
+    "jump-06.png",
+    "jump-07.png",
+    "jump-08.png"
+  ],
+  "timingsMs": [
+    120,
+    90,
+    140,
+    180,
+    150,
+    100,
+    120,
+    220
+  ],
+  "qa": {
+    "binaryAlpha": true,
+    "transparentRGB0": true,
+    "bounds": [
+      [
+        27,
+        56,
+        66,
+        88
+      ],
+      [
+        37,
+        35,
+        72,
+        88
+      ],
+      [
+        34,
+        37,
+        65,
+        78
+      ],
+      [
+        27,
+        45,
+        70,
+        82
+      ],
+      [
+        27,
+        42,
+        72,
+        87
+      ],
+      [
+        31,
+        52,
+        65,
+        88
+      ],
+      [
+        30,
+        45,
+        64,
+        88
+      ],
+      [
+        36,
+        41,
+        64,
+        88
+      ]
+    ]
+  },
+  "limitations": []
+}
